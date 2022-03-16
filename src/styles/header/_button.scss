@@ -1,0 +1,17 @@
+a.special-btn{
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid $white;
+ 
+    font-weight:300;
+    color:$white;
+    text-align:center;
+    transition: all $slow-spd;
+
+    &:hover{
+        color:$dark-hover;
+        background-color:$white;
+        padding:0.35em 2em;
+    }
+}
+

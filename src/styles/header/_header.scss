@@ -1,0 +1,32 @@
+@mixin color-animation {
+	animation-name: backgroundColorPalette;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+
+/* Standard syntax */
+@keyframes backgroundColorPalette {
+	0% {
+		background: #5c5ef3;
+	}
+	25% {
+		background: #8a3ffc;
+	}
+	50% {
+		background: #3032aa;
+	}
+	75% {
+		background: rgb(101, 8, 189);
+	}
+	100% {
+		background: #0d48b8;
+	}
+}
+
+.header {
+    @include color-animation();
+    color: $white;
+	
+}

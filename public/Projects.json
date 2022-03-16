@@ -1,0 +1,100 @@
+{
+  "Data" : [
+      {
+      "id":0,
+      "title" : "OpenCV Plate and Face Recognition",
+      "author" : "Alex",
+      "date" : "2020UTC",
+      "metadata" : "null",
+      "description" : "This program uses OpenCV to find peoples faces in images/videos and search vehicle plate numbers in Europe and Canada. Currently, this project is under development.",
+      "tools" : ["Python","OpenCV","Yolo"],
+      "githublink" : "null",
+      "imglink" : "https://www.stereolabs.com/docs/unity/images/ObjectDetection/nyc-boxes.png",
+      "type": "application"
+      },
+      {
+        "id":1,
+      "title" : "Illium Stock Trader",
+      "author" : "Alex",
+      "date" : "2020UTC",
+      "metadata" : "null",
+      "description" : "This program uses OpenCV to find peoples faces in images/videos and search vehicle plate numbers in Europe and Canada. Currently, this project is under development.",
+      "tools" : ["React","Node","MongoDB"],
+      "githublink" : "null",
+      "imglink" : "https://cdn.mos.cms.futurecdn.net/baoSRtAYy8Vrv4No2pkikn.jpg",
+      "type": "application"
+      },
+      {
+        "id":2,
+      "title" : "4K Image Upscaler",
+      "author" : "Alex",
+      "date" : "2020UTC",
+      "metadata" : "null",
+      "description" : "This program uses OpenCV to find peoples faces in images/videos and search vehicle plate numbers in Europe and Canada. Currently, this project is under development.",
+      "tools" : ["React","Node","MongoDB"],
+      "githublink" : "null",
+      "imglink" : "https://lh3.googleusercontent.com/fife/AAWUweVN2HoFds4Hfrw6EmLOvYGiE-V7-IHIJJmIAKSMPsDgMeUQyYYv9ODEgPDj7yLjFWTNq6PhuJDfL3CPMoR94VR8vidahFLSSY_cayvbq6WACyB1DbrwDkrxzChU9oPU0fsP_8NyCd_zqvRaTdFHV6MulUdrKjSfAekB8zQse5EnTJEd-G1CTCE5ncGXXLHJFHvaS6Gbjchkt-EeHGMIjrZHGPznPK2oQMZhdRrXzkNXhdirlIlN4vNvy-N5MMWqlp1vcsV8aF5eu5TkuWUx9zT2rTbyGv6CBYjCE5490HxHS3uuaQdpHl_Id8mLZF_rwCHQy_n8_GYMGQ6LGRbVElRakMRXY9V-hampKkHWnyCVOsWfqtlFMLOD0kjyDc9kr5ugz4zUGGypuvlZM4iUIwyltA5pJPCxbbEkEQ_SyFDY4XoYoq24b_DaLReu9iKKtrq7EpYMBcTInz9OHgZYgIRc2-HlAmL4cd1x8RvhySGvstsIVAOWgKgkVtc5IhJ6EKtTZjZd8W7YBkT8jXAcEqH6kZEDRD9OPZksCerWtFILo4jocBzALKAYPgPk-gkqZ-xMfFweck2NEU0V5F82jHkkLrtuOHv8BCHScOA__zQwCwpdtzC8pSuBDKIy87UN-wyDjfGeXgZjVUyVOOK4sF9Z_jgaNY86Z_OBaH_i5XLpu1qFrhMcgkKuNTpCVZ1AEPOn8ojfV_peCGqCF_6NV6dux-Iprt16JGk=w1366-h656",
+      "type": "application"
+      },
+      {
+        "id":3,
+      "title" : "Generative Adversarial Networks",
+      "author" : "Alex",
+      "date" : "2020UTC",
+      "metadata" : "null",
+      "description" : "Generative Adversarial Networks, or GANs for short, are an approach to generative modeling using deep learning methods, such as convolutional neural networks.",
+      "tools" : ["Python","Pandas","Numpy"],
+      "githublink" : "null",
+      "imglink" : "https://canalesportfolio.netlify.app/dist/images/about/nature-0.png",
+      "type": "application"
+      },
+      {
+        "id":4,
+      "title" : "Geotab Mapping",
+      "author" : "Alex",
+      "date" : "2020UTC",
+      "metadata" : "null",
+      "description" : "This program uses OpenCV to find peoples faces in images/videos and search vehicle plate numbers in Europe and Canada. Currently, this project is under development.",
+      "tools" : ["React","Mapbox","Tailwind"],
+      "githublink" : "null",
+      "imglink" : "https://assets.website-files.com/5e832e12eb7ca02ee9064d42/5fced77b120d5b225e9fd4a8_cropped-2-p-1080.jpeg",
+      "type": "application"
+      },
+      {
+        "id":5,
+      "title" : "Halo Statistics API",
+      "author" : "Alex",
+      "date" : "2020UTC",
+      "metadata" : "null",
+      "description" : "The API officially used by Halo Waypoint, this service allows developers to return details about different players and their service records. This includes Win/Loss ratio, hours played, spartan armour used, and favorite game modes.",
+      "tools" : ["NodeJs","MySql","Express"],
+      "githublink" : "null",
+      "imglink" : "http://4.bp.blogspot.com/_ezXfXwVkn3k/TTaXP9ShRGI/AAAAAAAAACs/0jA3Y4Hq_6A/s1600/ih_odst+man02c.jpg",
+      "type": "api"
+      },
+      {
+        "id":6,
+      "title" : "Automobile Logo API",
+      "author" : "Alex",
+      "date" : "2020UTC",
+      "metadata" : "null",
+      "description" : "This Vehicle API provides access to a library of vehicle Logos. Instead of using an ID, Logos are retrieved using the Manufacturer Name.",
+      "tools" : ["NodeJs","MySql","Express"],
+      "githublink" : "null",
+      "imglink" : "https://assets-eu-01.kc-usercontent.com/bb5aba31-d98c-0160-8548-418b3723c58e/a7c1db34-dc01-4c89-91d1-7c4f4ea5f197/Mercedes-C-Class-2021-2.jpg",
+      "type": "api"
+      },
+      {
+        "id":7,
+      "title" : "Osteoporosis Machine Learning Detection",
+      "author" : "Ed Sykes, Ravi Jain, Alex Canales, Wei Bin Wang, Mohit Deol, Jennifer Weldon, Rohit Shanker, Volodymyr Voytenko, Jansen Sullivan, Doug Sauer",
+      "date" : "2020UTC",
+      "metadata" : "Towards Better Insights: Preliminary Results Of A Machine Learning Model For Fracture Risk Assessment",
+      "description" : "Create a Machine Learning (ML) model that predicts the BMD T-score and assesses the fracture risk based on relevant patient data features.",
+      "tools" : ["Machine Learning","Data Science","Scikit"],
+      "githublink" : "null",
+      "imglink" : "https://drtaylorwallace.com/wp-content/uploads/2020/06/osteoporosis.jpg",
+      "type": "api"
+      }
+  ]
+}
