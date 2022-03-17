@@ -23,8 +23,16 @@ function App() {
 
         <Link to="/projects" className="nav-item">
           <div className="nav-link">
-            <i className="fa fa-pencil fa-2x" aria-hidden="true"></i>
+            <i className="fa fa-code fa-2x" aria-hidden="true"></i>
             <span className="link-text">Projects</span>
+          </div>
+        </Link>
+
+
+        <Link to="/art" className="nav-item">
+          <div className="nav-link">
+            <i className="fa fa-paint-brush fa-2x" aria-hidden="true"></i>
+            <span className="link-text">Art</span>
           </div>
         </Link>
 

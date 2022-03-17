@@ -1,0 +1,16 @@
+a.card-btn{
+    
+    padding:0.35em 1.2em;
+    border:0.1em solid $dark;
+    border-radius: 0.25rem;
+    font-weight:300;
+    color:$dark;
+    text-align:center;
+    transition: all $slow-spd;
+    
+
+    &:hover{
+       
+        padding:0.35em 2em;
+    }
+}

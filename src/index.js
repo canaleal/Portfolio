@@ -14,6 +14,7 @@ import Elements from "./pages/elements/elements";
 import Error from "./pages/error/error";
 
 import reportWebVitals from './reportWebVitals';
+import Art from './pages/art/art';
 
 
 
@@ -27,6 +28,7 @@ render(
        
         <Route path="projects" element={<Projects />} />
         <Route path="projects/elements/:id" element={<Elements />} />
+        <Route path="art" element={<Art />} />
         <Route path="*" element={<Error />} />
       </Route>
     </Routes>

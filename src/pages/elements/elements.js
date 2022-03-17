@@ -53,7 +53,7 @@ const Elements = (props) => {
           <p>Error! Project does not exist.</p>
 
           :
-          <div className='h-full flex flex-col'>
+          <div className='h-full w-full flex flex-col'>
             <h1 className='text-4xl weight-bold'>{project.title}</h1>
 
 
