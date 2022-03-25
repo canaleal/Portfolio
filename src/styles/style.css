@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
 :root {
-  font-size: 16px;
+  font-size: 15px;
   font-family: 'Quicksand', sans-serif;
 }
 
@@ -379,11 +379,15 @@ a.special-btn:hover {
 .card:hover {
   -webkit-box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
           box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
-  -webkit-transform: scale(1.01);
-          transform: scale(1.01);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
   cursor: pointer;
   -webkit-filter: opacity(1) saturate(150%);
           filter: opacity(1) saturate(150%);
+}
+
+.card-md {
+  height: 20rem;
 }
 
 .card-lg {
@@ -400,28 +404,20 @@ a.special-btn:hover {
           filter: none;
 }
 
-.nsfw {
-  -webkit-filter: blur(8px);
-          filter: blur(8px);
-}
-
-.nsfw:hover {
-  -webkit-filter: none;
-          filter: none;
-}
-
 a.card-btn {
+  display: inline-block;
   padding: 0.35em 1.2em;
-  border: 0.1em solid #212426;
-  border-radius: 0.25rem;
+  border: 0.1em solid #000;
   font-weight: 300;
-  color: #212426;
+  color: #000;
   text-align: center;
   -webkit-transition: all 600ms;
   transition: all 600ms;
 }
 
 a.card-btn:hover {
+  color: #212529;
+  background-color: #fff;
   padding: 0.35em 2em;
 }
 /*# sourceMappingURL=style.css.map */

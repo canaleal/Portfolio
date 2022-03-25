@@ -15,7 +15,7 @@ const Projects = (props) => {
 
     useEffect(() => {
 
-        const fetchProjects = fetch('Projects.json'
+        const fetchProjects = fetch('data/Projects.json'
             , {
                 headers: {
                     'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ const Projects = (props) => {
             setIsLoaded(true);
         });
 
-
+        return () => { setIsLoaded(false) };
     }, []);
 
 
@@ -49,7 +49,7 @@ const Projects = (props) => {
 
 
     return (
-        <div className="main">
+        <div className="main" >
 
             {isLoaded ?
 
@@ -57,9 +57,9 @@ const Projects = (props) => {
                     <p>Error! Unable to load projects.</p>
                     :
                     <div>
-                        <h1 className='text-4xl weight-bold'>Projects</h1>
+                        <h1 className='text-4xl font-bold'>Projects</h1>
 
-                        <div className="grid grid-cols-1 ">
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 my-4">
                             {
                                 projectsList.map(item => (<Card key={item.id} project={item} />))
                             }

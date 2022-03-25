@@ -5,7 +5,7 @@ import Header from './components/header'
 export default class home extends Component {
   render() {
     return (
-      <div  className="main sm:h-screen" >
+      <div  className="main h-[32rem] sm:h-screen" >
         <div className="h-full flex flex-col">
        
           <Header/>

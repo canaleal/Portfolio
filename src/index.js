@@ -10,13 +10,23 @@ import './index.css'
 import App from './App';
 import Home from "./pages/home/home";
 import Projects from "./pages/projects/projects";
-import Elements from "./pages/elements/elements";
+import Element from "./pages/elements/element";
 import Error from "./pages/error/error";
 
 import reportWebVitals from './reportWebVitals';
 import Art from './pages/art/art';
 
 
+//Import font awesome and some icons
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {faPython, faJs} from "@fortawesome/free-brands-svg-icons";
+
+
+//Add the icons to the library so they can be used in ever single component
+library.add(
+  faPython,
+  faJs
+);
 
 
 const rootElement = document.getElementById("root");
@@ -27,7 +37,7 @@ render(
         <Route index element={<Home />} />
        
         <Route path="projects" element={<Projects />} />
-        <Route path="projects/elements/:id" element={<Elements />} />
+        <Route path="projects/element/:id" element={<Element />} />
         <Route path="art" element={<Art />} />
         <Route path="*" element={<Error />} />
       </Route>

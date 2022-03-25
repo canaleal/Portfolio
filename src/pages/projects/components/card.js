@@ -2,35 +2,69 @@ import React, { Component } from 'react'
 import { useState, useEffect } from 'react';
 import { Outlet, Link } from "react-router-dom";
 
-const Card = (props) => {
 
+import useSound from 'use-sound';
+
+
+const Card = (props) => {
+  const [error, setError] = useState(null);
+  const [isLoaded, setIsLoaded] = useState(false);
   const [projectElement, setProjectElement] = useState({});
 
   useEffect(() => {
-    setProjectElement(props.project)
+    try {
+      setProjectElement(props.project);
+      setIsLoaded(true);
+    } catch (error) {
+      setError(true);
+      setIsLoaded(true);
+    }
+
+    return () => { setProjectElement({}) };
   }, [])
 
 
+
+
   return (
-    <div className="border rounded-lg my-4">
-      <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 '>
-        <div className='col-span-1'>
-          <Link to={{ pathname: `/projects/elements/${projectElement.id}` }} className="card "
-            style={{ backgroundImage: `url(${projectElement.imglink})` }} loading="lazy">
-          </Link>
-        </div>
-      
-        <div className='col-span-1'>
-          <h2 className='text-xl weight-bold'>{projectElement.title}</h2>
-          <p className='weight-bold text-blue-600 py-2'>{projectElement.author}</p>
-
-          <p className=''>{projectElement.description}</p>
 
 
-         
-        </div>
+    <div className="border  rounded-lg  col-span-1 shadow-xl">
 
-      </div>
+      {isLoaded ?
+
+        error ?
+          <p>Error! Unable to load projects.</p>
+          :
+          <>
+            <Link to={{ pathname: `/projects/element/${projectElement.id}` }} className="card card-md"
+              style={{ backgroundImage: `url(${projectElement.imglink})` }} loading="lazy">
+            </Link>
+
+            <div className='p-4'>
+              <h2 className='text-lg '>{projectElement.title}</h2>
+
+              <div className='flex py-2'>
+
+                {
+                  projectElement.tools.map((tool, index) => {
+                    return (
+                      <img  title={tool}  key={tool} className='w-8 mx-2' src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${tool}/${tool}-original.svg`} />
+                    )
+                  })
+                }
+
+              </div>
+
+
+              <Link to={{ pathname: `/projects/element/${projectElement.id}` }}className="card-btn my-4 rounded-lg">View Project</Link>
+
+            </div>
+          </>
+        :
+        <p>Loading</p>
+      }
+
 
 
     </div>

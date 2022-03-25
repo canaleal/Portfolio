@@ -3,36 +3,73 @@ import { useState, useEffect } from 'react';
 import { Outlet, Link } from "react-router-dom";
 
 const Card = (props) => {
-
+  const [error, setError] = useState(null);
+  const [isLoaded, setIsLoaded] = useState(false);
   const [projectElement, setProjectElement] = useState({});
 
   useEffect(() => {
-    setProjectElement(props.project)
+    try {
+      setProjectElement(props.project);
+      setIsLoaded(true);
+    } catch (error) {
+      setError(true);
+      setIsLoaded(true);
+    }
+
   }, [])
 
 
   return (
-    <div className='border rounded-lg my-4'>
+
+    <div className="border rounded-lg  col-span-1 shadow-xl">
 
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 ">
+      {isLoaded ?
 
-      <div className='col-span-1 '>
-          <div className="card card-lg"
-            style={{ backgroundImage: `url(${projectElement.imglink})` }} loading="lazy">
-          </div>
-        </div>
-        <div className='col-span-1'>
-          <h2 className='text-xl weight-bold'>{projectElement.title}</h2>
-          <p className='weight-bold text-blue-600 py-2'>{projectElement.author}</p>
+        error ?
+          <p>Error! Unable to load projects.</p>
+          :
+          <>
+            <div className='grid grid-cols-1 sm:grid-cols-2'>
 
-          <p className=''>{projectElement.description}</p>
+              <div className='col-span-1'>
+                <div to={{ pathname: `/projects/element/${projectElement.id}` }} className="card card-lg"
+                  style={{ backgroundImage: `url(${projectElement.imglink})` }} loading="lazy">
+                </div>
+              </div>
 
-        </div>
-        
+              <div className='col-span-1 p-4'>
 
-      </div>
+                <h2 className='text-lg'>{projectElement.title}</h2>
+                <p className='text-blue-600 py-2'>{projectElement.author}</p>
+                <p className=''>{projectElement.description}</p>
+
+                <div className='flex py-2'>
+
+                  {
+                    projectElement.tools.map((tool, index) => {
+                      return (
+                        <img key={tool} className='w-8 mx-2' src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${tool}/${tool}-original.svg`} />
+                      )
+                    })
+                  }
+
+                </div>
+
+              </div>
+            </div>
+
+
+          </>
+        :
+        <p>Loading</p>
+      }
+
+
     </div>
+
+
+
   )
 
 }
