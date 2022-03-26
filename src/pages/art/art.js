@@ -35,7 +35,7 @@ const Art = () => {
 
             setArtObjectList(myJson['Data'])
             setIsLoaded(true);
-            console.log(myJson['Data'])
+          
 
         }).catch(error => {
 
@@ -48,6 +48,7 @@ const Art = () => {
     }, []);
 
 
+    
 
     return (
         <div className="main ">
@@ -69,12 +70,8 @@ const Art = () => {
                                             style={{ backgroundImage: `url(${art.imglink})` }} loading="lazy">
                                         </div>
                                     </div>
-
-
                                 )
                             })}
-
-
 
                         </div>
                     </div>

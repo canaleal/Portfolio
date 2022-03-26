@@ -1,0 +1,12 @@
+
+
+.img-icon{
+    transition: all 1s;
+    &:hover {
+		
+		transform: scale(1.2);
+		
+		filter: opacity(1) saturate(150%);
+    }  
+
+}

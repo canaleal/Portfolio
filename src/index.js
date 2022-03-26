@@ -10,7 +10,7 @@ import './index.css'
 import App from './App';
 import Home from "./pages/home/home";
 import Projects from "./pages/projects/projects";
-import Element from "./pages/elements/element";
+import Project from "./pages/project/project";
 import Error from "./pages/error/error";
 
 import reportWebVitals from './reportWebVitals';
@@ -37,7 +37,7 @@ render(
         <Route index element={<Home />} />
        
         <Route path="projects" element={<Projects />} />
-        <Route path="projects/element/:id" element={<Element />} />
+        <Route path="projects/project/:id" element={<Project />} />
         <Route path="art" element={<Art />} />
         <Route path="*" element={<Error />} />
       </Route>

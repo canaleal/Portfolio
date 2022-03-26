@@ -40,16 +40,16 @@ const Card = (props) => {
 
               <div className='col-span-1 p-4'>
 
-                <h2 className='text-lg'>{projectElement.title}</h2>
-                <p className='text-blue-600 py-2'>{projectElement.author}</p>
-                <p className=''>{projectElement.description}</p>
+                <h2 className='text-lg mb-2'>{projectElement.title}</h2>
+                <p className='text-blue-600 my-2'>{projectElement.author}</p>
+                <p className='my-2'>{projectElement.description}</p>
 
-                <div className='flex py-2'>
+                <div className='flex my-2'>
 
                   {
                     projectElement.tools.map((tool, index) => {
                       return (
-                        <img key={tool} className='w-8 mx-2' src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${tool}/${tool}-original.svg`} />
+                        <img  title={tool}  key={tool} className='img-icon w-8 mx-2' src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${tool}/${tool}-original.svg`} />
                       )
                     })
                   }

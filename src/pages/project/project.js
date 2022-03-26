@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import Card from './components/card';
 
-const Element = (props) => {
+const Project = (props) => {
 
   let { id } = useParams();
   const [error, setError] = useState(null);
@@ -79,4 +79,4 @@ const Element = (props) => {
 
 }
 
-export default Element; 
+export default Project; 
