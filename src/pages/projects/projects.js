@@ -77,7 +77,7 @@ const Projects = (props) => {
                     <div>
                         <h1 className='text-4xl font-bold'>Projects</h1>
 
-                        <div className='flex flex-wrap justify-between border rounded-lg p-2 shadow-lg my-4' >
+                        <div className=' flex flex-wrap justify-between border rounded-lg p-2 shadow-lg my-4' >
 
                             {
                                 tools.map((tool, index) => {

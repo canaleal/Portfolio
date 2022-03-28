@@ -416,8 +416,8 @@ a.special-btn:hover {
 .card:hover {
   -webkit-box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
           box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
   cursor: pointer;
   -webkit-filter: opacity(1) saturate(150%);
           filter: opacity(1) saturate(150%);
@@ -434,6 +434,13 @@ a.special-btn:hover {
 .blur {
   -webkit-filter: blur(8px);
           filter: blur(8px);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.blur:hover {
+  -webkit-filter: none;
+          filter: none;
 }
 
 .blur-none {

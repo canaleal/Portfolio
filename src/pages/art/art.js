@@ -65,11 +65,11 @@ const Art = () => {
 
                             {artObjectList.map((art) => {
                                 return (
-                                    <div key={art.id} className={`col-span-1 sm:col-span-${art.col_span} shadow-xl`}>
-                                        <div className="card card-md"
+                                  
+                                        <div key={art.id} className={` col-span-1 sm:col-span-${art.col_span} shadow-xl card card-lg ${art.isNsfw ? 'blur' : ''}`}
                                             style={{ backgroundImage: `url(${art.imglink})` }} loading="lazy">
                                         </div>
-                                    </div>
+                                 
                                 )
                             })}
 

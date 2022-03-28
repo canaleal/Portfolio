@@ -94,7 +94,7 @@
       "tools" : ["jupyter","python","pandas","numpy", "tensorflow", "r", "matlab"],
       "githublink" : "null",
       "imglink" : "https://drtaylorwallace.com/wp-content/uploads/2020/06/osteoporosis.jpg",
-      "type": "api"
+      "type": "machine"
       },
       {
         "id":8,
@@ -118,6 +118,18 @@
       "tools" : ["react","css3","javascript","python","fastapi"],
       "githublink" : "null",
       "imglink" : "http://localhost:3000/assets/images/trials.png",
+      "type": "application"
+      },
+      {
+        "id":10,
+      "title" : "Reddit Image Downloader",
+      "author" : "Alex",
+      "date" : "2020UTC",
+      "metadata" : "",
+      "description" : "Program Downloads Images from Reddit and saves them to a local repository.",
+      "tools" : ["python","html5","css3","javascript","fastapi"],
+      "githublink" : "null",
+      "imglink" : "https://preview.redd.it/kd325orqch881.jpg?width=640&crop=smart&auto=webp&s=9c53e1821a7f61e41d4fc77c90ecad0a32e7fc3a",
       "type": "application"
       }
   ]

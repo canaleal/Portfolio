@@ -43,6 +43,7 @@ const Card = (props) => {
 
             <div className='p-4'>
               <h2 className='text-lg mb-2'>{projectElement.title}</h2>
+             
 
               <div className='flex my-2'>
 
