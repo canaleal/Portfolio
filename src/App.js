@@ -29,10 +29,10 @@ function App() {
         </Link>
 
 
-        <Link to="/art" className="nav-item">
+        <Link to="/gallery" className="nav-item">
           <div className="nav-link">
             <i className="fa fa-paint-brush fa-2x" aria-hidden="true"></i>
-            <span className="link-text">Art</span>
+            <span className="link-text">Gallery</span>
           </div>
         </Link>
 
@@ -58,12 +58,7 @@ function App() {
 
 
 
-        <div className="nav-item">
-          <a id="open-modal-btn" className="nav-link">
-            <i className="fa fa-book fa-2x" aria-hidden="true"></i>
-            <span className="link-text">Resume</span>
-          </a>
-        </div>
+      
       </nav>
       
 

@@ -10,7 +10,10 @@
       "tools" : ["python","opencv","pandas", "tensorflow"],
       "githublink" : "null",
       "imglink" : "https://www.stereolabs.com/docs/unity/images/ObjectDetection/nyc-boxes.png",
-      "type": "application"
+      "type": "application",
+      "scale":"small",
+      "isDisable": true,
+      "inDevelopment": true
       },
       {
         "id":1,
@@ -22,19 +25,25 @@
       "tools" : ["react","nodejs","mongodb"],
       "githublink" : "null",
       "imglink" : "https://imageio.forbes.com/specials-images/imageserve/6063a818c5beaa25a4cc2f00/Stock-market-graph-/960x0.jpg?fit=bounds&format=jpg&width=960",
-      "type": "application"
+      "type": "application",
+      "scale":"Small",
+      "isDisable": true,
+      "inDevelopment": true
       },
       {
         "id":2,
       "title" : "4K Image Upscaler",
       "author" : "Alex",
       "date" : "2020UTC",
-      "metadata" : "null",
-      "description" : "This program uses OpenCV to find peoples faces in images/videos and search vehicle plate numbers in Europe and Canada. Currently, this project is under development.",
+      "metadata" : "Enhanced Deep Residual Networks for Single Image Super-Resolution (EDSR)",
+      "description" : "Built using Python and Streamlit, this application takes an input image and returns and upscaled 2K, and 4K resolution of the same image. Although the application can accept any image, drawings are prefered as they're easier for the algorithms to work with and require less time to upscale.",
       "tools" : ["fastapi","python","tensorflow","opencv"],
       "githublink" : "null",
       "imglink" : "https://lh3.googleusercontent.com/fife/AAWUweVN2HoFds4Hfrw6EmLOvYGiE-V7-IHIJJmIAKSMPsDgMeUQyYYv9ODEgPDj7yLjFWTNq6PhuJDfL3CPMoR94VR8vidahFLSSY_cayvbq6WACyB1DbrwDkrxzChU9oPU0fsP_8NyCd_zqvRaTdFHV6MulUdrKjSfAekB8zQse5EnTJEd-G1CTCE5ncGXXLHJFHvaS6Gbjchkt-EeHGMIjrZHGPznPK2oQMZhdRrXzkNXhdirlIlN4vNvy-N5MMWqlp1vcsV8aF5eu5TkuWUx9zT2rTbyGv6CBYjCE5490HxHS3uuaQdpHl_Id8mLZF_rwCHQy_n8_GYMGQ6LGRbVElRakMRXY9V-hampKkHWnyCVOsWfqtlFMLOD0kjyDc9kr5ugz4zUGGypuvlZM4iUIwyltA5pJPCxbbEkEQ_SyFDY4XoYoq24b_DaLReu9iKKtrq7EpYMBcTInz9OHgZYgIRc2-HlAmL4cd1x8RvhySGvstsIVAOWgKgkVtc5IhJ6EKtTZjZd8W7YBkT8jXAcEqH6kZEDRD9OPZksCerWtFILo4jocBzALKAYPgPk-gkqZ-xMfFweck2NEU0V5F82jHkkLrtuOHv8BCHScOA__zQwCwpdtzC8pSuBDKIy87UN-wyDjfGeXgZjVUyVOOK4sF9Z_jgaNY86Z_OBaH_i5XLpu1qFrhMcgkKuNTpCVZ1AEPOn8ojfV_peCGqCF_6NV6dux-Iprt16JGk=w1366-h656",
-      "type": "application"
+      "type": "application",
+      "scale":"Small",
+      "isDisable": false,
+      "inDevelopment": true
       },
       {
         "id":3,
@@ -46,19 +55,25 @@
       "tools" : ["jupyter","python","pandas","numpy", "tensorflow"],
       "githublink" : "null",
       "imglink" : "https://canalesportfolio.netlify.app/dist/images/about/nature-0.png",
-      "type": "application"
+      "type": "application",
+      "scale":"Small",
+      "isDisable": true,
+      "inDevelopment": true
       },
       {
         "id":4,
-      "title" : "Geotab Mapping",
+      "title" : "3D Geotab Mapping",
       "author" : "Alex",
       "date" : "2020UTC",
       "metadata" : "null",
       "description" : "This program uses OpenCV to find peoples faces in images/videos and search vehicle plate numbers in Europe and Canada. Currently, this project is under development.",
-      "tools" : ["react","python","redux"],
+      "tools" : ["react","python","redux", "javascript", "css3"],
       "githublink" : "null",
       "imglink" : "https://assets.website-files.com/5e832e12eb7ca02ee9064d42/5fced77b120d5b225e9fd4a8_cropped-2-p-1080.jpeg",
-      "type": "application"
+      "type": "application",
+      "scale":"Medium",
+      "isDisable": false,
+      "inDevelopment": false
       },
       {
         "id":5,
@@ -70,7 +85,10 @@
       "tools" : ["nodejs","mysql","express"],
       "githublink" : "null",
       "imglink" : "http://4.bp.blogspot.com/_ezXfXwVkn3k/TTaXP9ShRGI/AAAAAAAAACs/0jA3Y4Hq_6A/s1600/ih_odst+man02c.jpg",
-      "type": "api"
+      "type": "api",
+      "scale":"Medium",
+      "isDisable": false,
+      "inDevelopment": false
       },
       {
         "id":6,
@@ -82,7 +100,10 @@
       "tools" : ["nodejs","postgresql","express"],
       "githublink" : "null",
       "imglink" : "https://assets-eu-01.kc-usercontent.com/bb5aba31-d98c-0160-8548-418b3723c58e/a7c1db34-dc01-4c89-91d1-7c4f4ea5f197/Mercedes-C-Class-2021-2.jpg",
-      "type": "api"
+      "type": "api",
+      "scale":"Small",
+      "isDisable": false,
+      "inDevelopment": false
       },
       {
         "id":7,
@@ -94,7 +115,10 @@
       "tools" : ["jupyter","python","pandas","numpy", "tensorflow", "r", "matlab"],
       "githublink" : "null",
       "imglink" : "https://drtaylorwallace.com/wp-content/uploads/2020/06/osteoporosis.jpg",
-      "type": "machine"
+      "type": "machine",
+      "scale":"Large",
+      "isDisable": false,
+      "inDevelopment": false
       },
       {
         "id":8,
@@ -106,7 +130,10 @@
       "tools" : ["react","css3","javascript","mongodb"],
       "githublink" : "null",
       "imglink" : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/employees-of-german-car-maker-volkswagen-work-at-the-news-photo-1592321842.jpg?crop=1.00xw:1.00xh;0,0&resize=640:*",
-      "type": "application"
+      "type": "application",
+      "scale":"Medium",
+      "isDisable": false,
+      "inDevelopment": false
       },
       {
         "id":9,
@@ -117,8 +144,11 @@
       "description" : "Portfolio to showcase my applications.",
       "tools" : ["react","css3","javascript","python","fastapi"],
       "githublink" : "null",
-      "imglink" : "http://localhost:3000/assets/images/trials.png",
-      "type": "application"
+      "imglink" : "http://localhost:3000/assets/images/castle.png",
+      "type": "application",
+      "scale":"Small",
+      "isDisable": false,
+      "inDevelopment": false
       },
       {
         "id":10,
@@ -129,8 +159,11 @@
       "description" : "Program Downloads Images from Reddit and saves them to a local repository.",
       "tools" : ["python","html5","css3","javascript","fastapi"],
       "githublink" : "null",
-      "imglink" : "https://preview.redd.it/kd325orqch881.jpg?width=640&crop=smart&auto=webp&s=9c53e1821a7f61e41d4fc77c90ecad0a32e7fc3a",
-      "type": "application"
+      "imglink" : "https://preview.redd.it/rnk324qleye21.png?width=960&crop=smart&auto=webp&s=538006f4f19715ccf1f79f8fe1afbaa73a91c387",
+      "type": "application",
+      "scale":"Small",
+      "isDisable": false,
+      "inDevelopment": false
       }
   ]
 }

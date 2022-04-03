@@ -14,6 +14,7 @@ import Project from "./pages/project/project";
 import Error from "./pages/error/error";
 
 import reportWebVitals from './reportWebVitals';
+import Gallery from './pages/gallery/gallery';
 import Art from './pages/art/art';
 
 
@@ -38,7 +39,8 @@ render(
        
         <Route path="projects" element={<Projects />} />
         <Route path="projects/project/:id" element={<Project />} />
-        <Route path="art" element={<Art />} />
+        <Route path="gallery" element={<Gallery />} />
+        <Route path="gallery/art/:id" element={<Art />} />
         <Route path="*" element={<Error />} />
       </Route>
     </Routes>

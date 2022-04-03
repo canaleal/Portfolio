@@ -29,44 +29,37 @@ const Card = (props) => {
   return (
 
 
-    <div className="border  rounded-lg  col-span-1 shadow-xl">
+    <div className=" bg-white rounded-lg col-span-1 shadow-xl">
 
       {isLoaded ?
 
         error ?
-          <p>Error! Unable to load projects.</p>
+          <p>Error! Unable to load the project.</p>
           :
-          <>
-            <Link to={{ pathname: `/projects/project/${projectElement.id}` }} className="card card-md"
+          <div className='flex flex-col'>
+            <Link to={{ pathname: `/projects/project/${projectElement.id}` }} className=" card card-md"
               style={{ backgroundImage: `url(${projectElement.imglink})` }} loading="lazy">
             </Link>
 
             <div className='p-4'>
-              <h2 className='text-lg mb-2'>{projectElement.title}</h2>
-             
-
+              <p className='font-bold my-2'>{projectElement.title} </p>
+              <p className='text-sm my-2'>{projectElement.scale} Sized Project</p>
               <div className='flex my-2'>
 
                 {
-                  projectElement.tools.map((tool, index) => {
+                  projectElement.tools.map((tool) => {
                     return (
-                      <img  title={tool}  key={tool} className='img-icon w-8 mx-2' src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${tool}/${tool}-original.svg`} />
+                      <img title={tool} key={tool} className='img-icon w-8 mx-2' src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${tool}/${tool}-original.svg`} />
                     )
                   })
                 }
 
               </div>
-
-
-              <Link to={{ pathname: `/projects/project/${projectElement.id}` }}className="card-btn my-2 rounded-lg">View Project</Link>
-
             </div>
-          </>
+          </div>
         :
         <p>Loading</p>
       }
-
-
 
     </div>
   )
