@@ -6,34 +6,17 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-const Gallery = () => {
+const GalleryPage = () => {
 
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [artList, setArtList] = useState([]);
 
 
-    const fetchData = async () => {
-            
-            const response = await fetch('../../data/Art.json'
-                , {
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
-                    }
-                }
-            );
-    
-            const myJson = await response.json();
-    
-            const artList = myJson['Data'];
-            setArtList(artList)
-            setIsLoaded(true);
-    }
+ 
 
     useEffect(() => {
 
-        fetchData();
 
         const fetchArt = fetch('data/Art.json'
             , {
@@ -57,6 +40,8 @@ const Gallery = () => {
             setIsLoaded(true);
         });
 
+
+        return () => { setIsLoaded(false) };
 
     }, []);
 
@@ -104,4 +89,4 @@ const Gallery = () => {
     )
 }
 
-export default Gallery;
+export default GalleryPage;

@@ -4,6 +4,7 @@ import { Outlet, Link } from "react-router-dom";
 
 
 import useSound from 'use-sound';
+import Tools from '../../../components/Tools';
 
 
 const Card = (props) => {
@@ -45,14 +46,7 @@ const Card = (props) => {
               <p className='font-bold my-2'>{projectElement.title} </p>
               <p className='text-sm my-2'>{projectElement.scale} Sized Project</p>
               <div className='flex my-2'>
-
-                {
-                  projectElement.tools.map((tool) => {
-                    return (
-                      <img title={tool} key={tool} className='img-icon w-8 mx-2' src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${tool}/${tool}-original.svg`} />
-                    )
-                  })
-                }
+                <Tools tools={projectElement.tools} />
 
               </div>
             </div>

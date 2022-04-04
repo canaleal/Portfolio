@@ -8,14 +8,15 @@ import {
 
 import './index.css'
 import App from './App';
-import Home from "./pages/home/home";
-import Projects from "./pages/projects/Projects";
-import Project from "./pages/project/project";
-import Error from "./pages/error/error";
+import HomePage from "./pages/home/HomePage";
+import ProjectsPage from "./pages/projects/ProjectsPage";
+import ProjectPage from "./pages/project/ProjectPage";
+import ErrorPage from "./pages/error/ErrorPage";
+import GalleryPage from './pages/gallery/GalleryPage';
+import ArtPage from './pages/art/ArtPage';
 
 import reportWebVitals from './reportWebVitals';
-import Gallery from './pages/gallery/gallery';
-import Art from './pages/art/art';
+
 
 
 //Import font awesome and some icons
@@ -35,13 +36,13 @@ render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}>
-        <Route index element={<Home />} />
+        <Route index element={<HomePage />} />
        
-        <Route path="projects" element={<Projects />} />
-        <Route path="projects/:id" element={<Project />} />
-        <Route path="gallery" element={<Gallery />} />
-        <Route path="gallery/:id" element={<Art />} />
-        <Route path="*" element={<Error />} />
+        <Route path="projects" element={<ProjectsPage />} />
+        <Route path="projects/:id" element={<ProjectPage />} />
+        <Route path="gallery" element={<GalleryPage />} />
+        <Route path="gallery/:id" element={<ArtPage />} />
+        <Route path="*" element={<ErrorPage />} />
       </Route>
     </Routes>
   </BrowserRouter>,

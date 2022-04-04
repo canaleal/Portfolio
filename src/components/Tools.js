@@ -1,11 +1,11 @@
 
 
-import React from 'react'
+import React, { Fragment } from 'react'
 
 
 const Tools = ({tools}) => {
     return (
-        <div className='bg-white flex flex-wrap justify-between  rounded-lg p-2 shadow-lg my-4' >
+        <div className='flex flex-wrap justify-between  '>
 
             {
                 tools.map((tool) => {

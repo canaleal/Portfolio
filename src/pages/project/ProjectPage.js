@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
+import Description from './components/Description';
 
 
-const Project = (props) => {
+const ProjectPage = (props) => {
 
   let { id } = useParams();
   const [error, setError] = useState(null);
@@ -66,24 +67,7 @@ const Project = (props) => {
 
               <div className='col-span-1 p-4 '>
 
-                <p className='font-bold'>Author:</p>
-                <p className='highlight my-2 mb-4' >{project.author}</p>
-                <p className='font-bold'>Project Scale:</p>
-                <p className='my-2 mb-4'>{project.scale}</p>
-                <p className='font-bold'>Description:</p>
-                <p className='my-2 mb-4'>{project.description}</p>
-                <p className='font-bold '>Tools:</p>
-                <div className='flex my-2'>
-
-                  {
-                    project.tools.map((tool) => {
-                      return (
-                        <img title={tool} key={tool} className='img-icon w-8 mx-2' src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${tool}/${tool}-original.svg`} />
-                      )
-                    })
-                  }
-
-                </div>
+                <Description project={project} />
 
               </div>
             </div>
@@ -99,4 +83,4 @@ const Project = (props) => {
 
 }
 
-export default Project; 
+export default ProjectPage; 

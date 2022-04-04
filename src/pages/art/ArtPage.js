@@ -3,9 +3,10 @@
 import React, { Component } from 'react'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
+import Description from './components/Description';
 
 
-const Art = (props) => {
+const ArtPage = (props) => {
 
   let { id } = useParams();
   const [error, setError] = useState(null);
@@ -67,10 +68,7 @@ const Art = (props) => {
               </div>
 
               <div className='col-span-1 p-4'>
-                <p className='font-bold'>Author:</p>
-                <p className='highlight my-2 mb-4' >{art.author}</p>
-                <p className='font-bold'>Created At:</p>
-                <p className='my-2 mb-4'>{art.date}</p>
+                <Description art={art}/>
               </div>
 
             </div>
@@ -87,4 +85,4 @@ const Art = (props) => {
 
 }
 
-export default Art; 
+export default ArtPage; 

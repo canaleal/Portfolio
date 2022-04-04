@@ -2,15 +2,14 @@ import React, { Component } from 'react'
 
 import { useState, useEffect } from 'react';
 import Card from './components/Card';
-import Tools from './components/Tools';
-import { getToolsList, filterDataIfPropertyIsFalse } from '../../util/filters';
+import Tools from '../../components/Tools';
+import { getToolsList, filterDataIfPropertyIsFalse } from '../../util/Filters';
 
-const Projects = (props) => {
+const ProjectsPage = (props) => {
 
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [projectsList, setProjectsList] = useState([]);
-
     const [tools, setTools] = useState([]);
 
 
@@ -65,7 +64,11 @@ const Projects = (props) => {
                     <div className='h-full w-full flex flex-col'>
                         <h1 className='text-4xl font-bold'>Projects</h1>
 
-                        <Tools tools={tools} />
+
+                        <div className='bg-white rounded-lg p-2 shadow-lg my-4' >
+                            <Tools tools={tools} />
+                        </div>
+                        
 
 
 
@@ -86,4 +89,4 @@ const Projects = (props) => {
 
 };
 
-export default Projects;
+export default ProjectsPage;
