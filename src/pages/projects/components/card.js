@@ -37,7 +37,7 @@ const Card = (props) => {
           <p>Error! Unable to load the project.</p>
           :
           <div className='flex flex-col'>
-            <Link to={{ pathname: `/projects/project/${projectElement.id}` }} className=" card card-md"
+            <Link to={{ pathname: `/projects/${projectElement.id}` }} className=" card card-md"
               style={{ backgroundImage: `url(${projectElement.imglink})` }} loading="lazy">
             </Link>
 

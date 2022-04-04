@@ -9,7 +9,7 @@ import {
 import './index.css'
 import App from './App';
 import Home from "./pages/home/home";
-import Projects from "./pages/projects/projects";
+import Projects from "./pages/projects/Projects";
 import Project from "./pages/project/project";
 import Error from "./pages/error/error";
 
@@ -38,9 +38,9 @@ render(
         <Route index element={<Home />} />
        
         <Route path="projects" element={<Projects />} />
-        <Route path="projects/project/:id" element={<Project />} />
+        <Route path="projects/:id" element={<Project />} />
         <Route path="gallery" element={<Gallery />} />
-        <Route path="gallery/art/:id" element={<Art />} />
+        <Route path="gallery/:id" element={<Art />} />
         <Route path="*" element={<Error />} />
       </Route>
     </Routes>

@@ -13,8 +13,27 @@ const Gallery = () => {
     const [artList, setArtList] = useState([]);
 
 
+    const fetchData = async () => {
+            
+            const response = await fetch('../../data/Art.json'
+                , {
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    }
+                }
+            );
+    
+            const myJson = await response.json();
+    
+            const artList = myJson['Data'];
+            setArtList(artList)
+            setIsLoaded(true);
+    }
 
     useEffect(() => {
+
+        fetchData();
 
         const fetchArt = fetch('data/Art.json'
             , {
@@ -62,7 +81,7 @@ const Gallery = () => {
                                     return (
 
                                         art.isDisable == false ?
-                                            <Link key={art.id} to={{ pathname: `/gallery/art/${art.id}` }} className={`bg-white col-span-${art.col_span} shadow-xl `}>
+                                            <Link key={art.id} to={{ pathname: `/gallery/${art.id}` }} className={`bg-white col-span-${art.col_span} shadow-xl `}>
                                                 <div className={`card card-lg ${art.isNsfw ? 'blur' : ''}`}
                                                     style={{ backgroundImage: `url(${art.imglink})` }} loading="lazy">
                                                 </div>
