@@ -5,14 +5,14 @@ import { Link } from "react-router-dom";
 import Tools from '../../../components/Tools';
 
 
-const Card = (props) => {
+const Card = ({project}) => {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [projectElement, setProjectElement] = useState({});
 
   useEffect(() => {
     try {
-      setProjectElement(props.project);
+      setProjectElement(project);
       setIsLoaded(true);
     } catch (error) {
       setError(true);

@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom';
 import Description from './components/Description';
 
 
-const ArtPage = (props) => {
+const ArtPage = ({}) => {
 
   const { id } = useParams();
   const [error, setError] = useState(null);
@@ -31,7 +31,7 @@ const ArtPage = (props) => {
       return response.json();
     }).then(myJson => {
 
-      let element = myJson['Data'].find(item => item['id'] == id)
+      let element = myJson['Data'].find(item => item['id'] === id)
       setArt(element);
       setIsLoaded(true);
 
