@@ -1,9 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { useState, useEffect } from 'react';
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-
-import useSound from 'use-sound';
 import Tools from '../../../components/Tools';
 
 
@@ -61,4 +59,4 @@ const Card = (props) => {
 }
 
 
-export default Card;
+export default React.memo(Card);

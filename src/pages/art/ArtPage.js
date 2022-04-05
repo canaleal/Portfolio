@@ -1,6 +1,6 @@
 
 
-import React, { Component } from 'react'
+import React from 'react'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import Description from './components/Description';
@@ -8,7 +8,7 @@ import Description from './components/Description';
 
 const ArtPage = (props) => {
 
-  let { id } = useParams();
+  const { id } = useParams();
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [art, setArt] = useState({});
@@ -68,7 +68,7 @@ const ArtPage = (props) => {
               </div>
 
               <div className='col-span-1 p-4'>
-                <Description art={art}/>
+                <Description art={art} />
               </div>
 
             </div>

@@ -13,7 +13,7 @@ const GalleryPage = () => {
     const [artList, setArtList] = useState([]);
 
 
- 
+
 
     useEffect(() => {
 
@@ -65,16 +65,11 @@ const GalleryPage = () => {
                                 artList.map((art) => {
                                     return (
 
-                                        art.isDisable == false ?
-                                            <Link key={art.id} to={{ pathname: `/gallery/${art.id}` }} className={`bg-white col-span-${art.col_span} shadow-xl `}>
-                                                <div className={`card card-lg ${art.isNsfw ? 'blur' : ''}`}
-                                                    style={{ backgroundImage: `url(${art.imglink})` }} loading="lazy">
-                                                </div>
-                                            </Link>
-                                            :
-                                            <></>
-
-
+                                        <Link key={art.id} to={{ pathname: `/gallery/${art.id}` }} className={`bg-white col-span-${art.col_span} shadow-xl `}>
+                                            <div className={`card card-lg ${art.isNsfw ? 'blur' : ''}`}
+                                                style={{ backgroundImage: `url(${art.imglink})` }} loading="lazy">
+                                            </div>
+                                        </Link>
 
                                     )
                                 })
