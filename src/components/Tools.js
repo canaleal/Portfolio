@@ -31,4 +31,4 @@ const Tools = ({ tools }) => {
 }
 
 
-export default Tools;
+export default  React.memo(Tools);

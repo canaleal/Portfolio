@@ -65,10 +65,10 @@ const ProjectsPage = (props) => {
                         <h1 className='text-4xl font-bold'>Projects</h1>
 
 
-                        <div className='bg-white rounded-lg p-2 shadow-lg my-4' >
+                        {/* <div className='bg-white rounded-lg p-2 shadow-lg my-4' >
                             <Tools tools={tools} />
                         </div>
-                        
+                         */}
 
 
 

@@ -57,7 +57,7 @@ const ProjectPage = (props) => {
           <div className='h-full w-full flex flex-col'>
             <h1 className='text-4xl font-bold'>{project.title}</h1>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 my-4 bg-white  shadow-xl">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 my-4 bg-white  shadow-xl ">
 
               <div className='col-span-2'>
                 <div to={{ pathname: `/projects/element/${project.id}` }} className="card card-4xl"

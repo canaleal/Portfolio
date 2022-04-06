@@ -12,4 +12,4 @@ const Description = ({ art }) => {
 }
 
 
-export default Description;
+export default React.memo(Description);

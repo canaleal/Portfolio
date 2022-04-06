@@ -22,4 +22,4 @@ const Description = ({project}) => {
 }
 
 
-export default Description;
+export default React.memo(Description);

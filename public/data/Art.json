@@ -73,24 +73,7 @@
             "isDisable": false
         },
         
-        {
-            "id": 9,
-            "title": "Rose Close Up",
-            "author": "Alex",
-            "date": "2022-03-26 10:05:18",
-            "metadata": "null",
-            "description": "null",
-            "tools": [
-                "4K",
-                "S21-Ultra"
-            ],
-            "col_span": "1",
-            "githublink": "null",
-            "imglink": "https://lh3.google.com/u/0/d/112czajCUScokWjaEfP35uvRA-KvtQv-r=w885-h656-iv1",
-            "isNsfw": 0,
-            "artType": "image",
-            "isDisable": false
-        },
+       
         {
             "id": 10,
             "title": "El Salvador",
