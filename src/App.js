@@ -18,7 +18,12 @@ function App() {
           </div>
         </Link>
 
-       
+        <Link to="/about" className="nav-item">
+          <div className="nav-link">
+            <i className="fa fa-user-circle-o fa-2x" aria-hidden="true"></i>
+            <span className="link-text">About</span>
+          </div>
+        </Link>
 
 
         <Link to="/projects" className="nav-item">
@@ -35,6 +40,15 @@ function App() {
             <span className="link-text">Gallery</span>
           </div>
         </Link>
+
+        {/* <Link to="/logos" className="nav-item">
+          <div className="nav-link">
+            <i className="fa fa-car fa-2x" aria-hidden="true"></i>
+            <span className="link-text">Logo</span>
+          </div>
+        </Link> */}
+
+     
 
         <a href="https://github.com/canaleal" target="_blank" className="nav-item">
           <div className="nav-link">

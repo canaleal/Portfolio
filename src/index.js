@@ -22,6 +22,8 @@ import reportWebVitals from './reportWebVitals';
 //Import font awesome and some icons
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {faPython, faJs} from "@fortawesome/free-brands-svg-icons";
+import CarLogosPage from './pages/logos/CarLogosPage';
+import AboutPage from './pages/about/AboutPage';
 
 
 //Add the icons to the library so they can be used in ever single component
@@ -42,6 +44,8 @@ render(
         <Route path="projects/:id" element={<ProjectPage />} />
         <Route path="gallery" element={<GalleryPage />} />
         <Route path="gallery/:id" element={<ArtPage />} />
+        <Route path="logos" element={<CarLogosPage />} />
+        <Route path="about" element={<AboutPage />} />
         <Route path="*" element={<ErrorPage />} />
       </Route>
     </Routes>

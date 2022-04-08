@@ -6,7 +6,7 @@ const Header =()=> {
   
     return (
       
-           <div className='header h-full  rounded-lg'>
+           <div className='header h-full '>
                 <div className='flex flex-col justify-center items-center h-full p-20' >
                     
                         <h2 className='text-4xl '>Alex Canales</h2>

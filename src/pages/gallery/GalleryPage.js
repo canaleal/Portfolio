@@ -5,6 +5,8 @@ import React from 'react'
 
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Footer from '../../components/Footer';
+import PageHeader from '../../components/PageHeader';
 
 const GalleryPage = () => {
 
@@ -56,9 +58,9 @@ const GalleryPage = () => {
                     <p>Error! Unable to load projects.</p>
                     :
                     <div className='h-full w-full flex flex-col'>
-                        <h1 className='text-4xl font-bold'>Art/Images</h1>
-
-                        <div className="grid  grid-cols-1 sm:grid-cols-3 gap-4 my-4 ">
+                  
+                        <PageHeader title={'Gallery'} color={'bg-green'}/>
+                        <div className="grid  grid-cols-1 sm:grid-cols-3 gap-4 my-4 px-5">
 
 
                             {
@@ -76,6 +78,9 @@ const GalleryPage = () => {
                             }
 
                         </div>
+
+
+                        <Footer/>
                     </div>
                 :
                 <p>Loading</p>
@@ -84,4 +89,4 @@ const GalleryPage = () => {
     )
 }
 
-export default GalleryPage;
+export default React.memo(GalleryPage);

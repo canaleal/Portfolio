@@ -1,14 +1,14 @@
 
 
 .img-icon{
-    transition: all 1s;
+    transition: all 0.5s;
 
    
 
     &:hover {
 		
-		transform: scale(1.2);
-		
+
+    transform: rotate(10deg) scale(1.2);
 		filter: opacity(1) saturate(150%);
     }  
 

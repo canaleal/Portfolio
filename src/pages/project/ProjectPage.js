@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
+import Footer from '../../components/Footer';
+import PageHeader from '../../components/PageHeader';
 import Description from './components/Description';
 
 
@@ -55,26 +57,33 @@ const ProjectPage = (props) => {
 
           :
           <div className='h-full w-full flex flex-col'>
-            <h1 className='text-4xl font-bold'>{project.title}</h1>
+          
+            <PageHeader title={project.title} color={'bg-blue'}/>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 my-4 bg-white  shadow-xl ">
+            <div className='px-5 my-4'>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4  bg-white  shadow-xl ">
 
-              <div className='col-span-2'>
-                <div to={{ pathname: `/projects/element/${project.id}` }} className="card card-4xl"
-                  style={{ backgroundImage: `url(${project.imglink})` }} loading="lazy">
+                <div className='col-span-2'>
+                  <div  className="card card-4xl"
+                    style={{ backgroundImage: `url(${project.imglink})` }} loading="lazy">
+                  </div>
+                </div>
+
+                <div className='col-span-1 p-4 '>
+
+                  <Description project={project} />
+
                 </div>
               </div>
 
-              <div className='col-span-1 p-4 '>
-
-                <Description project={project} />
-
-              </div>
             </div>
+
+
+            <Footer/>
           </div>
 
         :
-        <p>Loading</p>
+        <p></p>
       }
 
 
@@ -83,4 +92,4 @@ const ProjectPage = (props) => {
 
 }
 
-export default ProjectPage; 
+export default React.memo(ProjectPage); 
