@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 
-const Header =()=> {
+const MainHeader =()=> {
 
   
     return (
@@ -21,4 +21,4 @@ const Header =()=> {
   
 };
 
-export default  React.memo(Header);
+export default  React.memo(MainHeader);
