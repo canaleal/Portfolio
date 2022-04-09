@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../../components/Footer';
 import PageHeader from '../../components/PageHeader';
-import Card from './components/Card';
+import Card from './components/GridCard';
 
 const AboutPage = () => {
 
