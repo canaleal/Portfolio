@@ -5,7 +5,7 @@ import Footer from '../../components/Footer';
 import PageHeader from '../../components/PageHeader';
 
 
-import Card from './components/Card';
+import Card from './components/GridCard';
 
 const CarLogosPage = (props) => {
 
