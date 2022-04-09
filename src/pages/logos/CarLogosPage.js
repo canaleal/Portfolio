@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Footer from '../../components/Footer';
 import PageHeader from '../../components/PageHeader';
 
-import { getToolsList, filterDataIfPropertyIsFalse } from '../../util/Filters';
+
 import Card from './components/Card';
 
 const CarLogosPage = (props) => {
