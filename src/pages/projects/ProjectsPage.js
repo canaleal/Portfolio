@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import { useState, useEffect } from 'react';
 import Card from './components/GridCard';
 import Tools from '../../components/Tools';
-import { getToolsList, filterDataIfPropertyIsFalse } from '../../util/Filters';
+import { getToolsList, filterDataIfPropertyIsFalse } from '../../util/ProjectsFilter';
 import PageHeader from '../../components/PageHeader';
 import Footer from '../../components/Footer';
 
