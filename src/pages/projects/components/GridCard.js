@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Tools from '../../../components/Tools';
 
 
-const Card = ({project}) => {
+const GridCard = ({project}) => {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [projectElement, setProjectElement] = useState({});
@@ -59,4 +59,4 @@ const Card = ({project}) => {
 }
 
 
-export default React.memo(Card);
+export default React.memo(GridCard);

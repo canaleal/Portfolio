@@ -1,11 +1,8 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-import { Link } from "react-router-dom";
-
-import Tools from '../../../components/Tools';
 
 
-const Card = ({work}) => {
+const GridCard = ({work}) => {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [workElement, setWorkElement] = useState({});
@@ -56,4 +53,4 @@ const Card = ({work}) => {
 }
 
 
-export default React.memo(Card);
+export default React.memo(GridCard);

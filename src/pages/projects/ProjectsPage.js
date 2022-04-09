@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import { useState, useEffect } from 'react';
-import Card from './components/Card';
+import Card from './components/GridCard';
 import Tools from '../../components/Tools';
 import { getToolsList, filterDataIfPropertyIsFalse } from '../../util/Filters';
 import PageHeader from '../../components/PageHeader';

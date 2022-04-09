@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 
 
 
-const Card = ({logo}) => {
+const GridCard = ({logo}) => {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [logoElement, setLogoElement] = useState({});
@@ -55,4 +55,4 @@ const Card = ({logo}) => {
 }
 
 
-export default React.memo(Card);
+export default React.memo(GridCard);
