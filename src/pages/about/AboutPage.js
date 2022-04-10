@@ -39,7 +39,7 @@ const AboutPage = () => {
             .then((responseJson) => { return responseJson['Data'] });
     }
 
-    
+
     async function getData(){
 
         try{
@@ -76,8 +76,8 @@ const AboutPage = () => {
                     <p>Error! Unable to load work list.</p>
                     :
                     <div className='h-full w-full flex flex-col'>
-
-                        <PageHeader title={'Work and Education'} color={'bg-gray-600'} />
+                       
+                        <PageHeader title={'Work'} color={'bg-gray-700'} />
 
                         <div className="grid  grid-cols-1 sm:grid-cols-5 gap-4 my-4 px-5">
 
@@ -94,7 +94,9 @@ const AboutPage = () => {
 
                         </div>
 
-                        <hr></hr>
+                  
+
+                        <PageHeader title={'Education'} color={'bg-gray-700'} />
 
                         <div className="grid  grid-cols-1 sm:grid-cols-5 gap-4 my-4 px-5">
 

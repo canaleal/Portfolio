@@ -56,6 +56,16 @@ const Footer = ({ }) => {
             "name": "Font Awesome",
             "link": "https://fontawesome.com/",
         },
+        {
+            "id":4,
+            "name":"Cool Backgrounds",
+            "link": "https://coolbackgrounds.io/"
+        },
+        {
+            "id":5,
+            "name":"Gradient Generator",
+            "link": "https://cssgradient.io/"
+        }
     ])
 
     const [aboutList, setAboutList] = useState([
