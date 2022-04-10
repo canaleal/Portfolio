@@ -31,7 +31,7 @@ const ProjectPage = (props) => {
       return response.json();
     }).then(myJson => {
 
-      let element = myJson['Data'].find(item => item['id'] === id)
+      let element = myJson['Data'].find(item => item['id'] === parseInt(id));
       setProject(element);
       setIsLoaded(true);
 
