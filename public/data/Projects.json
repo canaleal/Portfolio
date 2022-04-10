@@ -144,7 +144,7 @@
       "description" : "Portfolio to showcase my applications.",
       "tools" : ["react","python","fastapi", "heroku", "photoshop-plain"],
       "githublink" : "null",
-      "imglink" : "http://localhost:3000/assets/images/castle.png",
+      "imglink" : "~/assets/images/castle.png",
       "type": "application",
       "scale":"Small",
       "isDisable": false,

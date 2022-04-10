@@ -100,7 +100,7 @@ const Footer = ({ }) => {
                             <p className='font-bold'>Application Tools</p>
                             {applicationToolsList.map((item) => (
                                 <div key={item.id} className='my-2'>
-                                    <a href={`${item.link}`} target='_blank' className='text-sm  hover:underline'>{item.name}</a>
+                                    <a href={`${item.link}`} target='_blank' rel="noreferrer"  className='text-sm  hover:underline'>{item.name}</a>
                                 </div>
                             ))}
 

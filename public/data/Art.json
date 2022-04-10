@@ -87,7 +87,7 @@
             ],
             "col_span": "1",
             "githublink": "null",
-            "imglink": "http://localhost:3000/assets/images/nature.png",
+            "imglink": "~/assets/images/nature.png",
             "isNsfw": 0,
             "artType": "image",
             "isDisable": false

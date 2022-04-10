@@ -50,20 +50,20 @@ function App() {
 
      
 
-        <a href="https://github.com/canaleal" target="_blank" className="nav-item">
+        <a href="https://github.com/canaleal" target="_blank" rel="noreferrer"  className="nav-item">
           <div className="nav-link">
             <i className="fa fa-github fa-2x" aria-hidden="true"></i>
             <span className="link-text">Github</span>
           </div>
         </a>
-        <a href='https://bitbucket.org/Canaleal/' target="_blank" className="nav-item">
+        <a href='https://bitbucket.org/Canaleal/' target="_blank" rel="noreferrer"  className="nav-item">
           <div className="nav-link">
             <i className="fa fa-bitbucket fa-2x" aria-hidden="true"></i>
             <span className="link-text">Bitbucket</span>
           </div>
         </a>
 
-        <a href='https://www.linkedin.com/in/alex-canales' target="_blank" className="nav-item">
+        <a href='https://www.linkedin.com/in/alex-canales' target="_blank" rel="noreferrer"  className="nav-item">
           <div className="nav-link">
             <i className="fa fa-linkedin fa-2x" aria-hidden="true"></i>
             <span className="link-text">LinkedIn</span>

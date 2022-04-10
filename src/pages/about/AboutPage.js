@@ -4,7 +4,6 @@
 import React from 'react'
 
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import Footer from '../../components/Footer';
 import PageHeader from '../../components/PageHeader';
 import Card from './components/GridCard';
@@ -17,33 +16,7 @@ const AboutPage = () => {
     const [educationList, setEducationList] = useState([]);
 
 
-
-    useEffect(() => {
-
-
-        getData();
-
-        return () => { setIsLoaded(false) };
-
-    }, []);
-
-
-    async function getData(){
-
-        try{
-            const work = await getWorkList();
-            const education = await getEducationList();
-            setWorkList(work);
-            setEducationList(education);
-            setIsLoaded(true);
-        }
-        catch{
-            setError(true);
-            setIsLoaded(true);
-        }
-      
-    }
-
+    
     const getWorkList = async () => {
         return fetch('data/Work.json', {
             headers: {
@@ -65,6 +38,35 @@ const AboutPage = () => {
             .then((response) => response.json())
             .then((responseJson) => { return responseJson['Data'] });
     }
+
+    
+    async function getData(){
+
+        try{
+            const work = await getWorkList();
+            const education = await getEducationList();
+            setWorkList(work);
+            setEducationList(education);
+            setIsLoaded(true);
+        }
+        catch{
+            setError(true);
+            setIsLoaded(true);
+        }
+      
+    }
+
+    useEffect(() => {
+
+
+        getData();
+
+        return () => { setIsLoaded(false) };
+
+    }, []);
+
+
+   
 
     return (
         <div className="main ">

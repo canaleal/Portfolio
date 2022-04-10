@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {  } from 'react'
 
 import { useState, useEffect } from 'react';
 import Footer from '../../components/Footer';
@@ -7,7 +7,7 @@ import PageHeader from '../../components/PageHeader';
 
 import Card from './components/GridCard';
 
-const CarLogosPage = (props) => {
+const CarLogosPage = ({}) => {
 
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
