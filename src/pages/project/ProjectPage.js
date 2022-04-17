@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import Footer from '../../components/Footer';
 import PageHeader from '../../components/PageHeader';
+import { getDataUsingFetch } from '../../util/FetchingData';
 import Description from './components/Description';
 
 
@@ -16,33 +17,33 @@ const ProjectPage = (props) => {
 
 
 
+  async function getData(){
+    try{
+        const projectsJson = await getDataUsingFetch('../../data/Projects.json');
+       
+        let projectElement = projectsJson.find(item => item['id'] === parseInt(id));
+       
+    
+        if(projectElement){
+          setProject(projectElement);
+        }
+        else{
+           throw new Error('Project is empty')
+        }     
+    }
+    catch{
+        setError(true);
+    }
+    finally{
+        setIsLoaded(true);
+    }
+}
+
   useEffect(() => {
 
-    const fetchProjects = fetch('../../data/Projects.json'
-      , {
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        }
-      }
-    );
+   getData();
 
-    fetchProjects.then(response => {
-      return response.json();
-    }).then(myJson => {
-
-      let element = myJson['Data'].find(item => item['id'] === parseInt(id));
-      setProject(element);
-      setIsLoaded(true);
-
-    }).catch(error => {
-
-
-      setError(true);
-      setIsLoaded(true);
-    });
-
-    return () => { setIsLoaded(false) };
+    return () => { setProject({}) };
   }, []);
 
 
@@ -61,7 +62,7 @@ const ProjectPage = (props) => {
             <PageHeader title={project.title} color={'bg-blue'}/>
 
             <div className='px-5 my-4'>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4  bg-white  shadow-xl ">
+              <div className="grid grid-cols-1 sm:grid-cols-4 gap-4  bg-white  shadow-xl ">
 
                 <div className='col-span-2'>
                   <div  className="card card-4xl"
@@ -69,7 +70,7 @@ const ProjectPage = (props) => {
                   </div>
                 </div>
 
-                <div className='col-span-1 p-4 '>
+                <div className='col-span-2 p-4 '>
 
                   <Description project={project} />
 

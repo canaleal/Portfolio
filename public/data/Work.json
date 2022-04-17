@@ -5,8 +5,8 @@
             "title": "Toronto-Dominion Bank",
             "author": "Alex",
             "date": "2022-03-26 10:05:18",
-            "metadata": "null",
-            "description": "Software Developer",
+            "role": "Software Developer",
+            "description": "The Toronto-Dominion Bank is a Canadian multinational banking and financial services corporation headquartered in Toronto, Ontario.",
             "tools": [
                 "Front End",
                 "Back End"
@@ -24,8 +24,8 @@
             "title": "Geotab",
             "author": "Alex",
             "date": "2022-03-26 10:05:18",
-            "metadata": "null",
-            "description": "Mobile Application Developer and Data Analyst",
+            "role": "Mobile Application Developer and Data Analyst",
+            "description": "Geotab is advancing security, connecting commercial vehicles to the internet and providing web-based analytics to help customers better manage their fleets.",
             "tools": [
                 "Front End",
                 "Back End"
@@ -43,8 +43,8 @@
             "title": "Sheridan College",
             "author": "Alex",
             "date": "2022-03-26 10:05:18",
-            "metadata": "null",
-            "description": "Data Scientist and Machine Learning Developer",
+            "role": "Data Scientist and Machine Learning Developer",
+            "description": "The Centre for Mobile Innovation (CMI) creates innovative solutions to industry-relevant challenges in mobile health, in close collaboration with industry, community, and academic partners. ",
             "tools": [
                 "Front End",
                 "Back End"
@@ -59,30 +59,11 @@
         },
         {
             "id": 3,
-            "title": "Fiverr",
-            "author": "Alex",
-            "date": "2022-03-26 10:05:18",
-            "metadata": "null",
-            "description": "Full Stack Web developer Freelancer",
-            "tools": [
-                "Front End",
-                "Back End"
-            ],
-            "startDate": "March 2020",
-            "endDate": "January 2021",
-            "githublink": "null",
-            "imglink": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/5c837aac7c42de1f9f125cff37ab2c70-1612076004546/fiverr-og-logo.png",
-            "isNsfw": 0,
-            "artType": "image",
-            "isDisable": false
-        },
-        {
-            "id": 4,
             "title": "Universidad de El Salvador",
             "author": "Alex",
             "date": "2022-03-26 10:05:18",
-            "metadata": "null",
-            "description": "Quality Assurance Specialist",
+            "role": "Quality Assurance Specialist",
+            "description": "The University of El Salvador (UES) is the only public university in El Salvador. Its student population, according to data based on the number of students enrolled in 2013, averages 56,000 students. It is the largest university in the country and the first to be founded.",
             "tools": [
                 "Front End",
                 "Back End"

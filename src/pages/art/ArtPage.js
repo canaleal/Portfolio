@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import Footer from '../../components/Footer';
 import PageHeader from '../../components/PageHeader';
+import { getDataUsingFetch } from '../../util/FetchingData';
 import Description from './components/Description';
 
 
@@ -17,35 +18,32 @@ const ArtPage = ({ }) => {
 
 
 
+  async function getData() {
+    try {
+      const artJson = await getDataUsingFetch('../../data/Art.json');
+
+      let artElement = artJson.find(item => item['id'] === parseInt(id));
+
+
+      if (artElement) {
+        setArt(artElement);
+      }
+      else {
+        throw new Error('Art is empty')
+      }
+    }
+    catch {
+      setError(true);
+    }
+    finally {
+      setIsLoaded(true);
+    }
+  }
 
   useEffect(() => {
+    getData();
 
-    const fetchArt = fetch('../../data/Art.json'
-      , {
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        }
-      }
-    );
-
-    fetchArt.then(response => {
-      return response.json();
-    }).then(myJson => {
-
-      let element = myJson['Data'].find(item => item['id'] === parseInt(id));
-      setArt(element);
-
-      setIsLoaded(true);
-
-    }).catch(error => {
-
-
-      setError(true);
-      setIsLoaded(true);
-    });
-
-    return () => { setIsLoaded(false) };
+    return () => { setArt({}) };
   }, []);
 
 
@@ -61,11 +59,11 @@ const ArtPage = ({ }) => {
           :
           <div className='h-full w-full flex flex-col '>
 
-            <PageHeader title={art.title} color={'bg-green'}/>
+            <PageHeader title={art.title} color={'bg-green'} />
 
             <div className='px-5 my-4'>
 
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4  bg-white shadow-xl ">
+              <div className="grid grid-cols-1 sm:grid-cols-4 gap-4  bg-white shadow-xl ">
 
                 <div className='col-span-2'>
                   <div to={{ pathname: `/projects/element/${art.id}` }} className="card card-4xl"
@@ -73,7 +71,7 @@ const ArtPage = ({ }) => {
                   </div>
                 </div>
 
-                <div className='col-span-1 p-4'>
+                <div className='col-span-2 p-4'>
                   <Description art={art} />
                 </div>
 
@@ -81,7 +79,7 @@ const ArtPage = ({ }) => {
             </div>
 
 
-            <Footer/>
+            <Footer />
 
 
           </div>

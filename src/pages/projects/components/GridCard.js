@@ -47,6 +47,13 @@ const GridCard = ({project}) => {
                 <Tools tools={projectElement.tools} />
 
               </div>
+
+              <div className='ellipsis'>
+                  <p className='my-2 '>{projectElement.description}</p>
+                </div>
+
+                <Link to={{ pathname: `/projects/${projectElement.id}` }}  className="card-btn my-2 rounded-lg mt-4">Live Example</Link>
+             
             </div>
           </div>
         :

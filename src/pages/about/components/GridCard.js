@@ -39,8 +39,15 @@ const GridCard = ({work}) => {
 
             <div className='p-4'>
               <p className='font-bold my-2'>{workElement.title}</p>
-             <p className='text-sm my-2'>{workElement.description}</p>
+              <p className='highlight text-sm my-2'>{workElement.role}</p>
+              
               <p className='text-sm my-2'>{workElement.startDate} to {workElement.endDate}</p>
+
+              <hr></hr>
+              <p className='font-bold my-2'>Description</p>
+              <p className='text-sm my-2 ' >{workElement.description}</p>
+                
+             
             </div>
           </div>
         :

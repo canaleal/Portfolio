@@ -8,10 +8,14 @@ a.card-btn{
     text-align:center;
     transition: all $slow-spd;
 
+    
+
     &:hover{
         color:$dark-hover;
         background-color:$white;
         padding:0.35em 2em;
+        
+        
     }
 }
 

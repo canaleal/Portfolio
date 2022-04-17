@@ -34,7 +34,7 @@ const GridCard = ({logo}) => {
           <p>Error! Unable to load the logo.</p>
           :
           <div className='flex flex-col p-4'>
-            <img className="h-8 w-fit " src={logoElement.link} alt={logoElement.title} />
+            <img className="img-icon h-8 w-fit " src={logoElement.link} alt={logoElement.title} />
             
   
      

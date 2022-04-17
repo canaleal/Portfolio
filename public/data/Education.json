@@ -5,8 +5,8 @@
             "title": "Sheridan College",
             "author": "Alex",
             "date": "2022-03-26 10:05:18",
-            "metadata": "null",
-            "description": "Computer Science (Mobile Computing Specialization)",
+            "role": "Bachelors of Applied Science in Computer Science",
+            "description": "Sheridan's Mobile Computing degree program offers diverse courses in computer science, software engineering, mobile development and wireless networking.",
             "tools": [
                 "Front End",
                 "Back End"
@@ -18,7 +18,46 @@
             "isNsfw": 0,
             "artType": "image",
             "isDisable": false
+        },
+        {
+            "id": 1,
+            "title": "Elements of AI",
+            "author": "Alex",
+            "date": "2022-03-26 10:05:18",
+            "role": "Introduction and Building AI",
+            "description": "The Elements of AI is a series of free online courses created by Reaktor and the University of Helsinki. We want to encourage as broad a group of people as possible to learn what AI is, what can (and can't) be done with AI, and how to start creating AI methods. ",
+            "tools": [
+                "Front End",
+                "Back End"
+            ],
+            "startDate": "August 2021",
+            "endDate": "Present",
+            "githublink": "null",
+            "imglink": "https://www.conservation-careers.com/wp-content/uploads/2019/09/HY20logo_0-2.png",
+            "isNsfw": 0,
+            "artType": "image",
+            "isDisable": false
+        },
+        {
+            "id": 3,
+            "title": "Google Digital Academy (Skillshop)",
+            "author": "Alex",
+            "date": "2022-03-26 10:05:18",
+            "role": "Google Analytics",
+            "description": "Analytics Academy helps you learn about Google's measurement tools so that you can grow your business through intelligent data collection and analysis.",
+            "tools": [
+                "Front End",
+                "Back End"
+            ],
+            "startDate": "January 2021",
+            "endDate": "Present",
+            "githublink": "null",
+            "imglink": "https://devinfo.in/wp-content/uploads/job-manager-uploads/company_logo/2021/12/google.png",
+            "isNsfw": 0,
+            "artType": "image",
+            "isDisable": false
         }
+       
        
        
     ]

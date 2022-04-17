@@ -1,12 +1,14 @@
 
 
 
+import { data } from 'autoprefixer';
 import React from 'react'
 
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../../components/Footer';
 import PageHeader from '../../components/PageHeader';
+import { getDataUsingFetch } from '../../util/FetchingData';
 
 const GalleryPage = () => {
 
@@ -15,35 +17,31 @@ const GalleryPage = () => {
     const [artList, setArtList] = useState([]);
 
 
-
+    async function getData(){
+        try{
+            const artJson = await getDataUsingFetch('../../data/Art.json');
+                   
+            if(artJson && artJson.length > 0){
+                setArtList(artJson);
+            }
+            else{
+               throw new Error('Art list is empty')
+            }     
+        }
+        catch{
+            setError(true);
+        }
+        finally{
+            setIsLoaded(true);
+        }
+    }
 
     useEffect(() => {
 
 
-        const fetchArt = fetch('data/Art.json'
-            , {
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                }
-            }
-        );
+        getData();
 
-        fetchArt.then(response => {
-            return response.json();
-        }).then(myJson => {
-
-            setArtList(myJson['Data'])
-            setIsLoaded(true);
-
-        }).catch(error => {
-
-            setError(true);
-            setIsLoaded(true);
-        });
-
-
-        return () => { setIsLoaded(false) };
+        return () => { setArtList([]) };
 
     }, []);
 
@@ -60,7 +58,7 @@ const GalleryPage = () => {
                     <div className='h-full w-full flex flex-col'>
                   
                         <PageHeader title={'Gallery'} color={'bg-green'}/>
-                        <div className="grid  grid-cols-1 sm:grid-cols-3 gap-4 my-4 px-5">
+                        <div className="grid  grid-cols-1 sm:grid-cols-4 gap-4 my-4 px-5">
 
 
                             {

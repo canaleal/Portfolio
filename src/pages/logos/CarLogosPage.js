@@ -3,6 +3,7 @@ import React, {  } from 'react'
 import { useState, useEffect } from 'react';
 import Footer from '../../components/Footer';
 import PageHeader from '../../components/PageHeader';
+import { getDataUsingFetch } from '../../util/FetchingData';
 
 
 import Card from './components/GridCard';
@@ -12,40 +13,33 @@ const CarLogosPage = ({}) => {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [logoList, setLogoList] = useState([]);
-    const [tools, setTools] = useState([]);
+   
 
-
-
+    async function getData(){
+        try{
+            const logoJson = await getDataUsingFetch('data/Logos.json');
+           
+        
+            if(logoJson && logoJson.length > 0){
+                setLogoList(logoJson);
+            }
+            else{
+               throw new Error('Logo list is empty')
+            }     
+        }
+        catch{
+            setError(true);
+        }
+        finally{
+            setIsLoaded(true);
+        }
+    }
 
     useEffect(() => {
 
-        const fetchLogos = fetch('data/Logos.json'
-            , {
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                }
-            }
-        );
+        getData();
 
-        fetchLogos.then(response => {
-            return response.json();
-        }).then(myJson => {
-
-
-            setLogoList(myJson['Data'])
-
-            setIsLoaded(true);
-
-
-        }).catch(error => {
-
-
-            setError(true);
-            setIsLoaded(true);
-        });
-
-        return () => { setIsLoaded(false) };
+        return () => { setLogoList([]); };
     }, []);
 
 
@@ -66,7 +60,7 @@ const CarLogosPage = ({}) => {
 
 
                         <div className='px-5 my-4 '>
-                            <div className="grid grid-cols-3 sm:grid-cols-6 gap-4">
+                            <div className="grid grid-cols-4 sm:grid-cols-8 gap-4">
                                 {logoList.map(logo => (
                                     <Card logo={logo} />
                                 ))}

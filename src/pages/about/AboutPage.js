@@ -6,6 +6,7 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import Footer from '../../components/Footer';
 import PageHeader from '../../components/PageHeader';
+
 import Card from './components/GridCard';
 
 const AboutPage = () => {
@@ -16,7 +17,7 @@ const AboutPage = () => {
     const [educationList, setEducationList] = useState([]);
 
 
-    
+
     const getWorkList = async () => {
         return fetch('data/Work.json', {
             headers: {
@@ -40,20 +41,20 @@ const AboutPage = () => {
     }
 
 
-    async function getData(){
+    async function getData() {
 
-        try{
+        try {
             const work = await getWorkList();
             const education = await getEducationList();
             setWorkList(work);
             setEducationList(education);
             setIsLoaded(true);
         }
-        catch{
+        catch {
             setError(true);
             setIsLoaded(true);
         }
-      
+
     }
 
     useEffect(() => {
@@ -61,12 +62,12 @@ const AboutPage = () => {
 
         getData();
 
-        return () => { setIsLoaded(false) };
+        return () => { setEducationList([]); setWorkList([]); };
 
     }, []);
 
 
-   
+
 
     return (
         <div className="main ">
@@ -76,10 +77,12 @@ const AboutPage = () => {
                     <p>Error! Unable to load work list.</p>
                     :
                     <div className='h-full w-full flex flex-col'>
-                       
-                        <PageHeader title={'Work'} color={'bg-gray-700'} />
 
-                        <div className="grid  grid-cols-1 sm:grid-cols-5 gap-4 my-4 px-5">
+                     
+
+                        <PageHeader title={'Work Experience'} color={'bg-blue'} />
+
+                        <div className="grid  grid-cols-1 sm:grid-cols-4 gap-4 my-4 px-5">
 
 
                             {
@@ -94,11 +97,11 @@ const AboutPage = () => {
 
                         </div>
 
-                  
 
-                        <PageHeader title={'Education'} color={'bg-gray-700'} />
 
-                        <div className="grid  grid-cols-1 sm:grid-cols-5 gap-4 my-4 px-5">
+                        <PageHeader title={'Education and Certificates'} color={'bg-blue'} />
+
+                        <div className="grid  grid-cols-1 sm:grid-cols-4 gap-4 my-4 px-5">
 
 
                             {

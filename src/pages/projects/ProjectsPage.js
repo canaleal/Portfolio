@@ -6,6 +6,7 @@ import Tools from '../../components/Tools';
 import { getToolsList, filterDataIfPropertyIsFalse } from '../../util/ProjectsFilter';
 import PageHeader from '../../components/PageHeader';
 import Footer from '../../components/Footer';
+import { getDataUsingFetch } from '../../util/FetchingData';
 
 const ProjectsPage = (props) => {
 
@@ -16,39 +17,37 @@ const ProjectsPage = (props) => {
 
 
 
+  
+
+    async function getData(){
+        try{
+            const projectsJson = await getDataUsingFetch('data/Projects.json');
+            const projectsList = filterDataIfPropertyIsFalse(projectsJson, 'isDisable')
+            const toolsList = getToolsList(projectsJson, 'tools')
+            setTools(toolsList)
+
+            if(projectsList && projectsList.length > 0){
+                setProjectsList(projectsList);
+            }
+            else{
+               throw new Error('Projects list is empty')
+            }     
+        }
+        catch{
+            setError(true);
+        }
+        finally{
+            setIsLoaded(true);
+        }
+    }
+
 
     useEffect(() => {
 
-        const fetchProjects = fetch('../../data/Projects.json'
-            , {
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                }
-            }
-        );
+       getData();
+       
 
-        fetchProjects.then(response => {
-            return response.json();
-        }).then(myJson => {
-
-            const toolsList = getToolsList(myJson['Data'], 'tools')
-            setTools(toolsList)
-
-            const projectsList = filterDataIfPropertyIsFalse(myJson['Data'], 'isDisable')
-            setProjectsList(projectsList)
-
-            setIsLoaded(true);
-
-
-        }).catch(error => {
-
-
-            setError(true);
-            setIsLoaded(true);
-        });
-
-        return () => { setIsLoaded(false) };
+        return () => { setProjectsList([]); setTools([]); };
     }, []);
 
 
@@ -73,7 +72,7 @@ const ProjectsPage = (props) => {
                          */}
 
                         <div className='px-5 my-4 '>
-                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 ">
+                            <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 ">
                                 {projectsList.map(project => (
                                     <Card key={project.id} project={project} />
                                 ))}

@@ -103,6 +103,14 @@ hr {
   background-color: #E6E8DE;
 }
 
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
 .nav {
   z-index: 2;
   position: fixed;
