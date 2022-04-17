@@ -6,6 +6,7 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import Footer from '../../components/Footer';
 import PageHeader from '../../components/PageHeader';
+import { getDataUsingFetch } from '../../util/FetchingData';
 
 import Card from './components/GridCard';
 
@@ -18,34 +19,11 @@ const AboutPage = () => {
 
 
 
-    const getWorkList = async () => {
-        return fetch('data/Work.json', {
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            }
-        })
-            .then((response) => response.json())
-            .then((responseJson) => { return responseJson['Data'] });
-    }
-
-    const getEducationList = async () => {
-        return fetch('data/Education.json', {
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            }
-        })
-            .then((response) => response.json())
-            .then((responseJson) => { return responseJson['Data'] });
-    }
-
-
     async function getData() {
 
         try {
-            const work = await getWorkList();
-            const education = await getEducationList();
+            const work = await getDataUsingFetch('data/Work.json');
+            const education = await getDataUsingFetch('data/Education.json');
             setWorkList(work);
             setEducationList(education);
             setIsLoaded(true);
