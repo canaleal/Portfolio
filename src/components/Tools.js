@@ -21,7 +21,7 @@ const Tools = ({ tools }) => {
             {
                 tools.map((tool) => {
                     return (
-                        <img title={tool} key={tool} className='img-icon w-8 mx-2 py-2' alt='' src={returnLinkGivenIfStringContains(tool)} />
+                        <img height='100' width='auto' title={tool} key={tool} className='img-icon w-8 mx-2 py-2' alt='' src={returnLinkGivenIfStringContains(tool)} loading="lazy"/>
                     )
                 })
             }

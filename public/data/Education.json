@@ -14,7 +14,7 @@
             "startDate": "September 2018",
             "endDate": "December 2022",
             "githublink": "null",
-            "imglink": "https://www.eduopinions.com/wp-content/uploads/2018/09/SheridanCollege.logo_.jpg",
+            "imglink": "assets/images/education/sheridan.webp",
             "isNsfw": 0,
             "artType": "image",
             "isDisable": false
@@ -33,7 +33,7 @@
             "startDate": "August 2021",
             "endDate": "Present",
             "githublink": "null",
-            "imglink": "https://www.conservation-careers.com/wp-content/uploads/2019/09/HY20logo_0-2.png",
+            "imglink": "assets/images/education/helsinki.webp",
             "isNsfw": 0,
             "artType": "image",
             "isDisable": false
@@ -52,7 +52,7 @@
             "startDate": "January 2021",
             "endDate": "Present",
             "githublink": "null",
-            "imglink": "https://devinfo.in/wp-content/uploads/job-manager-uploads/company_logo/2021/12/google.png",
+            "imglink": "/assets/images/education/google.webp",
             "isNsfw": 0,
             "artType": "image",
             "isDisable": false

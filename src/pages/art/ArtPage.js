@@ -20,7 +20,7 @@ const ArtPage = ({ }) => {
 
   async function getData() {
     try {
-      const artJson = await getDataUsingFetch('data/Art.json');
+      const artJson = await getDataUsingFetch('../data/Art.json');
 
       let artElement = artJson.find(item => item['id'] === parseInt(id));
 
@@ -63,12 +63,11 @@ const ArtPage = ({ }) => {
 
             <div className='px-5 my-4'>
 
-              <div className="grid grid-cols-1 sm:grid-cols-4 gap-4  bg-white shadow-xl ">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-4  bg-white shadow-xl ">
 
                 <div className='col-span-2'>
-                  <div to={{ pathname: `/projects/element/${art.id}` }} className="card card-4xl"
-                    style={{ backgroundImage: `url(${art.imglink})` }} loading="lazy">
-                  </div>
+              
+                  <img height='100' width='auto' src={`${art.imglink}`} alt="" className='card card-4xl'  loading="lazy"/>
                 </div>
 
                 <div className='col-span-2 p-4'>

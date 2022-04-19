@@ -62,12 +62,11 @@ const ProjectPage = (props) => {
             <PageHeader title={project.title} color={'bg-blue'}/>
 
             <div className='px-5 my-4'>
-              <div className="grid grid-cols-1 sm:grid-cols-4 gap-4  bg-white  shadow-xl ">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-4  bg-white  shadow-xl ">
 
                 <div className='col-span-2'>
-                  <div  className="card card-4xl"
-                    style={{ backgroundImage: `url(${project.imglink})` }} loading="lazy">
-                  </div>
+             
+                  <img height='100' width='auto' src={`${project.imglink}`} alt={`${project.title}`} className='card card-4xl'  loading="lazy"/>
                 </div>
 
                 <div className='col-span-2 p-4 '>

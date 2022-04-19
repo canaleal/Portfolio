@@ -58,7 +58,7 @@ const GalleryPage = () => {
                     <div className='h-full w-full flex flex-col'>
                   
                         <PageHeader title={'Gallery'} color={'bg-green'}/>
-                        <div className="grid  grid-cols-1 sm:grid-cols-4 gap-4 my-4 px-5">
+                        <div className="grid  grid-cols-1 md:grid-cols-4 gap-4 my-4 px-5">
 
 
                             {
@@ -66,9 +66,10 @@ const GalleryPage = () => {
                                     return (
 
                                         <Link key={art.id} to={{ pathname: `/gallery/${art.id}` }} className={`bg-white col-span-${art.col_span} shadow-xl `}>
-                                            <div className={`card card-lg ${art.isNsfw ? 'blur' : ''}`}
-                                                style={{ backgroundImage: `url(${art.imglink})` }} loading="lazy">
-                                            </div>
+                                           
+
+                                            <img height='100' width='auto' src={`${art.imglink}`} alt={`${art.title}`} className={`card card-md ${art.isNsfw ? 'blur' : ''}`}  loading="lazy"/>
+                                            
                                         </Link>
 
                                     )

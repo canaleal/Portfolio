@@ -14,7 +14,7 @@
             "startDate": "May 2022",
             "endDate": "Present",
             "githublink": "null",
-            "imglink": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Toronto-Dominion_Bank_logo.svg/1144px-Toronto-Dominion_Bank_logo.svg.png",
+            "imglink": "assets/images/work/td.webp",
             "isNsfw": 0,
             "artType": "image",
             "isDisable": false
@@ -33,7 +33,7 @@
             "startDate": "January 2022",
             "endDate": "Present",
             "githublink": "null",
-            "imglink": "https://pbs.twimg.com/profile_images/1410948329534627845/4OKG_bsd_400x400.png",
+            "imglink": "assets/images/work/geotab.webp",
             "isNsfw": 0,
             "artType": "image",
             "isDisable": false
@@ -52,7 +52,7 @@
             "startDate": "January 2021",
             "endDate": "February 2022",
             "githublink": "null",
-            "imglink": "https://www.eduopinions.com/wp-content/uploads/2018/09/SheridanCollege.logo_.jpg",
+            "imglink": "assets/images/work/sheridan.webp",
             "isNsfw": 0,
             "artType": "image",
             "isDisable": false
@@ -71,7 +71,7 @@
             "startDate": "March 2020",
             "endDate": "April 2020",
             "githublink": "null",
-            "imglink": "https://media-cdn.sygictraveldata.com/media/1200x630/612664395a40232133447d33247d383739323834333839",
+            "imglink": "assets/images/work/elsalvador.webp",
             "isNsfw": 0,
             "artType": "image",
             "isDisable": false

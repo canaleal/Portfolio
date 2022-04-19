@@ -60,7 +60,7 @@ const CarLogosPage = ({}) => {
 
 
                         <div className='px-5 my-4 '>
-                            <div className="grid grid-cols-4 sm:grid-cols-8 gap-4">
+                            <div className="grid grid-cols-4 md:grid-cols-8 gap-4">
                                 {logoList.map(logoElement => (
                                     <Card logoElement={logoElement} />
                                 ))}

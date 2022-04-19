@@ -13,7 +13,7 @@
             ],
             "col_span": "1",
             "githublink": "null",
-            "imglink": "https://adventureontario.org/wp-content/uploads/2020/01/SmokeyHollowFalls-18.jpg",
+            "imglink": "/assets/images/art/smokeyhollow.webp",
             "isNsfw": 0,
             "artType": "image",
             "isDisable": false
@@ -31,7 +31,7 @@
             ],
             "col_span": "1",
             "githublink": "null",
-            "imglink": "https://www.gardenia.net/storage/app/public/uploads/images/detail/YkyKzZfByX7Y8VPRyHup6BYcrIpw4t2YZeB7xZi4.jpeg",
+            "imglink": "/assets/images/art/fern.webp",
             "isNsfw": 0,
             "artType": "image",
             "isDisable": false
@@ -49,7 +49,7 @@
             ],
             "col_span": "1",
             "githublink": "null",
-            "imglink": "https://p0.piqsels.com/preview/549/451/686/autumn-autumn-leaves-leaves-the-leaves.jpg",
+            "imglink": "/assets/images/art/maple.webp",
             "isNsfw": 0,
             "artType": "image",
             "isDisable": false
@@ -67,7 +67,7 @@
             ],
             "col_span": "1",
             "githublink": "null",
-            "imglink": "https://gardenerspath.com/wp-content/uploads/2021/03/Wood-Hyacinth-Spanish-Bluebell-Hyacinthoides-hispanica-Growing-in-the-Garden.jpg",
+            "imglink": "/assets/images/art/spanish.webp",
             "isNsfw": 0,
             "artType": "image",
             "isDisable": false
@@ -87,7 +87,7 @@
             ],
             "col_span": "1",
             "githublink": "null",
-            "imglink": "/assets/images/nature.png",
+            "imglink": "/assets/images/art/nature.webp",
             "isNsfw": 0,
             "artType": "image",
             "isDisable": false
@@ -105,7 +105,7 @@
             ],
             "col_span": "1",
             "githublink": "null",
-            "imglink": "https://www.rbg.ca/app/uploads/2020/03/bird-of-paradise-bloom-mediterranean-garden-2000x1333.jpg",
+            "imglink": "/assets/images/art/paradise.webp",
             "isNsfw": 0,
             "artType": "image",
             "isDisable": false
@@ -123,7 +123,7 @@
             ],
             "col_span": "1",
             "githublink": "null",
-            "imglink": "/assets/images/Mountains.JPG",
+            "imglink": "/assets/images/art/mountains.webp",
             "isNsfw": 0,
             "artType": "image",
             "isDisable": false

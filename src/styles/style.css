@@ -459,6 +459,8 @@ a.special-btn:hover {
   transition: all 1s;
   overflow: hidden;
   background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   background-position: center;
   background-repeat: no-repeat;
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import { useState, useEffect } from 'react';
-import Card from './components/GridCard';
+import Card from './components/ProjectCard';
 import AboutCard from './components/AboutCard';
 import Tools from '../../components/Tools';
 import { getToolsList, filterDataIfPropertyIsFalse } from '../../util/ProjectsFilter';
@@ -9,7 +9,7 @@ import PageHeader from '../../components/PageHeader';
 import Footer from '../../components/Footer';
 import { getDataUsingFetch } from '../../services/FetchingData';
 
-const ProjectsPage = (props) => {
+const ProjectsPage = ({}) => {
 
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
@@ -81,7 +81,7 @@ const ProjectsPage = (props) => {
                         
 
                         <div className='px-5 my-4 '>
-                            <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 ">
+                            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 ">
                                 {projectsList.map(projectElement => (
                                     <Card key={projectElement.id} projectElement={projectElement} />
                                 ))}
@@ -94,7 +94,7 @@ const ProjectsPage = (props) => {
 
                         <PageHeader title={'Work Experience'} color={'bg-blue'} />
 
-                        <div className="grid  grid-cols-1 sm:grid-cols-4 gap-4 my-4 px-5">
+                        <div className="grid  grid-cols-1 md:grid-cols-4 gap-4 my-4 px-5">
 
 
                             {
@@ -113,7 +113,7 @@ const ProjectsPage = (props) => {
 
                         <PageHeader title={'Education and Certificates'} color={'bg-blue'} />
 
-                        <div className="grid  grid-cols-1 sm:grid-cols-4 gap-4 my-4 px-5">
+                        <div className="grid  grid-cols-1 md:grid-cols-4 gap-4 my-4 px-5">
 
 
                             {

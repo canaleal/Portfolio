@@ -13,9 +13,8 @@ const AboutCard = ({  aboutElement }) => {
 
 
       <div className='flex flex-col'>
-        <div className=" card card-md"
-          style={{ backgroundImage: `url(${aboutElement.imglink})` }} loading="lazy">
-        </div>
+   
+        <img height='100' width='auto' src={`${aboutElement.imglink}`} alt={`${aboutElement.title}`} className='card card-md'  loading="lazy"/>
 
         <div className='p-4'>
           <p className='font-bold my-2'>{aboutElement.title}</p>
