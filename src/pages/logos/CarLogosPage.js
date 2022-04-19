@@ -3,7 +3,7 @@ import React, {  } from 'react'
 import { useState, useEffect } from 'react';
 import Footer from '../../components/Footer';
 import PageHeader from '../../components/PageHeader';
-import { getDataUsingFetch } from '../../util/FetchingData';
+import { getDataUsingFetch } from '../../services/FetchingData';
 
 
 import Card from './components/GridCard';
@@ -61,8 +61,8 @@ const CarLogosPage = ({}) => {
 
                         <div className='px-5 my-4 '>
                             <div className="grid grid-cols-4 sm:grid-cols-8 gap-4">
-                                {logoList.map(logo => (
-                                    <Card logo={logo} />
+                                {logoList.map(logoElement => (
+                                    <Card logoElement={logoElement} />
                                 ))}
                             </div>
 

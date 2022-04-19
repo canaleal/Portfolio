@@ -15,13 +15,21 @@ const Description = ({ project }) => {
             <div className='flex my-2'>
                 <Tools tools={project.tools} />
             </div>
+            
 
             {
                 project.title === 'Automobile Logo API' ?
-                    <Link Link to="/logos" className="card-btn my-4 rounded-lg">Live Example</Link>
+                    <Link to="/logos" className="card-btn my-4 rounded-lg">Live Example</Link>
                     :
                     null
+            }
 
+
+            {
+                project.githublink !== 'null' ?
+                    <a href={project.githublink} target="_blank" rel="noreferrer" className="card-btn card-btn-blue my-4 rounded-lg">Code</a>
+                    :
+                    null
             }
         </Fragment>
     )

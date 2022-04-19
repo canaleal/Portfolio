@@ -1,21 +1,26 @@
-a.card-btn{
+.card-btn{
     display:inline-block;
     padding:0.35em 1.2em;
     border:0.1em solid $black;
    
     font-weight:300;
-    color:$black;
+   
     text-align:center;
     transition: all $slow-spd;
 
     
 
     &:hover{
-        color:$dark-hover;
-        background-color:$white;
+       
         padding:0.35em 2em;
         
         
     }
+
+    &-blue{
+        color: white;
+        background-color: #4648a4;
+    }
+
 }
 

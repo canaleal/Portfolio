@@ -526,21 +526,23 @@ a.special-btn:hover {
           filter: none;
 }
 
-a.card-btn {
+.card-btn {
   display: inline-block;
   padding: 0.35em 1.2em;
   border: 0.1em solid #000;
   font-weight: 300;
-  color: #000;
   text-align: center;
   -webkit-transition: all 600ms;
   transition: all 600ms;
 }
 
-a.card-btn:hover {
-  color: #212529;
-  background-color: #fff;
+.card-btn:hover {
   padding: 0.35em 2em;
+}
+
+.card-btn-blue {
+  color: white;
+  background-color: #4648a4;
 }
 
 .img-icon {

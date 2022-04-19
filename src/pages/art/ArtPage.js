@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import Footer from '../../components/Footer';
 import PageHeader from '../../components/PageHeader';
-import { getDataUsingFetch } from '../../util/FetchingData';
+import { getDataUsingFetch } from '../../services/FetchingData';
 import Description from './components/Description';
 
 
@@ -20,7 +20,7 @@ const ArtPage = ({ }) => {
 
   async function getData() {
     try {
-      const artJson = await getDataUsingFetch('../../data/Art.json');
+      const artJson = await getDataUsingFetch('data/Art.json');
 
       let artElement = artJson.find(item => item['id'] === parseInt(id));
 

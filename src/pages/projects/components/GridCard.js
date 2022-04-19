@@ -5,39 +5,18 @@ import { Link } from "react-router-dom";
 import Tools from '../../../components/Tools';
 
 
-const GridCard = ({project}) => {
-  const [error, setError] = useState(null);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [projectElement, setProjectElement] = useState({});
-
-  useEffect(() => {
-    try {
-      setProjectElement(project);
-      setIsLoaded(true);
-    } catch (error) {
-      setError(true);
-      setIsLoaded(true);
-    }
-
-    return () => { setProjectElement({}) };
-  }, [])
-
-
-
-
+const GridCard = ({projectElement}) => {
+ 
   return (
 
 
     <div className=" bg-white rounded-lg col-span-1 shadow-xl">
 
-      {isLoaded ?
-
-        error ?
-          <p>Error! Unable to load the project.</p>
-          :
+ 
           <div className='flex flex-col'>
-            <Link to={{ pathname: `/projects/${projectElement.id}` }} className=" card card-md"
-              style={{ backgroundImage: `url(${projectElement.imglink})` }} loading="lazy">
+            <Link to={{ pathname: `/projects/${projectElement.id}` }} >
+
+                <div className='card card-md' style={{ backgroundImage: `url(${projectElement.imglink})` }} loading="lazy"></div>
             </Link>
 
             <div className='p-4'>
@@ -52,13 +31,18 @@ const GridCard = ({project}) => {
                   <p className='my-2 '>{projectElement.description}</p>
                 </div>
 
-                <Link to={{ pathname: `/projects/${projectElement.id}` }}  className="card-btn my-2 rounded-lg mt-4">Live Example</Link>
+                <Link to={{ pathname: `/projects/${projectElement.id}` }}  className="card-btn my-2 rounded-lg mt-4">Read More</Link>
+
+                {
+                projectElement.githublink !== 'null' ?
+                    <a href={projectElement.githublink} target="_blank" rel="noreferrer" className="card-btn card-btn-blue my-4 ml-2 rounded-lg">Code</a>
+                    :
+                    null
+            }
              
             </div>
           </div>
-        :
-        <p>Loading</p>
-      }
+        
 
     </div>
   )

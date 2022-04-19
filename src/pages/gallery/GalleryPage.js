@@ -8,7 +8,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../../components/Footer';
 import PageHeader from '../../components/PageHeader';
-import { getDataUsingFetch } from '../../util/FetchingData';
+import { getDataUsingFetch } from '../../services/FetchingData';
 
 const GalleryPage = () => {
 
@@ -19,7 +19,7 @@ const GalleryPage = () => {
 
     async function getData(){
         try{
-            const artJson = await getDataUsingFetch('../../data/Art.json');
+            const artJson = await getDataUsingFetch('data/Art.json');
                    
             if(artJson && artJson.length > 0){
                 setArtList(artJson);
