@@ -64,14 +64,14 @@ const ProjectsPage = (props) => {
 
 
     return (
-        <div className="main " >
+        <div className="main " data-testid="main-page" >
 
             {isLoaded ?
 
                 error ?
                     <p>Error! Unable to load projects.</p>
                     :
-                    <div className='h-full w-full flex flex-col'>
+                    <div className='h-full w-full flex flex-col' >
 
                         <PageHeader title={'Projects'} color={'bg-blue'}/>
 
