@@ -6,14 +6,14 @@ import {
   Route,
 } from "react-router-dom";
 
-import './index.css'
+
 import App from './App';
 import HomePage from "./pages/home/HomePage";
 import ProjectsPage from "./pages/projects/ProjectsPage";
-import ProjectPage from "./pages/project/ProjectPage";
+import ProjectPage from "./pages/projects/ProjectPage";
 import ErrorPage from "./pages/error/ErrorPage";
 import GalleryPage from './pages/gallery/GalleryPage';
-import ArtPage from './pages/art/ArtPage';
+import ArtPage from './pages/gallery/ArtPage';
 
 import reportWebVitals from './reportWebVitals';
 
@@ -22,7 +22,7 @@ import reportWebVitals from './reportWebVitals';
 //Import font awesome and some icons
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {faPython, faJs} from "@fortawesome/free-brands-svg-icons";
-import CarLogosPage from './pages/logos/CarLogosPage';
+import CarLogosPage from './pages/logos/LogosPage';
 
 
 

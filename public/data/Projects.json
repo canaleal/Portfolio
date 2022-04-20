@@ -97,7 +97,7 @@
       "date" : "2020UTC",
       "metadata" : "null",
       "description" : "This Vehicle API provides access to a library of vehicle Logos. Instead of using an ID, Logos are retrieved using the Manufacturer Name.",
-      "tools" : ["nodejs","postgresql","express", "heroku"],
+      "tools" : ["nodejs","mongodb","express", "heroku"],
       "githublink" : "null",
       "imglink" : "/assets/images/projects/mercedes.webp",
       "type": "api",

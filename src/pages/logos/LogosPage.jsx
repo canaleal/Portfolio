@@ -6,7 +6,7 @@ import PageHeader from '../../components/PageHeader';
 import { getDataUsingFetch } from '../../services/FetchingData';
 
 
-import Card from './components/GridCard';
+import Card from './components/LogoCard';
 
 const CarLogosPage = ({}) => {
 

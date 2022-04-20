@@ -1,10 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 import { useState, useEffect } from 'react';
 import Card from './components/ProjectCard';
 import AboutCard from './components/AboutCard';
-import Tools from '../../components/Tools';
-import { getToolsList, filterDataIfPropertyIsFalse } from '../../util/ProjectsFilter';
+import { getToolsList, filterDataIfPropertyIsFalse } from '../../helpers/Filters';
 import PageHeader from '../../components/PageHeader';
 import Footer from '../../components/Footer';
 import { getDataUsingFetch } from '../../services/FetchingData';

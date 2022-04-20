@@ -78,4 +78,30 @@
 	}
 }
 
+.card-btn{
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid $black;
+   
+    font-weight:300;
+   
+    text-align:center;
+    transition: all $slow-spd;
+
+    
+
+    &:hover{
+       
+        padding:0.35em 2em;
+        
+        
+    }
+
+    &-blue{
+        color: white;
+        background-color: #4648a4;
+    }
+
+}
+
 
