@@ -6,9 +6,9 @@ import PageHeader from '../../components/PageHeader';
 import { getDataUsingFetch } from '../../services/FetchingData';
 
 
-import Card from './components/LogoCard';
+import LogoCard from './components/LogoCard';
 
-const CarLogosPage = ({}) => {
+const AutomobileLogoPage = ({}) => {
 
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
@@ -62,7 +62,7 @@ const CarLogosPage = ({}) => {
                         <div className='px-5 my-4 '>
                             <div className="grid grid-cols-4 md:grid-cols-8 gap-4">
                                 {logoList.map(logoElement => (
-                                    <Card logoElement={logoElement} />
+                                    <LogoCard logoElement={logoElement} />
                                 ))}
                             </div>
 
@@ -81,4 +81,4 @@ const CarLogosPage = ({}) => {
 
 };
 
-export default React.memo(CarLogosPage);
+export default React.memo(AutomobileLogoPage);

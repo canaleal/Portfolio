@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom';
 import Footer from '../../components/Footer';
 import PageHeader from '../../components/PageHeader';
 import { getDataUsingFetch } from '../../services/FetchingData';
-import Description from './components/Description';
+import Description from './components/ArtPageDescription';
 
 
 const ArtPage = ({ }) => {

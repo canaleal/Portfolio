@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 
-const Description = ({ art }) => {
+const ArtPageDescription = ({ art }) => {
     const {author, date, description} = art;
     return (
         <Fragment>
@@ -15,4 +15,4 @@ const Description = ({ art }) => {
 }
 
 
-export default React.memo(Description);
+export default React.memo(ArtPageDescription);

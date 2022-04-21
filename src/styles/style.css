@@ -549,6 +549,11 @@ a.special-btn:hover {
   background-color: #4648a4;
 }
 
+.card-btn-green {
+  color: white;
+  background-color: #007a3e;
+}
+
 .img-icon {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;

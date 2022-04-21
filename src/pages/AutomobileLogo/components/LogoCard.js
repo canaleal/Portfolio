@@ -1,6 +1,6 @@
 import React from 'react'
 
-const GridCard = ({logoElement}) => {
+const LogoCard = ({logoElement}) => {
  
 
 
@@ -23,4 +23,4 @@ const GridCard = ({logoElement}) => {
 }
 
 
-export default React.memo(GridCard);
+export default React.memo(LogoCard);

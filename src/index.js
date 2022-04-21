@@ -22,7 +22,7 @@ import reportWebVitals from './reportWebVitals';
 //Import font awesome and some icons
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {faPython, faJs} from "@fortawesome/free-brands-svg-icons";
-import CarLogosPage from './pages/logos/LogosPage';
+import AutomobileLogoPage from './pages/AutomobileLogo/AutomobileLogoPage';
 
 
 
@@ -44,7 +44,7 @@ render(
         <Route path="projects/:id" element={<ProjectPage />} />
         <Route path="gallery" element={<GalleryPage />} />
         <Route path="gallery/:id" element={<ArtPage />} />
-        <Route path="logos" element={<CarLogosPage />} />
+        <Route path="logos" element={<AutomobileLogoPage />} />
         <Route path="*" element={<ErrorPage />} />
       </Route>
     </Routes>

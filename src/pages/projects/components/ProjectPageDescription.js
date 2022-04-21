@@ -2,9 +2,19 @@ import React, { Fragment } from 'react'
 import { Link } from 'react-router-dom';
 import Tools from '../../../components/Tools';
 
-const Description = ({ project }) => {
+const ProjectPageDescription = ({ project }) => {
 
     const {author, scale, title, description, tools, githublink} = project;
+
+    const returnLinkComponentGivenTitle = (title) => {
+        if (title === 'Automobile Logo API') {
+            return <Link to="/logos" className="card-btn card-btn-green my-4 rounded-lg">Live Example</Link>
+        } 
+        else{
+            return null;
+        }
+    }
+
 
     return (
         <Fragment>
@@ -21,10 +31,7 @@ const Description = ({ project }) => {
             
 
             {
-                title === 'Automobile Logo API' ?
-                    <Link to="/logos" className="card-btn my-4 rounded-lg">Live Example</Link>
-                    :
-                    null
+                returnLinkComponentGivenTitle(title)
             }
 
 
@@ -39,4 +46,4 @@ const Description = ({ project }) => {
 }
 
 
-export default React.memo(Description);
+export default React.memo(ProjectPageDescription);

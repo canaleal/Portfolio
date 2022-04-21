@@ -68,7 +68,7 @@
       "metadata" : "null",
       "description" : "This program uses OpenCV to find peoples faces in images/videos and search vehicle plate numbers in Europe and Canada. Currently, this project is under development.",
       "tools" : ["react","tailwindcss-plain","redux","nodejs", "express", "googlecloud" ],
-      "githublink" : "null",
+      "githublink" : "https://github.com/canaleal/ComputerVision_UI_Mapping",
       "imglink" : "/assets/images/projects/mapbox.webp",
       "type": "application",
       "scale":"Medium",
