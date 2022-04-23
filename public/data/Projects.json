@@ -2,17 +2,17 @@
   "Data" : [
       {
       "id":0,
-      "title" : "OpenCV Plate and Face Recognition",
+      "title" : "Road Obstacle Detection",
       "author" : "Alex",
       "date" : "2020UTC",
       "metadata" : "null",
-      "description" : "This program uses OpenCV to find peoples faces in images/videos and search vehicle plate numbers in Europe and Canada. Currently, this project is under development.",
-      "tools" : ["python","opencv","pandas", "tensorflow"],
+      "description" : "This program uses OpenCV and Tensorflow to detect potholes in Images, and Videos. Currently, this project is under development.",
+      "tools" : ["fastapi","python","opencv","pandas", "tensorflow"],
       "githublink" : "null",
-      "imglink" : "",
+      "imglink" : "/assets/images/projects/impediments.webp",
       "type": "application",
-      "scale":"small",
-      "isDisable": true,
+      "scale":"Medium",
+      "isDisable": false,
       "inDevelopment": true
       },
       {
@@ -36,7 +36,7 @@
       "author" : "Alex",
       "date" : "2020UTC",
       "metadata" : "Enhanced Deep Residual Networks for Single Image Super-Resolution (EDSR)",
-      "description" : "Built using Python and Streamlit, this application takes an input image and returns and upscaled 2K, and 4K resolution of the same image. Although the application can accept any image, drawings are prefered as they're easier for the algorithms to work with and require less time to upscale.",
+      "description" : "Built using Python and Streamlit, this application takes an input image and returns and upscaled 2K, or 4K version of the same image. Although the application can accept any image, drawings are prefered as they're easier for the algorithms to work with and require less time to upscale.",
       "tools" : ["fastapi","python","tensorflow","opencv"],
       "githublink" : "null",
       "imglink" : "/assets/images/projects/upscaler.webp",

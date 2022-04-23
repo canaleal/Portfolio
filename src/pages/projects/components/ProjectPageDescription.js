@@ -6,15 +6,32 @@ const ProjectPageDescription = ({ project }) => {
 
     const {author, scale, title, description, tools, githublink} = project;
 
+
+
+    
+  const returnLinkComponentGivenGithubLink = (githublink) => {
+
+    if (githublink !== 'null') {
+      return <a href={githublink} target="_blank" rel="noreferrer" className="card-btn card-btn-blue my-4 ml-2 rounded-lg">Code</a>
+    }
+    else {
+      return null;
+    }
+  }
+    
+
     const returnLinkComponentGivenTitle = (title) => {
-        if (title === 'Automobile Logo API') {
-            return <Link to="/logos" className="card-btn card-btn-green my-4 rounded-lg">Live Example</Link>
-        } 
-        else{
+
+
+        switch (title) {
+          case 'Automobile Logo API':
+            return <Link to="/logos" className="card-btn card-btn-green my-4 ml-2 rounded-lg">Example</Link>
+          case 'Portfolio Website':
+            return <Link to="/" className="card-btn card-btn-green my-4 ml-2 rounded-lg">Example</Link>
+          default:
             return null;
         }
-    }
-
+      }
 
     return (
         <Fragment>
@@ -31,16 +48,13 @@ const ProjectPageDescription = ({ project }) => {
             
 
             {
-                returnLinkComponentGivenTitle(title)
-            }
+            returnLinkComponentGivenGithubLink(githublink)
+          }
 
 
-            {
-                githublink !== 'null' ?
-                    <a href={githublink} target="_blank" rel="noreferrer" className="card-btn card-btn-blue my-4 rounded-lg">Code</a>
-                    :
-                    null
-            }
+{
+            returnLinkComponentGivenTitle(title)
+          }
         </Fragment>
     )
 }
