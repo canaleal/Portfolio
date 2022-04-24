@@ -7,37 +7,23 @@
       "date" : "2020UTC",
       "metadata" : "null",
       "description" : "This program uses OpenCV and Tensorflow to detect potholes in Images, and Videos. Currently, this project is under development.",
-      "tools" : ["fastapi","python","opencv","pandas", "tensorflow"],
-      "githublink" : "null",
+      "tools" : ["python","opencv","pandas", "tensorflow", "pytorch", "selenium"],
+      "githublink" : "https://github.com/canaleal/PotholeObjectDetection",
       "imglink" : "/assets/images/projects/impediments.webp",
       "type": "application",
       "scale":"Medium",
       "isDisable": false,
       "inDevelopment": true
       },
+    
       {
         "id":1,
-      "title" : "Illium Stock Trader",
-      "author" : "Alex",
-      "date" : "2020UTC",
-      "metadata" : "null",
-      "description" : "This program uses OpenCV to find peoples faces in images/videos and search vehicle plate numbers in Europe and Canada. Currently, this project is under development.",
-      "tools" : ["react","nodejs","mongodb"],
-      "githublink" : "null",
-      "imglink" : "",
-      "type": "application",
-      "scale":"Small",
-      "isDisable": true,
-      "inDevelopment": true
-      },
-      {
-        "id":2,
       "title" : "4K Image Upscaler",
       "author" : "Alex",
       "date" : "2020UTC",
       "metadata" : "Enhanced Deep Residual Networks for Single Image Super-Resolution (EDSR)",
       "description" : "Built using Python and Streamlit, this application takes an input image and returns and upscaled 2K, or 4K version of the same image. Although the application can accept any image, drawings are prefered as they're easier for the algorithms to work with and require less time to upscale.",
-      "tools" : ["fastapi","python","tensorflow","opencv"],
+      "tools" : ["fastapi","python","tensorflow","opencv", "pytest"],
       "githublink" : "null",
       "imglink" : "/assets/images/projects/upscaler.webp",
       "type": "application",
@@ -46,22 +32,7 @@
       "inDevelopment": true
       },
       {
-        "id":3,
-      "title" : "Generative Adversarial Networks",
-      "author" : "Alex",
-      "date" : "2020UTC",
-      "metadata" : "null",
-      "description" : "Generative Adversarial Networks, or GANs for short, are an approach to generative modeling using deep learning methods, such as convolutional neural networks.",
-      "tools" : ["jupyter","python","pandas","numpy", "tensorflow"],
-      "githublink" : "null",
-      "imglink" : "",
-      "type": "application",
-      "scale":"Small",
-      "isDisable": true,
-      "inDevelopment": true
-      },
-      {
-        "id":4,
+        "id":2,
       "title" : "3D Geotab Mapping",
       "author" : "Alex",
       "date" : "2020UTC",
@@ -76,7 +47,7 @@
       "inDevelopment": false
       },
       {
-        "id":5,
+        "id":3,
       "title" : "Halo Statistics API",
       "author" : "Alex",
       "date" : "2020UTC",
@@ -91,7 +62,7 @@
       "inDevelopment": false
       },
       {
-        "id":6,
+        "id":4,
       "title" : "Automobile Logo API",
       "author" : "Alex",
       "date" : "2020UTC",
@@ -106,7 +77,7 @@
       "inDevelopment": false
       },
       {
-        "id":7,
+        "id":5,
       "title" : "Osteoporosis Machine Learning Detection",
       "author" : "Ed Sykes, Ravi Jain, Alex Canales, Wei Bin Wang, Mohit Deol, Jennifer Weldon, Rohit Shanker, Volodymyr Voytenko, Jansen Sullivan, Doug Sauer",
       "date" : "2020UTC",
@@ -121,7 +92,7 @@
       "inDevelopment": false
       },
       {
-        "id":8,
+        "id":6,
       "title" : "Vehicle Identification Number : OCR device",
       "author" : "Alex",
       "date" : "2020UTC",
@@ -136,7 +107,7 @@
       "inDevelopment": false
       },
       {
-        "id":9,
+        "id":7,
       "title" : "Portfolio Website",
       "author" : "Alex",
       "date" : "2020UTC",
@@ -151,7 +122,7 @@
       "inDevelopment": false
       },
       {
-        "id":10,
+        "id":8,
       "title" : "Reddit Image Downloader",
       "author" : "Alex",
       "date" : "2020UTC",

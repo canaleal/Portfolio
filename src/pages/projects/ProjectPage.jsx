@@ -19,6 +19,7 @@ const ProjectPage = (props) => {
 
   async function getData(){
     try{
+
         const projectsJson = await getDataUsingFetch('../../data/Projects.json');
        
         let projectElement = projectsJson.find(item => item['id'] === parseInt(id));
@@ -41,7 +42,7 @@ const ProjectPage = (props) => {
 
   useEffect(() => {
 
-   getData();
+    getData();
 
     return () => { setProject({}) };
   }, []);
