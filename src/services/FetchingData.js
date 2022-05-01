@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+
+// Fetching data from the API
 export const getDataUsingFetch = async (url) => {
 
     return axios.get(url)
@@ -9,7 +11,7 @@ export const getDataUsingFetch = async (url) => {
 }
 
 
-
+// Fetching data from the API and filtering the projects by the category
 export const fetchDataUsingAxiosAndFilter = async (url) => {
 
     return axios.get(url)

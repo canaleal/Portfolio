@@ -113,7 +113,7 @@
       "date" : "2020UTC",
       "metadata" : "Towards Better Insights: Preliminary Results Of A Machine Learning Model For Fracture Risk Assessment",
       "description" : "Portfolio to showcase my applications.",
-      "tools" : ["react","python","fastapi", "heroku", "photoshop-plain"],
+      "tools" : ["react","nodejs", "express", "googlecloud", "photoshop-plain"],
       "githublink" : "https://github.com/canaleal/Showcase",
       "imglink" : "/assets/images//projects/castle.webp",
       "type": "application",

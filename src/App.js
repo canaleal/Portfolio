@@ -1,11 +1,11 @@
-import React  from 'react'
+import React, { Fragment }  from 'react'
 import { Outlet, Link } from "react-router-dom";
 import './styles/style.css';
 
 function App() {
   return (
 
-    <div>
+    <Fragment>
 
 
 
@@ -72,7 +72,7 @@ function App() {
 
 
       <Outlet />
-    </div>
+    </Fragment>
   );
 }
 
