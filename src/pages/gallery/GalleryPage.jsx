@@ -6,6 +6,7 @@ import React from 'react'
 
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import AttentionBar from '../../components/AttentionBar';
 import Footer from '../../components/Footer';
 import PageHeader from '../../components/PageHeader';
 import { getDataUsingFetch } from '../../services/FetchingData';
@@ -58,6 +59,10 @@ const GalleryPage = () => {
                     <div className='h-full w-full flex flex-col'>
                   
                         <PageHeader title={'Gallery'} color={'bg-green'}/>
+
+
+                        <AttentionBar/>
+
                         <div className="grid  grid-cols-1 md:grid-cols-4 gap-4 my-4 px-5">
 
 
@@ -65,10 +70,10 @@ const GalleryPage = () => {
                                 artList.map((art) => {
                                     return (
 
-                                        <Link key={art.id} to={{ pathname: `/gallery/${art.id}` }} className={`bg-white col-span-${art.col_span} shadow-xl `}>
+                                        <Link key={art.id} to={{ pathname: `/gallery/${art.id}` }} className={` col-span-${art.col_span} shadow-xl `}>
                                            
 
-                                            <img height='100' width='auto' src={`${art.imglink}`} alt={`${art.title}`} className={`card card-md ${art.isNsfw ? 'blur' : ''}`}  loading="lazy"/>
+                                            <img height='100' width='auto' src={`${art.imglink}`} alt={`${art.title}`} className={`card card-lg ${art.isNsfw ? 'blur' : ''}`}  loading="lazy"/>
                                             
                                         </Link>
 

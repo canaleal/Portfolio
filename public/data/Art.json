@@ -127,6 +127,133 @@
             "isNsfw": 0,
             "artType": "image",
             "isDisable": false
+        },
+
+        {
+            "id": 7,
+            "title": "Antonov",
+            "author": "JustJon",
+            "date": "2022-03-26 10:05:18",
+            "metadata": "null",
+            "description": "The Antonov An-225 Mriya was a strategic airlift cargo aircraft designed in the 1980s by the Antonov Design Bureau in the Soviet Union.",
+            "tools": [
+                "4K",
+                "S21-Ultra"
+            ],
+            "col_span": "1",
+            "githublink": "null",
+            "imglink": "/assets/images/art/antonov.webp",
+            "isNsfw": 0,
+            "artType": "image",
+            "isDisable": false
+        },
+        {
+            "id": 8,
+            "title": "Country Side",
+            "author": "Denis Istomin",
+            "date": "2022-03-26 10:05:18",
+            "metadata": "null",
+            "description": "Japanese Countryside during sunset.",
+            "tools": [
+                "4K",
+                "S21-Ultra"
+            ],
+            "col_span": "1",
+            "githublink": "null",
+            "imglink": "/assets/images/art/country.webp",
+            "isNsfw": 0,
+            "artType": "image",
+            "isDisable": false
+        },
+        {
+            "id": 9,
+            "title": "Orange Sky Sunset",
+            "author": "Favorites",
+            "date": "2022-03-26 10:05:18",
+            "metadata": "null",
+            "description": "Distant lands with a sunset in the background.",
+            "tools": [
+                "4K",
+                "S21-Ultra"
+            ],
+            "col_span": "1",
+            "githublink": "null",
+            "imglink": "/assets/images/art/orangesky.webp",
+            "isNsfw": 0,
+            "artType": "image",
+            "isDisable": false
+        },
+        {
+            "id": 10,
+            "title": "Rider",
+            "author": "Favorites",
+            "date": "2022-03-26 10:05:18",
+            "metadata": "null",
+            "description": "Inspired by Zion National Park.",
+            "tools": [
+                "4K",
+                "S21-Ultra"
+            ],
+            "col_span": "2",
+            "githublink": "null",
+            "imglink": "/assets/images/art/rider.webp",
+            "isNsfw": 0,
+            "artType": "image",
+            "isDisable": false
+        },
+        {
+            "id": 11,
+            "title": "Room",
+            "author": "Favorites",
+            "date": "2022-03-26 10:05:18",
+            "metadata": "null",
+            "description": "Image speaks for itself.",
+            "tools": [
+                "4K",
+                "S21-Ultra"
+            ],
+            "col_span": "1",
+            "githublink": "null",
+            "imglink": "/assets/images/art/room.webp",
+            "isNsfw": 0,
+            "artType": "image",
+            "isDisable": false
+        },
+        {
+            "id": 12,
+            "title": "Waterfall",
+            "author": "Favorites",
+            "date": "2022-03-26 10:05:18",
+            "metadata": "null",
+            "description": "Dark waterfall with ominous lights.",
+            "tools": [
+                "4K",
+                "S21-Ultra"
+            ],
+            "col_span": "1",
+            "githublink": "null",
+            "imglink": "/assets/images/art/waterfall.webp",
+            "isNsfw": 0,
+            "artType": "image",
+            "isDisable": false
+        },
+        {
+            "id": 13,
+            "title": "Snowbound",
+            "author": "Favorites",
+            "date": "2022-03-26 10:05:18",
+            "metadata": "null",
+            "description": "My favorite piece. Explorer making their way through the Arctic.",
+            "tools": [
+                "4K",
+                "S21-Ultra"
+            ],
+            "col_span": "2",
+            "githublink": "null",
+            "imglink": "/assets/images/art/snowbound.webp",
+            "isNsfw": 0,
+            "artType": "image",
+            "isDisable": false
         }
        
        
