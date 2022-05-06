@@ -2,9 +2,9 @@
 import React, { useState, useEffect } from 'react';
 
 import { Link } from 'react-router-dom';
-import AttentionBar from '../../components/AttentionBar';
-import Footer from '../../components/Footer';
-import PageHeader from '../../components/PageHeader';
+import AttentionBar from '../../common/AttentionBar';
+import Footer from '../../common/Footer';
+import PageHeader from '../../common/PageHeader';
 import { getDataUsingFetch } from '../../services/FetchingData';
 
 function GalleryPage() {

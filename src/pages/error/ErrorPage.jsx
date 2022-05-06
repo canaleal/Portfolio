@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 import React from 'react';
-import PageHeader from '../../components/PageHeader';
+import PageHeader from '../../common/PageHeader';
 
 function Error() {
   return (

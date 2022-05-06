@@ -5,8 +5,8 @@ import React, { useState, useEffect } from 'react';
 import Card from './components/ProjectCard';
 import AboutCard from './components/AboutCard';
 import { filterDataIfPropertyIsFalse } from '../../helpers/Filters';
-import PageHeader from '../../components/PageHeader';
-import Footer from '../../components/Footer';
+import PageHeader from '../../common/PageHeader';
+import Footer from '../../common/Footer';
 import { getDataUsingFetch } from '../../services/FetchingData';
 
 function ProjectsPage() {

@@ -1,8 +1,9 @@
 /* eslint-disable no-nested-ternary */
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Footer from '../../components/Footer';
-import PageHeader from '../../components/PageHeader';
+import Footer from '../../common/Footer';
+import PageHeader from '../../common/PageHeader';
+import { addRawToImagePath } from '../../helpers/ImageLinks';
 import { getDataUsingFetch } from '../../services/FetchingData';
 import Description from './components/ProjectPageDescription';
 
@@ -54,7 +55,7 @@ function ProjectPage() {
 
                   <div className="col-span-2">
 
-                    <img height="100" width="auto" src={`${project.imglink}`} alt={`${project.title}`} className="card card-4xl" loading="lazy" />
+                    <img height="100" width="auto" src={`${addRawToImagePath(project.imglink)}`} alt={`${project.title}`} className="card card-4xl" loading="lazy" />
                   </div>
 
                   <div className="col-span-2 p-4 ">

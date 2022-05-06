@@ -1,8 +1,8 @@
 /* eslint-disable no-nested-ternary */
 import React, { useState, useEffect } from 'react';
 
-import Footer from '../../components/Footer';
-import PageHeader from '../../components/PageHeader';
+import Footer from '../../common/Footer';
+import PageHeader from '../../common/PageHeader';
 import { getDataUsingFetch } from '../../services/FetchingData';
 
 import LogoCard from './components/LogoCard';
@@ -14,7 +14,7 @@ function AutomobileLogoPage() {
 
   async function getData() {
     try {
-      const logoJson = await getDataUsingFetch('http://localhost:5001/cars');
+      const logoJson = await getDataUsingFetch('../../data/Logos.json');
 
       if (logoJson && logoJson.length > 0) {
         setLogoList(logoJson);

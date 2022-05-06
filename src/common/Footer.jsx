@@ -139,7 +139,7 @@ function Footer() {
 
           <div className="col-span-1 py-2 ">
             <p className="font-bold">License Terms</p>
-            <img height="100" width="auto" className="h-16 my-2" src="https://www.rbg.ca/app/uploads/RBG_Horizontal_Black_CMYK.svg?x96454" data-src="https://www.rbg.ca/app/uploads/RBG_Horizontal_Black_CMYK.svg?x96454" loading="lazy" alt="RRBG logo_Horizontal_Black_CMYK" data-was-processed="true" />
+            <img height={100} width={150} className="h-16 my-2" src="https://www.rbg.ca/app/uploads/RBG_Horizontal_Black_CMYK.svg?x96454" data-src="https://www.rbg.ca/app/uploads/RBG_Horizontal_Black_CMYK.svg?x96454" loading="lazy" alt="RRBG logo_Horizontal_Black_CMYK" data-was-processed="true" />
             <p className="text-xs my-2">The contents of the Royal Botanical Gardens site are copyrighted and redistribution, reproductions, or publication of its contents is prohibited without the express written consent of Royal Botanical Gardens. </p>
           </div>
 
