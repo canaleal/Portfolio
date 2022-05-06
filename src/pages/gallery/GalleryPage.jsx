@@ -1,96 +1,74 @@
+/* eslint-disable no-nested-ternary */
+import React, { useState, useEffect } from 'react';
 
-
-
-import { data } from 'autoprefixer';
-import React from 'react'
-
-import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AttentionBar from '../../components/AttentionBar';
 import Footer from '../../components/Footer';
 import PageHeader from '../../components/PageHeader';
 import { getDataUsingFetch } from '../../services/FetchingData';
 
-const GalleryPage = () => {
+function GalleryPage() {
+  const [error, setError] = useState(null);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [artList, setArtList] = useState([]);
 
-    const [error, setError] = useState(null);
-    const [isLoaded, setIsLoaded] = useState(false);
-    const [artList, setArtList] = useState([]);
+  async function getData() {
+    try {
+      const artJson = await getDataUsingFetch('data/Art.json');
 
-
-    async function getData(){
-        try{
-            const artJson = await getDataUsingFetch('data/Art.json');
-                   
-            if(artJson && artJson.length > 0){
-                setArtList(artJson);
-            }
-            else{
-               throw new Error('Art list is empty')
-            }     
-        }
-        catch{
-            setError(true);
-        }
-        finally{
-            setIsLoaded(true);
-        }
+      if (artJson && artJson.length > 0) {
+        setArtList(artJson);
+      } else {
+        throw new Error('Art list is empty');
+      }
+    } catch {
+      setError(true);
+    } finally {
+      setIsLoaded(true);
     }
+  }
 
-    useEffect(() => {
+  useEffect(() => {
+    getData();
 
+    return () => { setArtList([]); };
+  }, []);
 
-        getData();
+  return (
+    <div className="main ">
+      {isLoaded
 
-        return () => { setArtList([]) };
+        ? error
+          ? <p>Error! Unable to load projects.</p>
+          : (
+            <div className="h-full w-full flex flex-col">
 
-    }, []);
+              <PageHeader title="Gallery" color="bg-green" />
 
+              <AttentionBar />
 
+              <div className="grid  grid-cols-1 md:grid-cols-4 gap-4 my-4 px-5">
 
+                {
+                    artList.map((art) => (
 
-    return (
-        <div className="main ">
-            {isLoaded ?
+                      <Link key={art.id} to={{ pathname: `/gallery/${art.id}` }} className={` col-span-${art.col_span} shadow-xl `}>
 
-                error ?
-                    <p>Error! Unable to load projects.</p>
-                    :
-                    <div className='h-full w-full flex flex-col'>
-                  
-                        <PageHeader title={'Gallery'} color={'bg-green'}/>
+                        <img height="100" width="auto" src={`${art.imglink}`} alt={`${art.title}`} className={`card card-lg ${art.isNsfw ? 'blur' : ''}`} loading="lazy" />
 
+                      </Link>
 
-                        <AttentionBar/>
+                    ))
+                }
 
-                        <div className="grid  grid-cols-1 md:grid-cols-4 gap-4 my-4 px-5">
+              </div>
 
-
-                            {
-                                artList.map((art) => {
-                                    return (
-
-                                        <Link key={art.id} to={{ pathname: `/gallery/${art.id}` }} className={` col-span-${art.col_span} shadow-xl `}>
-                                           
-
-                                            <img height='100' width='auto' src={`${art.imglink}`} alt={`${art.title}`} className={`card card-lg ${art.isNsfw ? 'blur' : ''}`}  loading="lazy"/>
-                                            
-                                        </Link>
-
-                                    )
-                                })
-                            }
-
-                        </div>
-
-
-                        <Footer/>
-                    </div>
-                :
-                <p>Loading</p>
-            }
-        </div>
-    )
+              <Footer />
+            </div>
+          )
+        : <p>Loading</p>}
+    </div>
+  );
 }
 
 export default React.memo(GalleryPage);

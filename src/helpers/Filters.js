@@ -1,30 +1,24 @@
-
+/* eslint-disable no-plusplus */
+/* eslint-disable prefer-spread */
 export const getToolsList = (objectList, property) => {
+  const list = [];
+  for (let i = 0; i < objectList.length; i++) {
+    list.push(objectList[i][property]);
+  }
 
+  const flat = [].concat.apply([], list);
+  const unique = flat.filter((elem, pos) => flat.indexOf(elem) === pos);
 
-    let list = [];
-    for (let i = 0; i < objectList.length; i++) {
-        list.push(objectList[i][property]);
-    }
-
-
-    let flat = [].concat.apply([], list);
-    let unique = flat.filter(function (elem, pos) {
-        return flat.indexOf(elem) === pos;
-    });
-
-    return unique;
-}
+  return unique;
+};
 
 export const filterDataIfPropertyIsFalse = (objectList, property) => {
-
-    
-    let list = [];
-    for (let i = 0; i < objectList.length; i++) {
-        if (objectList[i][property] === false) {
-            list.push(objectList[i]);
-        }
+  const list = [];
+  for (let i = 0; i < objectList.length; i++) {
+    if (objectList[i][property] === false) {
+      list.push(objectList[i]);
     }
+  }
 
-    return list;
-}
+  return list;
+};

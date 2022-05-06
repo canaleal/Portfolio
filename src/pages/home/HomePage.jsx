@@ -1,17 +1,16 @@
-import React, { Component } from 'react'
-import Header from './components/HomeBody'
+import React from 'react';
+import Header from './components/HomeBody';
 
+function Home() {
+  return (
+    <div className="main h-screen">
+      <div className="h-full flex flex-col">
 
-export default class Home extends Component {
-  render() {
-    return (
-      <div  className="main h-screen" >
-        <div className="h-full flex flex-col">
-       
-          <Header/>
-        </div>
-        
+        <Header />
       </div>
-    )
-  }
+
+    </div>
+  );
 }
+
+export default React.memo(Home);
