@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react';
-import { returnLinkComponentGivenGithubLink, returnLinkComponentGivenTitle } from '../../../common/LinkButtons';
+import { returnLinkComponentGivenGithubLink, returnLinkComponentGivenProjectLink } from '../../../common/LinkButtons';
 
 import Tools from '../../../common/Tools';
 
 function ProjectPageDescription({ project }) {
   const {
-    author, scale, title, description, tools, githublink,
+    author, scale, description, tools, githublink, projectlink,
   } = project;
 
   return (
@@ -26,7 +26,7 @@ function ProjectPageDescription({ project }) {
       }
 
       {
-        returnLinkComponentGivenTitle(title)
+        returnLinkComponentGivenProjectLink(projectlink)
       }
     </>
   );

@@ -1,13 +1,13 @@
 import React from 'react';
 
 import { Link } from 'react-router-dom';
-import { returnLinkComponentGivenGithubLink, returnLinkComponentGivenTitle } from '../../../common/LinkButtons';
+import { returnLinkComponentGivenGithubLink, returnLinkComponentGivenProjectLink } from '../../../common/LinkButtons';
 
 import Tools from '../../../common/Tools';
 
 function GridCard({ projectElement }) {
   const {
-    id, title, description, tools, githublink, imglink, scale,
+    id, title, description, tools, githublink, imglink, scale, projectlink,
   } = projectElement;
 
   return (
@@ -46,7 +46,7 @@ function GridCard({ projectElement }) {
           }
 
           {
-            returnLinkComponentGivenTitle(title)
+            returnLinkComponentGivenProjectLink(projectlink)
           }
 
         </div>
