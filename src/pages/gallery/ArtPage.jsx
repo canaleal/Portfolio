@@ -52,17 +52,14 @@ function ArtPage() {
 
               <div className="px-5 my-4">
 
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-4  bg-white shadow-xl ">
-
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-4 shadow-xl ">
                   <div className="col-span-2">
-
                     <img height="100" width="auto" src={`${addRawToImagePath(art.imglink)}`} alt="" className="card card-4xl" loading="lazy" />
                   </div>
 
                   <div className="col-span-2 p-4">
                     <Description art={art} />
                   </div>
-
                 </div>
               </div>
 

@@ -1,15 +1,17 @@
 import React from 'react';
-import Header from './components/HomeBody';
+import Footer from '../../common/Footer';
+import HomeBody from './components/HomeBody';
+import MainHeader from './components/MainHeader';
 
 function Home() {
   return (
-    <div className="main h-screen">
-      <div className="h-full flex flex-col">
 
-        <Header />
-      </div>
-
+    <div className="main">
+      <MainHeader />
+      <HomeBody />
+      <Footer />
     </div>
+
   );
 }
 

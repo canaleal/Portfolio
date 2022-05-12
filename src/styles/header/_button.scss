@@ -6,7 +6,7 @@ a.special-btn{
     font-weight:300;
     color:$white;
     text-align:center;
-    transition: all $slow-spd;
+    transition: all $slow-spd ease;
 
     &:hover{
         color:$dark-hover;

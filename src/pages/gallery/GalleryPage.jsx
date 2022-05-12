@@ -47,7 +47,7 @@ function GalleryPage() {
 
               <AttentionBar />
 
-              <div className="grid  grid-cols-1 md:grid-cols-4 gap-4 my-4 px-5">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-4 my-4 px-5">
 
                 {
                     artList.map((art) => (

@@ -3,7 +3,7 @@
 	z-index: 2;
 	position: fixed;
 	background-color: $dark;
-	transition: width $fast-spd ease;
+	transition: width $xslow-spd ease;
 	overflow: hidden;
 	display: flex;
 
@@ -35,7 +35,7 @@
 			color: $white;
 			text-decoration: none;
 			filter: grayscale(100%) opacity(1);
-			transition: $fast-spd;
+			transition: $xslow-spd ease;
 
 			.link-text {
 				margin-left: 1rem;
@@ -45,7 +45,7 @@
 				width: 1rem;
 				min-width: 1rem;
 				margin: 0 1.5rem;
-				transition: $fast-spd ease;
+				transition: $xslow-spd ease;
 			}
 
 			&:hover {

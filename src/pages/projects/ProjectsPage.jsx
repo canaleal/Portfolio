@@ -64,24 +64,19 @@ function ProjectsPage() {
                             <Tools tools={tools} />
                         </div> */}
 
-              <div className="px-5 my-4 ">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-4 ">
-                  {projectsList.map((projectElement) => (
-                    <Card key={projectElement.id} projectElement={projectElement} />
-                  ))}
-                </div>
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-4 my-4 px-5">
+                {projectsList.map((projectElement) => (
+                  <Card key={projectElement.id} projectElement={projectElement} />
+                ))}
               </div>
 
               <PageHeader title="Work Experience" color="bg-blue" />
 
               <div className="grid  grid-cols-1 md:grid-cols-4 gap-4 my-4 px-5">
 
-                {
-                    workList.map((aboutElement) => (
-                      <AboutCard key={aboutElement.id} aboutElement={aboutElement} />
-
-                    ))
-                }
+                { workList.map((aboutElement) => (
+                  <AboutCard key={aboutElement.id} aboutElement={aboutElement} />
+                ))}
 
               </div>
 
@@ -89,13 +84,9 @@ function ProjectsPage() {
 
               <div className="grid  grid-cols-1 md:grid-cols-4 gap-4 my-4 px-5">
 
-                {
-                    educationList.map((aboutElement) => (
-
-                      <AboutCard key={aboutElement.id} aboutElement={aboutElement} />
-
-                    ))
-                }
+                { educationList.map((aboutElement) => (
+                  <AboutCard key={aboutElement.id} aboutElement={aboutElement} />
+                ))}
 
               </div>
 
