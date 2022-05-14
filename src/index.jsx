@@ -12,15 +12,15 @@ import { faPython, faJs } from '@fortawesome/free-brands-svg-icons';
 import HomePage from './pages/home/HomePage';
 import Projects from './pages/projects/Projects';
 import ProjectId from './pages/projects-Id/Projects-Id';
-import GalleryPage from './pages/gallery/GalleryPage';
+import GalleryPage from './pages/gallery/Gallery';
 import GalleryId from './pages/gallery-Id/Gallery-Id';
 
 import ErrorPage from './pages/error/ErrorPage';
 import reportWebVitals from './reportWebVitals';
 
 // Import font awesome and some icons
-import CarLogos from './pages/CarLogos/CarLogos';
-import Layout from './layouts/Layout';
+import CarLogos from './pages/carLogos/CarLogos';
+import AppLayout from './layouts/AppLayout';
 
 import './styles/style.css';
 
@@ -34,7 +34,7 @@ const rootElement = document.getElementById('root');
 render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Layout />}>
+      <Route path="/" element={<AppLayout />}>
         <Route index element={<HomePage />} />
 
         <Route path="projects" element={<Projects />} />

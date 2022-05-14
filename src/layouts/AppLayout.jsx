@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { Outlet, Link } from 'react-router-dom';
 
-function Layout() {
+function AppLayout() {
   return (
     <>
       <nav className="nav">
@@ -53,4 +53,4 @@ function Layout() {
   );
 }
 
-export default Layout;
+export default AppLayout;

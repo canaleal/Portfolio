@@ -1,14 +1,14 @@
 /* eslint-disable no-nested-ternary */
 import React, { useState, useEffect } from 'react';
 
-import { Link } from 'react-router-dom';
 import AttentionBar from '../../common/AttentionBar';
 import Footer from '../../common/Footer';
 import PageHeader from '../../common/PageHeader';
 import GridLayout from '../../layouts/GridLayout';
 import { getDataUsingFetch } from '../../services/FetchingData';
+import GalleryCard from './components/GalleryCard';
 
-function GalleryPage() {
+function Gallery() {
   const [error, setError] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const [artList, setArtList] = useState([]);
@@ -52,10 +52,8 @@ function GalleryPage() {
             <AttentionBar message="This page contains my work, as well as my favorite pieces from other artists." />
 
             <GridLayout>
-              {artList.map((art) => (
-                <Link key={art.id} to={{ pathname: `/gallery/${art.id}` }} className={` col-span-${art.col_span} shadow-xl `}>
-                  <img height="100" width="auto" src={`${art.imglink}`} alt={`${art.title}`} className={`card card-lg ${art.isNsfw ? 'blur' : ''}`} loading="lazy" />
-                </Link>
+              {artList.map((artElement) => (
+                <GalleryCard key={artElement.id} artElement={artElement} />
               ))}
             </GridLayout>
 
@@ -67,4 +65,4 @@ function GalleryPage() {
   );
 }
 
-export default React.memo(GalleryPage);
+export default React.memo(Gallery);
