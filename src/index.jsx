@@ -19,7 +19,7 @@ import ErrorPage from './pages/error/ErrorPage';
 import reportWebVitals from './reportWebVitals';
 
 // Import font awesome and some icons
-import CarLogos from './pages/carLogos/CarLogos';
+import Logos from './pages/logos/Logos';
 import AppLayout from './layouts/AppLayout';
 
 import './styles/style.css';
@@ -41,7 +41,7 @@ render(
         <Route path="projects/:id" element={<ProjectId />} />
         <Route path="gallery" element={<GalleryPage />} />
         <Route path="gallery/:id" element={<GalleryId />} />
-        <Route path="carLogos" element={<CarLogos />} />
+        <Route path="logos" element={<Logos />} />
         <Route path="*" element={<ErrorPage />} />
       </Route>
     </Routes>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function CarLogoCard({ logoElement }) {
+function LogoCard({ logoElement }) {
   const {
     link, title, name, year,
   } = logoElement;
@@ -23,4 +23,4 @@ function CarLogoCard({ logoElement }) {
   );
 }
 
-export default React.memo(CarLogoCard);
+export default React.memo(LogoCard);
