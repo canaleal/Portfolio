@@ -2,7 +2,7 @@
 /* eslint-disable no-nested-ternary */
 import React, { useState, useEffect } from 'react';
 
-import Card from './components/ProjectCard';
+import ProjectCard from './components/ProjectCard';
 import { filterDataIfPropertyIsFalse } from '../../helpers/Filters';
 import PageHeader from '../../common/PageHeader';
 import Footer from '../../common/Footer';
@@ -56,7 +56,7 @@ function Projects() {
 
             <GridLayout>
               {projectsList.map((projectElement) => (
-                <Card key={projectElement.id} projectElement={projectElement} />
+                <ProjectCard key={projectElement.id} projectElement={projectElement} />
               ))}
             </GridLayout>
 

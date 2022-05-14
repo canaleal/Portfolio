@@ -1,8 +1,8 @@
 import React from 'react';
 
-function PageHeader({ title, color }) {
+function PageHeader({ title, color, rounded = '' }) {
   return (
-    <div className={`${color}  py-5 text-center text-white sticky`}>
+    <div className={`${color} ${rounded}  py-5 text-center text-white sticky`}>
       <h1 className="text-4xl  ">{title}</h1>
     </div>
 

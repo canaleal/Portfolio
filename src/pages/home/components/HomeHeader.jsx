@@ -1,6 +1,6 @@
 import React from 'react';
 
-function MainHeader() {
+function HomeHeader() {
   return (
     <div className="h-screen flex flex-col">
       <div className="header h-full ">
@@ -22,4 +22,4 @@ function MainHeader() {
   );
 }
 
-export default React.memo(MainHeader);
+export default React.memo(HomeHeader);

@@ -1,14 +1,16 @@
 import React from 'react';
 import Footer from '../../common/Footer';
-import HomeBody from './components/HomeBody';
-import MainHeader from './components/MainHeader';
+import AboutBody from './components/AboutBody';
+import HomeHeader from './components/HomeHeader';
+import Stacks from './components/Stacks';
 
 function Home() {
   return (
 
     <div className="main">
-      <MainHeader />
-      <HomeBody />
+      <HomeHeader />
+      <AboutBody />
+      <Stacks />
       <Footer />
     </div>
 

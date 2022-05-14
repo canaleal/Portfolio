@@ -1,76 +1,32 @@
-import React, { useEffect, useState } from 'react';
-import AttentionBar from '../../../common/AttentionBar';
-import PageHeader from '../../../common/PageHeader';
-import GridLayout from '../../../layouts/GridLayout';
-import { getDataUsingFetch } from '../../../services/FetchingData';
-import AboutCard from './AboutCard';
+import React from 'react';
+import Tools from '../../../common/Tools';
 
 function AboutBody() {
-  const [error, setError] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [workList, setWorkList] = useState([]);
-  const [educationList, setEducationList] = useState([]);
-
-  async function getData() {
-    try {
-      const tempWorkList = await getDataUsingFetch('data/Work.json');
-      const tempEducationList = await getDataUsingFetch('data/Education.json');
-
-      if (tempWorkList && tempWorkList.length > 0
-        && tempEducationList && tempEducationList.length > 0) {
-        setWorkList(tempWorkList);
-        setEducationList(tempEducationList);
-      } else {
-        throw new Error('Work list is empty');
-      }
-    } catch {
-      setError(true);
-    } finally {
-      setIsLoaded(true);
-    }
-  }
-
-  useEffect(() => {
-    getData();
-
-    return () => { };
-  }, []);
-
+  const favoriteToolList = ['nextjs', 'svelte', 'nodejs', 'express', 'mongodb', 'postgresql', 'docker', 'googlecloud'];
   return (
-    <div>
+    <div id="about" className="grid grid-cols-1 md:grid-cols-2 gap-4 px-4 py-16">
 
-      {error === true
-        ? <p>Error! Unable to load work list and education list.</p>
-        : <p />}
+      <div className="col-span-1">
+        <img className="object-none object-center card card-md" height="100" width="auto" src="\assets\images\art\snowbound.webp" alt="Logo" />
+      </div>
 
-      {isLoaded === true && error === false
+      <div className="col-span-1">
 
-        ? (
-          <div>
-            <PageHeader title="Work Experience" color="bg-dark" />
-            <AttentionBar message="To view my full work list, please take a look at my Linkedin." />
+        <h2 className="text-4xl  mb-4">About Me</h2>
+        <p className="my-2  mb-4">
+          Software developer based in Oakville, Ontario interested in
+          Predictive Image Analysis (Object Detection) and Data Science.
+        </p>
 
-            <GridLayout>
-              { workList.map((aboutElement) => (
-                <AboutCard key={aboutElement.id} aboutElement={aboutElement} />
-              ))}
-            </GridLayout>
+        <p className="font-bold ">Favorite Tools:</p>
+        <div className="flex my-2">
+          <Tools tools={favoriteToolList} />
+        </div>
 
-            <PageHeader title="Education and Certificates" color="bg-dark" />
-            <AttentionBar message="To view my full education list, please take a look at my Linkedin." />
-            <GridLayout>
-              { educationList.map((aboutElement) => (
-                <AboutCard key={aboutElement.id} aboutElement={aboutElement} />
-              ))}
-            </GridLayout>
+      </div>
 
-          </div>
-        )
-        : <p />}
     </div>
   );
 }
 
-AboutBody.propTypes = {};
-
-export default AboutBody;
+export default React.memo(AboutBody);

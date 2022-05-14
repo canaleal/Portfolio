@@ -74,7 +74,7 @@
       "description" : "This Vehicle API provides access to a library of vehicle Logos. Instead of using an ID, Logos are retrieved using the Manufacturer Name.",
       "tools" : ["nodejs","mongodb","express", "eslint", "googlecloud", "docker"],
       "githublink" : "https://github.com/canaleal/AutomobileAPI",
-      "projectlink": "/logos",
+      "projectlink": "/carLogos",
       "imglink" : "/assets/images/projects/mercedes.webp",
       "type": "api",
       "scale":"Small",
