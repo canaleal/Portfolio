@@ -5,10 +5,11 @@ import { Link } from 'react-router-dom';
 import AttentionBar from '../../common/AttentionBar';
 import Footer from '../../common/Footer';
 import PageHeader from '../../common/PageHeader';
+import GridLayout from '../../layouts/GridLayout';
 import { getDataUsingFetch } from '../../services/FetchingData';
 
 function GalleryPage() {
-  const [error, setError] = useState(null);
+  const [error, setError] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const [artList, setArtList] = useState([]);
 
@@ -36,36 +37,31 @@ function GalleryPage() {
 
   return (
     <div className="main ">
-      {isLoaded
 
-        ? error
-          ? <p>Error! Unable to load projects.</p>
-          : (
-            <div className="h-full w-full flex flex-col">
+      {error === true
+        ? <p>Error! Unable to load gallery list.</p>
+        : <p />}
 
-              <PageHeader title="Gallery" color="bg-green" />
+      {isLoaded === true && error === false
 
-              <AttentionBar />
+        ? (
+          <div className="h-full w-full flex flex-col">
 
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-4 my-4 px-5">
+            <PageHeader title="Gallery" color="bg-green" />
 
-                {
-                    artList.map((art) => (
+            <AttentionBar message="This page contains my work, as well as my favorite pieces from other artists." />
 
-                      <Link key={art.id} to={{ pathname: `/gallery/${art.id}` }} className={` col-span-${art.col_span} shadow-xl `}>
+            <GridLayout>
+              {artList.map((art) => (
+                <Link key={art.id} to={{ pathname: `/gallery/${art.id}` }} className={` col-span-${art.col_span} shadow-xl `}>
+                  <img height="100" width="auto" src={`${art.imglink}`} alt={`${art.title}`} className={`card card-lg ${art.isNsfw ? 'blur' : ''}`} loading="lazy" />
+                </Link>
+              ))}
+            </GridLayout>
 
-                        <img height="100" width="auto" src={`${art.imglink}`} alt={`${art.title}`} className={`card card-lg ${art.isNsfw ? 'blur' : ''}`} loading="lazy" />
-
-                      </Link>
-
-                    ))
-                }
-
-              </div>
-
-              <Footer />
-            </div>
-          )
+            <Footer />
+          </div>
+        )
         : <p>Loading</p>}
     </div>
   );

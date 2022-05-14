@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Tools({ tools }) {
+function Tools({ tools, iconSize = 'w-8' }) {
   const returnLinkGivenIfStringContains = (toolString) => {
     if (toolString.includes('plain')) {
       const tempString = toolString.replace('-plain', '');
@@ -15,7 +15,7 @@ function Tools({ tools }) {
 
       {
         tools.map((tool) => (
-          <img height="100" width="auto" title={tool} key={tool} className="img-icon w-8 mx-2 py-2" alt="" src={returnLinkGivenIfStringContains(tool)} loading="lazy" />
+          <img height="100" width="auto" title={tool} key={tool} className={`img-icon ${iconSize} mx-2 py-2`} alt="" src={returnLinkGivenIfStringContains(tool)} loading="lazy" />
         ))
       }
 

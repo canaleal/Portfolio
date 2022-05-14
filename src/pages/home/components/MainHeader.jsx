@@ -1,16 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 function MainHeader() {
   return (
     <div className="h-screen flex flex-col">
       <div className="header h-full ">
-        <div className="flex flex-col justify-center items-center h-full p-20">
+        <div className="flex flex-col justify-center items-center h-full mx-auto px-8">
 
           <h2 className="text-4xl ">Alex Canales</h2>
-          <p>Experienced creating responsive applications for mobile, desktop & web.</p>
+          <p className="mb-8">Experienced creating responsive applications for mobile, desktop & web.</p>
 
-          <Link to="/projects" className="special-btn my-10 rounded-lg">View Projects</Link>
+          <a href="/#about" className="flex flex-col about-btn px-8 hover:mt-8">
+            <p className="my-2">About Me</p>
+            <i className="fa fa-arrow-down fa-2x mx-auto" aria-hidden="true" />
+
+          </a>
 
         </div>
       </div>

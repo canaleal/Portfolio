@@ -18,7 +18,7 @@ function ProjectPageDescription({ project }) {
       <p className="my-2 mb-4">{description}</p>
       <p className="font-bold ">Tools:</p>
       <div className="flex my-2">
-        <Tools tools={tools} />
+        <Tools tools={tools} iconSize="w-12" />
       </div>
 
       {
