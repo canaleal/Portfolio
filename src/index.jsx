@@ -8,16 +8,18 @@ import {
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faPython, faJs } from '@fortawesome/free-brands-svg-icons';
+
 import HomePage from './pages/home/HomePage';
-import ProjectsPage from './pages/projects/ProjectsPage';
-import ProjectPage from './pages/projects/ProjectPage';
-import ErrorPage from './pages/error/ErrorPage';
+import Projects from './pages/projects/Projects';
+import ProjectId from './pages/projects-Id/Projects-Id';
 import GalleryPage from './pages/gallery/GalleryPage';
-import ArtPage from './pages/gallery/ArtPage';
+import GalleryId from './pages/gallery-Id/Gallery-Id';
+
+import ErrorPage from './pages/error/ErrorPage';
 import reportWebVitals from './reportWebVitals';
 
 // Import font awesome and some icons
-import AutomobileLogoPage from './pages/AutomobileLogo/AutomobileLogoPage';
+import CarLogos from './pages/CarLogos/CarLogos';
 import Layout from './layouts/Layout';
 
 import './styles/style.css';
@@ -35,11 +37,11 @@ render(
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
 
-        <Route path="projects" element={<ProjectsPage />} />
-        <Route path="projects/:id" element={<ProjectPage />} />
+        <Route path="projects" element={<Projects />} />
+        <Route path="projects/:id" element={<ProjectId />} />
         <Route path="gallery" element={<GalleryPage />} />
-        <Route path="gallery/:id" element={<ArtPage />} />
-        <Route path="logos" element={<AutomobileLogoPage />} />
+        <Route path="gallery/:id" element={<GalleryId />} />
+        <Route path="carLogos" element={<CarLogos />} />
         <Route path="*" element={<ErrorPage />} />
       </Route>
     </Routes>

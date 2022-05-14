@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-function ArtPageDescription({ art }) {
+function GalleryDescription({ art }) {
   const { author, date, description } = art;
   return (
     <>
@@ -14,4 +14,4 @@ function ArtPageDescription({ art }) {
   );
 }
 
-export default React.memo(ArtPageDescription);
+export default React.memo(GalleryDescription);

@@ -5,7 +5,7 @@ import { returnLinkComponentGivenGithubLink, returnLinkComponentGivenProjectLink
 
 import Tools from '../../../common/Tools';
 
-function GridCard({ projectElement }) {
+function ProjectCard({ projectElement }) {
   const {
     id, title, description, tools, githublink, imglink, scale, projectlink,
   } = projectElement;
@@ -56,4 +56,4 @@ function GridCard({ projectElement }) {
   );
 }
 
-export default React.memo(GridCard);
+export default React.memo(ProjectCard);

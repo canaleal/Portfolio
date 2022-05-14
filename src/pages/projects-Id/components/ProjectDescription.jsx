@@ -3,7 +3,7 @@ import { returnLinkComponentGivenGithubLink, returnLinkComponentGivenProjectLink
 
 import Tools from '../../../common/Tools';
 
-function ProjectPageDescription({ project }) {
+function ProjectDescription({ project }) {
   const {
     author, scale, description, tools, githublink, projectlink,
   } = project;
@@ -32,4 +32,4 @@ function ProjectPageDescription({ project }) {
   );
 }
 
-export default React.memo(ProjectPageDescription);
+export default React.memo(ProjectDescription);

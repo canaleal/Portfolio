@@ -10,7 +10,7 @@ import { getDataUsingFetch } from '../../services/FetchingData';
 import GridLayout from '../../layouts/GridLayout';
 import AttentionBar from '../../common/AttentionBar';
 
-function ProjectsPage() {
+function Projects() {
   const [error, setError] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const [projectsList, setProjectsList] = useState([]);
@@ -70,4 +70,4 @@ function ProjectsPage() {
   );
 }
 
-export default React.memo(ProjectsPage);
+export default React.memo(Projects);

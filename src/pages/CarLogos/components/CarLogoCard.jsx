@@ -1,6 +1,6 @@
 import React from 'react';
 
-function LogoCard({ logoElement }) {
+function CarLogoCard({ logoElement }) {
   return (
 
     <div className=" bg-white rounded-lg col-span-1 shadow-xl slide-in-right">
@@ -20,4 +20,4 @@ function LogoCard({ logoElement }) {
   );
 }
 
-export default React.memo(LogoCard);
+export default React.memo(CarLogoCard);

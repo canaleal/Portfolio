@@ -5,24 +5,24 @@ import Footer from '../../common/Footer';
 import PageHeader from '../../common/PageHeader';
 import { addRawToImagePath } from '../../helpers/ImageLinks';
 import { getDataUsingFetch } from '../../services/FetchingData';
-import Description from './components/ArtPageDescription';
+import ProjectDescription from './components/ProjectDescription';
 
-function ArtPage() {
+function ProjectsId() {
   const { id } = useParams();
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [art, setArt] = useState({});
+  const [project, setProject] = useState({});
 
   async function getData() {
     try {
-      const artJson = await getDataUsingFetch('../data/Art.json');
+      const projectsJson = await getDataUsingFetch('../../data/Projects.json');
 
-      const artElement = artJson.find((item) => item.id === parseInt(id, 10));
+      const projectElement = projectsJson.find((item) => item.id === parseInt(id, 10));
 
-      if (artElement) {
-        setArt(artElement);
+      if (projectElement) {
+        setProject(projectElement);
       } else {
-        throw new Error('Art is empty');
+        throw new Error('Project is empty');
       }
     } catch {
       setError(true);
@@ -34,7 +34,7 @@ function ArtPage() {
   useEffect(() => {
     getData();
 
-    return () => { setArt({}); };
+    return () => { setProject({}); };
   }, []);
 
   return (
@@ -43,28 +43,26 @@ function ArtPage() {
       {isLoaded
 
         ? error
-          ? <p>Error! Art does not exist.</p>
+          ? <p>Error! Project does not exist.</p>
 
           : (
-            <div className="h-full w-full flex flex-col ">
+            <div className="h-full w-full flex flex-col">
 
-              <PageHeader title={art.title} color="bg-green" />
+              <PageHeader title={project.title} color="bg-blue" />
 
               <div className="px-5 my-4">
-
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-4 shadow-xl ">
                   <div className="col-span-2">
-                    <img height="100" width="auto" src={`${addRawToImagePath(art.imglink)}`} alt="" className="card card-4xl" loading="lazy" />
+                    <img height="100" width="auto" src={`${addRawToImagePath(project.imglink)}`} alt={`${project.title}`} className="card card-4xl" loading="lazy" />
                   </div>
 
-                  <div className="col-span-2 p-4">
-                    <Description art={art} />
+                  <div className="col-span-2 p-4 ">
+                    <ProjectDescription project={project} />
                   </div>
                 </div>
               </div>
 
               <Footer />
-
             </div>
           )
 
@@ -74,4 +72,4 @@ function ArtPage() {
   );
 }
 
-export default React.memo(ArtPage);
+export default React.memo(ProjectsId);

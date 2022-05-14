@@ -5,9 +5,9 @@ import Footer from '../../common/Footer';
 import PageHeader from '../../common/PageHeader';
 import { getDataUsingFetch } from '../../services/FetchingData';
 
-import LogoCard from './components/LogoCard';
+import LogoCard from './components/CarLogoCard';
 
-function AutomobileLogoPage() {
+function CarLogos() {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [logoList, setLogoList] = useState([]);
@@ -65,4 +65,4 @@ function AutomobileLogoPage() {
   );
 }
 
-export default React.memo(AutomobileLogoPage);
+export default React.memo(CarLogos);

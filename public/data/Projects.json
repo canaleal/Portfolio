@@ -120,7 +120,7 @@
       "date" : "2020UTC",
       "metadata" : null,
       "description" : "Portfolio to showcase my projects. This includes Mobile Apps, Web Apps, Front-End projects, APIs, Data Science work, and Embedded systems development.",
-      "tools" : ["react","nodejs", "express", "googlecloud", "photoshop-plain"],
+      "tools" : ["react", "tailwindcss-plain", "sass", "eslint" ,"nodejs", "express", "mongodb", "googlecloud", "docker"],
       "githublink" : "https://github.com/canaleal/Showcase",
       "projectlink": "/home",
       "imglink" : "/assets/images//projects/castle.webp",
