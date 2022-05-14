@@ -1,0 +1,1 @@
+Do not open pull requests directly against this repository, they will be ignored. I'm not accepting any contributions as this is a personal project used to showcase my skills, sorry.
