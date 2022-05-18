@@ -5,6 +5,8 @@ import GridLayout from '../../../layouts/GridLayout';
 import { getDataUsingFetch } from '../../../services/FetchingData';
 import EmploymentCard from './EmploymentCard';
 
+import { Constants } from '../../../constants/Constants';
+
 function Employments() {
   const [error, setError] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -13,8 +15,8 @@ function Employments() {
 
   async function getData() {
     try {
-      const tempWorkList = await getDataUsingFetch('data/Work.json');
-      const tempEducationList = await getDataUsingFetch('data/Education.json');
+      const tempWorkList = await getDataUsingFetch(Constants.WORK_URL);
+      const tempEducationList = await getDataUsingFetch(Constants.EDUCATION_URL);
 
       if (tempWorkList && tempWorkList.length > 0
         && tempEducationList && tempEducationList.length > 0) {

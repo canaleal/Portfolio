@@ -10,6 +10,8 @@ import { getDataUsingFetch } from '../../services/FetchingData';
 import GridLayout from '../../layouts/GridLayout';
 import AttentionBar from '../../common/AttentionBar';
 
+import { Constants } from '../../constants/Constants';
+
 function Projects() {
   const [error, setError] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -17,7 +19,7 @@ function Projects() {
 
   async function getData() {
     try {
-      const projectsJson = await getDataUsingFetch('data/Projects.json');
+      const projectsJson = await getDataUsingFetch(Constants.PROJECTS_URL);
       const tempProjectList = filterDataIfPropertyIsFalse(projectsJson, 'isDisable');
 
       if (tempProjectList && tempProjectList.length > 0) {

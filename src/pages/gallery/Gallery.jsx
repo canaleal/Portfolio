@@ -8,6 +8,8 @@ import GridLayout from '../../layouts/GridLayout';
 import { getDataUsingFetch } from '../../services/FetchingData';
 import GalleryCard from './components/GalleryCard';
 
+import { Constants } from '../../constants/Constants';
+
 function Gallery() {
   const [error, setError] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -15,7 +17,7 @@ function Gallery() {
 
   async function getData() {
     try {
-      const artJson = await getDataUsingFetch('data/Art.json');
+      const artJson = await getDataUsingFetch(Constants.GALLERY_URL);
 
       if (artJson && artJson.length > 0) {
         setArtList(artJson);

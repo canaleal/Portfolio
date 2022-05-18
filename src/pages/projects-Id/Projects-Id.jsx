@@ -7,6 +7,8 @@ import { addRawToImagePath } from '../../helpers/ImageLinks';
 import { getDataUsingFetch } from '../../services/FetchingData';
 import ProjectDescription from './components/ProjectDescription';
 
+import { Constants } from '../../constants/Constants';
+
 function ProjectsId() {
   const { id } = useParams();
   const [error, setError] = useState(null);
@@ -15,7 +17,7 @@ function ProjectsId() {
 
   async function getData() {
     try {
-      const projectsJson = await getDataUsingFetch('../../data/Projects.json');
+      const projectsJson = await getDataUsingFetch(Constants.PROJECTS_URL);
 
       const projectElement = projectsJson.find((item) => item.id === parseInt(id, 10));
 

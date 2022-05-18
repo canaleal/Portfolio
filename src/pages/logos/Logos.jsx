@@ -7,6 +7,8 @@ import { getDataUsingFetch } from '../../services/FetchingData';
 
 import LogoCard from './components/LogoCard';
 
+import { Constants } from '../../constants/Constants';
+
 function Logos() {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -14,7 +16,7 @@ function Logos() {
 
   async function getData() {
     try {
-      const logoJson = await getDataUsingFetch('../../data/Logos.json');
+      const logoJson = await getDataUsingFetch(Constants.LOGOS_URL);
 
       if (logoJson && logoJson.length > 0) {
         setLogoList(logoJson);
