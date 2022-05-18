@@ -4,7 +4,7 @@ import Tools from '../../../common/Tools';
 
 function StackCard({ stackElement }) {
   const {
-    title, frontEndTools, backEndTools, databaseTools, deploymentTools,
+    title, description, frontEndTools, backEndTools, databaseTools, deploymentTools,
   } = stackElement;
   return (
     <div className="rounded-lg col-span-1 shadow-xl">
@@ -14,6 +14,9 @@ function StackCard({ stackElement }) {
         <PageHeader title={title} color="bg-dark" rounded="rounded-lg" />
 
         <div className="p-4">
+
+          <p className="font-bold my-2">Description</p>
+          <p className="text-sm my-2 ">{description}</p>
 
           <p className="font-bold ">Front End Tools:</p>
           <div className="flex my-2">

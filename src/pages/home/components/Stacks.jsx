@@ -9,7 +9,8 @@ function Stacks() {
   const stackList = [
     {
       id: 0,
-      title: 'Osteoporosis Canada',
+      title: 'CMI',
+      description: 'The Centre for Mobile Innovation (CMI) creates innovative solutions to industry-relevant challenges in mobile health, in close collaboration with industry, community, and academic partners. ',
       frontEndTools: ['python', 'r', 'jupyter', 'pandas', 'numpy', 'pytorch', 'pytest'],
       backEndTools: ['fastapi'],
       databaseTools: ['mysql'],
@@ -18,6 +19,7 @@ function Stacks() {
     {
       id: 1,
       title: 'Geotab',
+      description: 'Geotab is advancing security, connecting commercial vehicles to the internet and providing web-based analytics to help customers better manage their fleets.',
       frontEndTools: ['react', 'tailwindcss-plain', 'redux', 'jest-plain', 'webpack', 'nextjs', 'figma'],
       backEndTools: ['nodejs', 'express'],
       databaseTools: ['mongodb', 'postgresql'],
@@ -26,6 +28,7 @@ function Stacks() {
     {
       id: 2,
       title: 'TD Bank',
+      description: 'The Toronto-Dominion Bank is a Canadian multinational banking and financial services corporation headquartered in Toronto, Ontario.',
       frontEndTools: ['angularjs', 'react', 'tailwindcss-plain', 'jquery', 'jest-plain', 'mocha-plain', 'webpack'],
       backEndTools: ['apache-plain', 'nodejs', 'express', 'spring', 'java', 'kotlin', 'dotnetcore'],
       databaseTools: ['mysql', 'postgresql'],
