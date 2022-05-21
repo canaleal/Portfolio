@@ -23,6 +23,9 @@ body {
 .main {
   margin-left: 5rem;
   background-color: #fffefd;
+}
+
+section {
   -webkit-animation: fade-in 0.2s linear both;
   animation: fade-in 0.2s linear both;
 }
@@ -57,7 +60,12 @@ body {
   margin-bottom: 2rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Source Serif Pro', serif;
 }
 
@@ -85,7 +93,8 @@ hr {
   border: none;
   height: 1px;
   /* Set the hr color */
-  background-color: #E6E8DE;
+  background-color: #e6e8de;
+  /* Modern Browsers */
 }
 
 .ellipsis {

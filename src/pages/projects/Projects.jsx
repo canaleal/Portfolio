@@ -41,7 +41,7 @@ function Projects() {
   }, []);
 
   return (
-    <div className="main " data-testid="main-page">
+    <section>
 
       {error === true
         ? <p>Error! Unable to load project list.</p>
@@ -68,7 +68,7 @@ function Projects() {
         )
         : <p />}
 
-    </div>
+    </section>
   );
 }
 

@@ -1,15 +1,8 @@
+.img-icon {
+	transition: all 0.5s;
 
-
-.img-icon{
-    transition: all 0.5s;
-
-   
-
-    &:hover {
-		
-
-    transform: rotate(10deg) scale(1.2);
+	&:hover {
+		transform: rotate(10deg) scale(1.2);
 		filter: opacity(1) saturate(150%);
-    }  
-
+	}
 }

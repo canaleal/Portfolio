@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 
 import AttentionBar from '../../common/AttentionBar';
-import Footer from '../../common/Footer';
 import PageHeader from '../../common/PageHeader';
 import GridLayout from '../../layouts/GridLayout';
 import { getDataUsingFetch } from '../../services/FetchingData';
@@ -38,7 +37,7 @@ function Gallery() {
   }, []);
 
   return (
-    <div className="main ">
+    <section>
 
       {error === true
         ? <p>Error! Unable to load gallery list.</p>
@@ -47,7 +46,7 @@ function Gallery() {
       {isLoaded === true && error === false
 
         ? (
-          <div className="h-full w-full flex flex-col">
+          <>
 
             <PageHeader title="Gallery" color="bg-green" />
 
@@ -59,11 +58,10 @@ function Gallery() {
               ))}
             </GridLayout>
 
-            <Footer />
-          </div>
+          </>
         )
-        : <p>Loading</p>}
-    </div>
+        : <p />}
+    </section>
   );
 }
 

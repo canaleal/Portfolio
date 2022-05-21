@@ -1,4 +1,3 @@
-
 .nav {
 	z-index: 2;
 	position: fixed;
@@ -11,9 +10,9 @@
 		font-weight: bold;
 		text-transform: uppercase;
 		margin-bottom: 1rem;
-		color:$white;
+		color: $white;
 		background: $dark-light;
-		
+
 		width: 100%;
 
 		span {
@@ -94,8 +93,6 @@
 
 		&:hover {
 			width: 15rem;
-
-			
 
 			.link-text {
 				display: inline;

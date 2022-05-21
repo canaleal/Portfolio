@@ -82,7 +82,7 @@ function Footer() {
   ]);
 
   return (
-    <div className="bg-smoke mt-4  ">
+    <footer className="bg-smoke mt-4  ">
       <hr />
       <div className=" py-8 px-5">
         <div className="grid grid-cols-1 sm:grid-cols-3 ">
@@ -147,7 +147,7 @@ function Footer() {
 
       </div>
 
-    </div>
+    </footer>
   );
 }
 

@@ -7,12 +7,12 @@ import Stacks from './components/Stacks';
 function Home() {
   return (
 
-    <div className="main">
+    <section>
       <HomeHeader />
       <AboutBody />
       <Stacks />
       <Footer />
-    </div>
+    </section>
 
   );
 }

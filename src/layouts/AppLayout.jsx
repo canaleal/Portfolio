@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import { Outlet, Link } from 'react-router-dom';
+import Footer from '../common/Footer';
 
 function AppLayout() {
   return (
@@ -48,7 +49,10 @@ function AppLayout() {
 
       </nav>
 
-      <Outlet />
+      <section className="main">
+        <Outlet />
+        <Footer />
+      </section>
     </>
   );
 }

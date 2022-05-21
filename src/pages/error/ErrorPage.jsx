@@ -4,7 +4,7 @@ import PageHeader from '../../common/PageHeader';
 
 function Error() {
   return (
-    <div className="main">
+    <section>
 
       <PageHeader title="404 Error" color="bg-red" />
 
@@ -12,7 +12,7 @@ function Error() {
         <p>Welcome to the backrooms. Nothing exists here, so please use the Navbar to select another page.</p>
       </div>
 
-    </div>
+    </section>
   );
 }
 

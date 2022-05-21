@@ -1,15 +1,15 @@
 /* eslint-disable no-nested-ternary */
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Footer from '../../common/Footer';
 import PageHeader from '../../common/PageHeader';
 import { addRawToImagePath } from '../../helpers/ImageLinks';
+import SmallGridLayout from '../../layouts/SmallGridLayout';
 import { getDataUsingFetch } from '../../services/FetchingData';
 import GalleryDescription from './components/GalleryDescription';
 
 function GalleryId() {
   const { id } = useParams();
-  const [error, setError] = useState(null);
+  const [error, setError] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const [art, setArt] = useState({});
 
@@ -38,39 +38,35 @@ function GalleryId() {
   }, []);
 
   return (
-    <div className="main">
+    <section>
 
-      {isLoaded
+      {error === true
+        ? <p>Error! Art does not exist.</p>
+        : <p />}
 
-        ? error
-          ? <p>Error! Art does not exist.</p>
+      {isLoaded === true && error === false
 
-          : (
-            <div className="h-full w-full flex flex-col ">
+        ? (
+          <>
 
-              <PageHeader title={art.title} color="bg-green" />
+            <PageHeader title={art.title} color="bg-green" />
 
-              <div className="px-5 my-4">
-
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-4 shadow-xl ">
-                  <div className="col-span-2">
-                    <img height="100" width="auto" src={`${addRawToImagePath(art.imglink)}`} alt="" className="card card-4xl" loading="lazy" />
-                  </div>
-
-                  <div className="col-span-2 p-4">
-                    <GalleryDescription art={art} />
-                  </div>
-                </div>
+            <SmallGridLayout>
+              <div className="col-span-2">
+                <img height="100" width="auto" src={`${addRawToImagePath(art.imglink)}`} alt="" className="card card-4xl" loading="lazy" />
               </div>
 
-              <Footer />
+              <div className="col-span-2 p-4">
+                <GalleryDescription art={art} />
+              </div>
+            </SmallGridLayout>
+          </>
 
-            </div>
-          )
+        )
 
         : <p />}
 
-    </div>
+    </section>
   );
 }
 

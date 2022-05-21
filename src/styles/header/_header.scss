@@ -5,7 +5,6 @@
 	animation-direction: alternate;
 }
 
-
 /* Standard syntax */
 @keyframes backgroundColorPalette {
 	0% {
@@ -26,7 +25,6 @@
 }
 
 .header {
-    @include color-animation();
-    color: $white;
-	
+	@include color-animation();
+	color: $white;
 }

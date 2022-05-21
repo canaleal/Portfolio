@@ -1,16 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300&display=swap');
 
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-
-
 :root {
-
 	font-family: 'Poppins', sans-serif;
 }
 
@@ -18,100 +13,95 @@ html {
 	scroll-behavior: smooth;
 }
 
-
 body {
 	color: black;
-	
+
 	margin: 0;
 	padding: 0;
 
 	font-size: 15px;
-    line-height: 1.75em;
-    font-weight: 300;
+	line-height: 1.75em;
+	font-weight: 300;
 }
-
-
 
 .main {
 	margin-left: 5rem;
-	
-	background-color: #fffefd;
 
-	-webkit-animation: fade-in 0.2s linear both;
-	        animation: fade-in 0.2s linear both;
+	background-color: #fffefd;
 }
 
-
-
-
-  
+section {
+	-webkit-animation: fade-in 0.2s linear both;
+	animation: fade-in 0.2s linear both;
+}
 
 /* Small screens */
 @media only screen and (max-width: 600px) {
-    .main{
-        margin: 0;
-        margin-bottom: 5rem;
-    }
+	.main {
+		margin: 0;
+		margin-bottom: 5rem;
+	}
 }
 
-
-.bolded{
+.bolded {
 	font-weight: bold;
 
-	&-red{
+	&-red {
 		color: $red;
 	}
 }
 
-.highlight{
+.highlight {
 	color: $highlight;
 }
 
-.m{
-	&-1{
+.m {
+	&-1 {
 		margin-top: 1rem;
 		margin-bottom: 1rem;
 	}
 
-	&-2{
+	&-2 {
 		margin-top: 2rem;
 		margin-bottom: 2rem;
 	}
 }
 
-
-
-
-h1, h2, h3, h4, h5, h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-family: 'Source Serif Pro', serif;
 }
 
-.bg-green{
+.bg-green {
 	background-color: #007a3e;
 }
 
-.bg-blue{
+.bg-blue {
 	background-color: #343579;
 }
 
-.bg-red{
+.bg-red {
 	background-color: #793434;
 }
 
-.bg-smoke{
+.bg-smoke {
 	background-color: #f8f9f2;
 }
 
-.bg-dark{
+.bg-dark {
 	background-color: $dark;
 }
 
 hr {
-    border: none;
-    height: 1px;
-    /* Set the hr color */
-  
-    background-color:  #E6E8DE/* Modern Browsers */
+	border: none;
+	height: 1px;
+	/* Set the hr color */
+
+	background-color: #e6e8de; /* Modern Browsers */
 }
 
 .ellipsis {
@@ -120,4 +110,4 @@ hr {
 	display: -webkit-box;
 	-webkit-line-clamp: 3;
 	-webkit-box-orient: vertical;
-  }
+}
