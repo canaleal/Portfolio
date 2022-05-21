@@ -1,6 +1,5 @@
 import React from 'react';
 import AttentionBar from '../../../common/AttentionBar';
-import Footer from '../../../common/Footer';
 import PageHeader from '../../../common/PageHeader';
 import GridLayout from '../../../layouts/GridLayout';
 import StackCard from './StackCard';
@@ -36,7 +35,7 @@ function Stacks() {
     }];
   return (
 
-    <div className="h-full w-full flex flex-col">
+    <>
 
       <PageHeader title="Tech Stacks" color="bg-blue" />
 
@@ -48,9 +47,7 @@ function Stacks() {
         ))}
       </GridLayout>
 
-      <Footer />
-
-    </div>
+    </>
 
   );
 }

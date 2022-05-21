@@ -4,7 +4,7 @@ import Tools from '../../../common/Tools';
 function AboutBody() {
   const favoriteToolList = ['nextjs', 'svelte', 'nodejs', 'express', 'mongodb', 'postgresql', 'docker', 'googlecloud'];
   return (
-    <div id="about" className="grid grid-cols-1 md:grid-cols-2 gap-4 px-4 py-16">
+    <section id="about" className="grid grid-cols-1 md:grid-cols-2 gap-4 px-4 py-16">
 
       <div className="col-span-1">
         <img className="object-none object-center card card-md" height="100" width="auto" src="\assets\images\art\snowbound.webp" alt="Logo" />
@@ -25,7 +25,7 @@ function AboutBody() {
 
       </div>
 
-    </div>
+    </section>
   );
 }
 

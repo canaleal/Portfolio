@@ -12,12 +12,12 @@ function ProjectCard({ projectElement }) {
 
   return (
 
-    <div className="rounded-lg col-span-1 shadow-xl">
+    <div className="card col-span-1 shadow-xl">
 
       <div className="flex flex-col">
         <Link to={{ pathname: `/projects/${id}` }} aria-label={title}>
 
-          <img height="100" width="auto" src={`${imglink}`} alt={`${title}`} className="card card-md" loading="lazy" />
+          <img height="100" width="auto" src={`${imglink}`} alt={`${title}`} className="img-card img-card-md" loading="lazy" />
         </Link>
 
         <div className="p-4">

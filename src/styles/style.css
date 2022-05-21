@@ -469,6 +469,22 @@ a.special-btn:hover {
 }
 
 .card {
+  border-radius: 1rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  overflow: hidden;
+}
+
+.card-noHover {
+  pointer-events: none;
+}
+
+.card:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+
+.img-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -497,11 +513,11 @@ a.special-btn:hover {
   background-repeat: no-repeat;
 }
 
-.card-noHover {
+.img-card-noHover {
   pointer-events: none;
 }
 
-.card:hover {
+.img-card:hover {
   -webkit-box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
           box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
   -webkit-transform: scale(1.03);
@@ -511,35 +527,35 @@ a.special-btn:hover {
           filter: opacity(1) saturate(150%);
 }
 
-.card-xsm {
+.img-card-xsm {
   height: 10rem;
 }
 
-.card-sm {
+.img-card-sm {
   height: 15rem;
 }
 
-.card-md {
+.img-card-md {
   height: 20rem;
 }
 
-.card-lg {
+.img-card-lg {
   height: 25rem;
 }
 
-.card-xl {
+.img-card-xl {
   height: 30rem;
 }
 
-.card-2xl {
+.img-card-2xl {
   height: 35rem;
 }
 
-.card-3xl {
+.img-card-3xl {
   height: 40rem;
 }
 
-.card-4xl {
+.img-card-4xl {
   height: 45rem;
 }
 

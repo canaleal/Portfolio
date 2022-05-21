@@ -48,7 +48,7 @@ function Employments() {
       {isLoaded === true && error === false
 
         ? (
-          <div>
+          <>
             <PageHeader title="Work Experience" color="bg-dark" />
             <AttentionBar message="To view my full work list, please take a look at my Linkedin." />
 
@@ -66,7 +66,7 @@ function Employments() {
               ))}
             </GridLayout>
 
-          </div>
+          </>
         )
         : <p />}
     </div>

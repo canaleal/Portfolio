@@ -53,7 +53,7 @@ function GalleryId() {
 
             <SmallGridLayout>
               <div className="col-span-2">
-                <img height="100" width="auto" src={`${addRawToImagePath(art.imglink)}`} alt="" className="card card-4xl" loading="lazy" />
+                <img height="100" width="auto" src={`${addRawToImagePath(art.imglink)}`} alt="" className="img-card img-card-4xl" loading="lazy" />
               </div>
 
               <div className="col-span-2 p-4">

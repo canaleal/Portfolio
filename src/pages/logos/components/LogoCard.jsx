@@ -6,7 +6,7 @@ function LogoCard({ logoElement }) {
   } = logoElement;
   return (
 
-    <div className=" bg-white rounded-lg col-span-1 shadow-xl slide-in-right">
+    <div className="card col-span-1 shadow-xl slide-in-right">
 
       <div className="flex flex-col p-4">
         <img height="100" width="auto" className="img-icon h-8 w-fit " src={link} alt={title} />

@@ -7,30 +7,27 @@ function EmploymentCard({ aboutElement }) {
   } = aboutElement;
   return (
 
-    <div className="  rounded-lg col-span-1 shadow-xl">
+    <div className=" rounded-lg col-span-1 shadow-xl">
 
-      <div className="flex flex-col">
+      <img height="100" width="auto" src={`${addRawToImagePath(imglink)}`} alt={`${title}`} className="card card-md" loading="lazy" />
+      <div className="p-4">
+        <p className="font-bold my-2">{title}</p>
+        <p className="highlight text-sm my-2">{role}</p>
 
-        <img height="100" width="auto" src={`${addRawToImagePath(imglink)}`} alt={`${title}`} className="card card-md" loading="lazy" />
-        <div className="p-4">
-          <p className="font-bold my-2">{title}</p>
-          <p className="highlight text-sm my-2">{role}</p>
+        <p className="text-sm my-2">
+          {startDate}
+          {' '}
+          to
+          {' '}
+          {endDate}
+        </p>
 
-          <p className="text-sm my-2">
-            {startDate}
-            {' '}
-            to
-            {' '}
-            {endDate}
-          </p>
-
-          <hr />
-          <p className="font-bold my-2">Description</p>
-          <p className="text-sm my-2 ">{description}</p>
-
-        </div>
+        <hr />
+        <p className="font-bold my-2">Description</p>
+        <p className="text-sm my-2 ">{description}</p>
 
       </div>
+
     </div>
   );
 }
