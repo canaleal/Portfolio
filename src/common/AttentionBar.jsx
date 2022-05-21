@@ -2,7 +2,7 @@ import React from 'react';
 
 function AttentionBar({ message }) {
   return (
-    <div className="bg-smoke">
+    <section className="bg-smoke">
 
       <div className=" py-8 px-5">
         <p className="font-bold">Attention</p>
@@ -11,7 +11,7 @@ function AttentionBar({ message }) {
 
       <hr />
 
-    </div>
+    </section>
   );
 }
 

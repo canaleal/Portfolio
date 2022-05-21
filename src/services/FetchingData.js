@@ -4,6 +4,13 @@ import axios from 'axios';
 export const getDataUsingFetch = async (url) => axios.get(url)
   .then((res) => res.data.Data);
 
+export const getDataWithAxios = async (sourceLink) => {
+  const response = await axios.get(
+    sourceLink,
+  );
+  return response.data;
+};
+
 // Fetching data from the API and filtering the projects by the category
 export const fetchDataUsingAxiosAndFilter = async (url) => axios.get(url)
   .then((res) => res.data.Data)

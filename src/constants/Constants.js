@@ -1,6 +1,11 @@
 /* eslint-disable import/prefer-default-export */
 function getFullWindowPath() {
-  return `${window.location.protocol}//${window.location.host}`;
+  if (typeof window !== 'undefined') {
+    return `${window.location.protocol}//${window.location.host}`;
+    // ✅ Can use window here
+  }
+  return null;
+  // ⛔️ Don't use window here
 }
 
 export const Constants = {
