@@ -1,5 +1,5 @@
 import React from 'react';
-import { addRawToImagePath } from '../../../helpers/ImageLinks';
+import { addRawToImagePath } from '../../../util/ImageLinks';
 
 function EmploymentCard({ aboutElement }) {
   const {

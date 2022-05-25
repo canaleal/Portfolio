@@ -8,7 +8,7 @@ function getFullWindowPath() {
   // ⛔️ Don't use window here
 }
 
-export const Constants = {
+export const Global = {
   PROJECTS_URL: `${getFullWindowPath()}/data/Projects.json`,
   GALLERY_URL: `${getFullWindowPath()}/data/Art.json`,
   WORK_URL: `${getFullWindowPath()}/data/Work.json`,

@@ -1,13 +1,13 @@
 /* eslint-disable no-nested-ternary */
 import React, { useState, useEffect } from 'react';
 
-import AttentionBar from '../../common/AttentionBar';
-import PageHeader from '../../common/PageHeader';
+import AttentionBar from '../../components/AttentionBar';
+import PageHeader from '../../components/PageHeader';
 import GridLayout from '../../layouts/GridLayout';
 import { getDataUsingFetch } from '../../services/FetchingData';
 import GalleryCard from './components/GalleryCard';
 
-import { Constants } from '../../constants/Constants';
+import { Global } from '../../constants';
 
 function Gallery() {
   const [error, setError] = useState(false);
@@ -16,7 +16,7 @@ function Gallery() {
 
   async function getData() {
     try {
-      const artJson = await getDataUsingFetch(Constants.GALLERY_URL);
+      const artJson = await getDataUsingFetch(Global.GALLERY_URL);
 
       if (artJson && artJson.length > 0) {
         setArtList(artJson);

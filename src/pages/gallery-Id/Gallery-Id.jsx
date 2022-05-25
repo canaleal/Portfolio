@@ -1,8 +1,8 @@
 /* eslint-disable no-nested-ternary */
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import PageHeader from '../../common/PageHeader';
-import { addRawToImagePath } from '../../helpers/ImageLinks';
+import PageHeader from '../../components/PageHeader';
+import { addRawToImagePath } from '../../util/ImageLinks';
 import SmallGridLayout from '../../layouts/SmallGridLayout';
 import { getDataUsingFetch } from '../../services/FetchingData';
 import GalleryDescription from './components/GalleryDescription';

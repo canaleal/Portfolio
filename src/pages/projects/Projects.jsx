@@ -3,14 +3,14 @@
 import React, { useState, useEffect } from 'react';
 
 import ProjectCard from './components/ProjectCard';
-import { filterDataIfPropertyIsFalse } from '../../helpers/Filters';
-import PageHeader from '../../common/PageHeader';
-import Footer from '../../common/Footer';
+import { filterDataIfPropertyIsFalse } from '../../util/Filters';
+import PageHeader from '../../components/PageHeader';
+import Footer from '../../components/Footer';
 import { getDataUsingFetch } from '../../services/FetchingData';
 import GridLayout from '../../layouts/GridLayout';
-import AttentionBar from '../../common/AttentionBar';
+import AttentionBar from '../../components/AttentionBar';
 
-import { Constants } from '../../constants/Constants';
+import { Global } from '../../constants';
 
 function Projects() {
   const [error, setError] = useState(false);
@@ -19,7 +19,7 @@ function Projects() {
 
   async function getData() {
     try {
-      const projectsJson = await getDataUsingFetch(Constants.PROJECTS_URL);
+      const projectsJson = await getDataUsingFetch(Global.PROJECTS_URL);
       const tempProjectList = filterDataIfPropertyIsFalse(projectsJson, 'isDisable');
 
       if (tempProjectList && tempProjectList.length > 0) {

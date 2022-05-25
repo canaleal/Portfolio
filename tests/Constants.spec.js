@@ -1,31 +1,31 @@
-import { Constants } from '../src/constants/Constants';
+import { Global } from '../src/constants/global';
 
-// Jest test is constants are defined
-test('Constants are defined', () => {
-  expect(Constants).toBeDefined();
+// Jest test is Gloabl are defined
+test('Gloabl are defined', () => {
+  expect(Global).toBeDefined();
 });
 
-// Jest test find if Constants.PROJECTS_URL is defined
-test('Constants.PROJECTS_URL is defined', () => {
-  expect(Constants.PROJECTS_URL).toBeDefined();
+// Jest test find if Gloabl.PROJECTS_URL is defined
+test('Gloabl.PROJECTS_URL is defined', () => {
+  expect(Global.PROJECTS_URL).toBeDefined();
 });
 
-// Jest test find if Constants.GALLERY_URL is defined
-test('Constants.GALLERY_URL is defined', () => {
-  expect(Constants.GALLERY_URL).toBeDefined();
+// Jest test find if Gloabl.GALLERY_URL is defined
+test('Gloabl.GALLERY_URL is defined', () => {
+  expect(Global.GALLERY_URL).toBeDefined();
 });
 
-// Jest test find if Constants.WORK_URL is defined
-test('Constants.WORK_URL is defined', () => {
-  expect(Constants.WORK_URL).toBeDefined();
+// Jest test find if Gloabl.WORK_URL is defined
+test('Gloabl.WORK_URL is defined', () => {
+  expect(Global.WORK_URL).toBeDefined();
 });
 
-// Jest test find if Constants.EDUCATION_URL is defined
-test('Constants.EDUCATION_URL is defined', () => {
-  expect(Constants.EDUCATION_URL).toBeDefined();
+// Jest test find if Gloabl.EDUCATION_URL is defined
+test('Gloabl.EDUCATION_URL is defined', () => {
+  expect(Global.EDUCATION_URL).toBeDefined();
 });
 
-// Jest test find if Constants.LOGOS_URL is defined
-test('Constants.LOGOS_URL is defined', () => {
-  expect(Constants.LOGOS_URL).toBeDefined();
+// Jest test find if Gloabl.LOGOS_URL is defined
+test('Gloabl.LOGOS_URL is defined', () => {
+  expect(Global.LOGOS_URL).toBeDefined();
 });

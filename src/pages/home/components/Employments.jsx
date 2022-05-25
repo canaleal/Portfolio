@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import AttentionBar from '../../../common/AttentionBar';
-import PageHeader from '../../../common/PageHeader';
+import AttentionBar from '../../../components/AttentionBar';
+import PageHeader from '../../../components/PageHeader';
 import GridLayout from '../../../layouts/GridLayout';
 import { getDataUsingFetch } from '../../../services/FetchingData';
 import EmploymentCard from './EmploymentCard';
 
-import { Constants } from '../../../constants/Constants';
+import { Global } from '../../../constants';
 
 function Employments() {
   const [error, setError] = useState(false);
@@ -15,8 +15,8 @@ function Employments() {
 
   async function getData() {
     try {
-      const tempWorkList = await getDataUsingFetch(Constants.WORK_URL);
-      const tempEducationList = await getDataUsingFetch(Constants.EDUCATION_URL);
+      const tempWorkList = await getDataUsingFetch(Global.WORK_URL);
+      const tempEducationList = await getDataUsingFetch(Global.EDUCATION_URL);
 
       if (tempWorkList && tempWorkList.length > 0
         && tempEducationList && tempEducationList.length > 0) {

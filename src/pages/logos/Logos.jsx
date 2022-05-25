@@ -1,11 +1,11 @@
 /* eslint-disable no-nested-ternary */
 import React, { useState, useEffect } from 'react';
-import PageHeader from '../../common/PageHeader';
+import PageHeader from '../../components/PageHeader';
 import { getDataUsingFetch } from '../../services/FetchingData';
 
 import LogoCard from './components/LogoCard';
 
-import { Constants } from '../../constants/Constants';
+import { Global } from '../../constants';
 
 function Logos() {
   const [error, setError] = useState(false);
@@ -14,7 +14,7 @@ function Logos() {
 
   async function getData() {
     try {
-      const logoJson = await getDataUsingFetch(Constants.LOGOS_URL);
+      const logoJson = await getDataUsingFetch(Global.LOGOS_URL);
 
       if (logoJson && logoJson.length > 0) {
         setLogoList(logoJson);

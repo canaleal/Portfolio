@@ -1,12 +1,12 @@
 /* eslint-disable no-nested-ternary */
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import PageHeader from '../../common/PageHeader';
-import { addRawToImagePath } from '../../helpers/ImageLinks';
+import PageHeader from '../../components/PageHeader';
+import { addRawToImagePath } from '../../util/ImageLinks';
 import { getDataUsingFetch } from '../../services/FetchingData';
 import ProjectDescription from './components/ProjectDescription';
 
-import { Constants } from '../../constants/Constants';
+import { Global } from '../../constants';
 import SmallGridLayout from '../../layouts/SmallGridLayout';
 
 function ProjectsId() {
@@ -17,7 +17,7 @@ function ProjectsId() {
 
   async function getData() {
     try {
-      const projectsJson = await getDataUsingFetch(Constants.PROJECTS_URL);
+      const projectsJson = await getDataUsingFetch(Global.PROJECTS_URL);
 
       const projectElement = projectsJson.find((item) => item.id === parseInt(id, 10));
 

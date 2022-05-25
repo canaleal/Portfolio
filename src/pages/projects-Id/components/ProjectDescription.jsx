@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
-import { returnLinkComponentGivenGithubLink, returnLinkComponentGivenProjectLink } from '../../../common/LinkButtons';
+import { returnLinkComponentGivenGithubLink, returnLinkComponentGivenProjectLink } from '../../../components/LinkButtons';
 
-import Tools from '../../../common/Tools';
+import Tools from '../../../components/Tools';
 
 function ProjectDescription({ project }) {
   const {

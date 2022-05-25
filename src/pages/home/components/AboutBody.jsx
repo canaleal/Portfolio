@@ -1,5 +1,5 @@
 import React from 'react';
-import Tools from '../../../common/Tools';
+import Tools from '../../../components/Tools';
 
 function AboutBody() {
   const favoriteToolList = ['nextjs', 'svelte', 'nodejs', 'express', 'mongodb', 'postgresql', 'docker', 'googlecloud'];
