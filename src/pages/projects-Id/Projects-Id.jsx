@@ -1,13 +1,13 @@
 /* eslint-disable no-nested-ternary */
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import PageHeader from '../../components/PageHeader';
-import { addRawToImagePath } from '../../util/ImageLinks';
-import { getDataUsingFetch } from '../../services/FetchingData';
-import ProjectDescription from './components/ProjectDescription';
+import PageHeader from 'components/PageHeader';
+import { addRawToImagePath } from 'util/add-raw-link';
+import { getDataUsingFetch } from 'services/FetchingData';
+import { Global } from 'constants';
+import SmallGridLayout from 'layouts/SmallGridLayout';
 
-import { Global } from '../../constants';
-import SmallGridLayout from '../../layouts/SmallGridLayout';
+import ProjectDescription from './components/ProjectDescription';
 
 function ProjectsId() {
   const { id } = useParams();

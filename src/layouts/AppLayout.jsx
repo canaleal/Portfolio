@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { Outlet, Link } from 'react-router-dom';
-import Footer from '../components/Footer';
+import Footer from 'components/Footer';
 
 function AppLayout() {
   return (

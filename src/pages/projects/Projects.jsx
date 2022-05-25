@@ -2,15 +2,16 @@
 /* eslint-disable no-nested-ternary */
 import React, { useState, useEffect } from 'react';
 
-import ProjectCard from './components/ProjectCard';
-import { filterDataIfPropertyIsFalse } from '../../util/Filters';
-import PageHeader from '../../components/PageHeader';
-import Footer from '../../components/Footer';
-import { getDataUsingFetch } from '../../services/FetchingData';
-import GridLayout from '../../layouts/GridLayout';
-import AttentionBar from '../../components/AttentionBar';
+import { filterDataIfPropertyIsFalse } from 'util/filter-tools-list';
+import PageHeader from 'components/PageHeader';
+import Footer from 'components/Footer';
+import { getDataUsingFetch } from 'services/FetchingData';
+import GridLayout from 'layouts/GridLayout';
+import AttentionBar from 'components/AttentionBar';
 
-import { Global } from '../../constants';
+import { Global } from 'constants';
+
+import ProjectCard from './components/ProjectCard';
 
 function Projects() {
   const [error, setError] = useState(false);

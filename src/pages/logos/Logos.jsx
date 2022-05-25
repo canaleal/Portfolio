@@ -1,11 +1,10 @@
 /* eslint-disable no-nested-ternary */
 import React, { useState, useEffect } from 'react';
-import PageHeader from '../../components/PageHeader';
-import { getDataUsingFetch } from '../../services/FetchingData';
+import PageHeader from 'components/PageHeader';
+import { getDataUsingFetch } from 'services/FetchingData';
+import { Global } from 'constants';
 
 import LogoCard from './components/LogoCard';
-
-import { Global } from '../../constants';
 
 function Logos() {
   const [error, setError] = useState(false);

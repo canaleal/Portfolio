@@ -1,10 +1,10 @@
 /* eslint-disable no-nested-ternary */
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import PageHeader from '../../components/PageHeader';
-import { addRawToImagePath } from '../../util/ImageLinks';
-import SmallGridLayout from '../../layouts/SmallGridLayout';
-import { getDataUsingFetch } from '../../services/FetchingData';
+import PageHeader from 'components/PageHeader';
+import { addRawToImagePath } from 'util/add-raw-link';
+import SmallGridLayout from 'layouts/SmallGridLayout';
+import { getDataUsingFetch } from 'services/FetchingData';
 import GalleryDescription from './components/GalleryDescription';
 
 function GalleryId() {

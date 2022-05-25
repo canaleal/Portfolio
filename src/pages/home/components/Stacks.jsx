@@ -1,7 +1,7 @@
 import React from 'react';
-import AttentionBar from '../../../components/AttentionBar';
-import PageHeader from '../../../components/PageHeader';
-import GridLayout from '../../../layouts/GridLayout';
+import AttentionBar from 'components/AttentionBar';
+import PageHeader from 'components/PageHeader';
+import GridLayout from 'layouts/GridLayout';
 import StackCard from './StackCard';
 
 function Stacks() {

@@ -1,6 +1,6 @@
 import React from 'react';
-import PageHeader from '../../../components/PageHeader';
-import Tools from '../../../components/Tools';
+import PageHeader from 'components/PageHeader';
+import Tools from 'components/Tools';
 
 function StackCard({ stackElement }) {
   const {

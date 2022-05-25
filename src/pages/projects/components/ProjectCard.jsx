@@ -1,9 +1,9 @@
 import React from 'react';
 
 import { Link } from 'react-router-dom';
-import { returnLinkComponentGivenGithubLink, returnLinkComponentGivenProjectLink } from '../../../components/LinkButtons';
+import { returnLinkComponentGivenGithubLink, returnLinkComponentGivenProjectLink } from 'components/LinkButtons';
 
-import Tools from '../../../components/Tools';
+import Tools from 'components/Tools';
 
 function ProjectCard({ projectElement }) {
   const {
