@@ -2,7 +2,7 @@ import React from 'react';
 
 function HomeHeader() {
   return (
-    <section className="h-screen">
+    <section id="home" className="h-screen">
       <div className="header h-full flex flex-col justify-center items-center mx-auto px-8">
         <h2 className="text-4xl ">Alex Canales</h2>
         <p className="mb-8">Experienced creating responsive applications for mobile, desktop & web.</p>

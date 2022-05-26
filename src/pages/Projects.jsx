@@ -11,7 +11,7 @@ import AttentionBar from 'components/AttentionBar';
 
 import { Global } from 'constants';
 
-import ProjectCard from './components/ProjectCard';
+import ProjectCard from 'components/projects/ProjectCard';
 
 function Projects() {
   const [error, setError] = useState(false);

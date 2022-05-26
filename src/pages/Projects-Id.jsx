@@ -7,7 +7,7 @@ import { getDataUsingFetch } from 'services/fetch-data';
 import { Global } from 'constants';
 import SmallGridLayout from 'layouts/SmallGridLayout';
 
-import ProjectDescription from './components/ProjectDescription';
+import ProjectDescription from 'components/projects/ProjectDescription';
 
 function ProjectsId() {
   const { id } = useParams();
@@ -18,7 +18,6 @@ function ProjectsId() {
   async function getData() {
     try {
       const projectsJson = await getDataUsingFetch(Global.PROJECTS_URL);
-
       const projectElement = projectsJson.find((item) => item.id === parseInt(id, 10));
 
       if (projectElement) {

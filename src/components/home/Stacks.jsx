@@ -35,7 +35,7 @@ function Stacks() {
     }];
   return (
 
-    <>
+    <section id="stack">
 
       <PageHeader title="Tech Stacks" color="bg-blue" />
 
@@ -47,7 +47,7 @@ function Stacks() {
         ))}
       </GridLayout>
 
-    </>
+    </section>
 
   );
 }

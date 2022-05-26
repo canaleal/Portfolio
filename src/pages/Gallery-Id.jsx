@@ -5,7 +5,7 @@ import PageHeader from 'components/PageHeader';
 import { addRawToImagePath } from 'util/add-raw-link';
 import SmallGridLayout from 'layouts/SmallGridLayout';
 import { getDataUsingFetch } from 'services/fetch-data';
-import GalleryDescription from './components/GalleryDescription';
+import GalleryDescription from 'components/gallery/GalleryDescription';
 
 function GalleryId() {
   const { id } = useParams();

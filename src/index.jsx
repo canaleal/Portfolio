@@ -9,17 +9,16 @@ import {
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faPython, faJs } from '@fortawesome/free-brands-svg-icons';
 
-import HomePage from './pages/home/HomePage';
-import Projects from './pages/projects/Projects';
-import ProjectId from './pages/projects-Id/Projects-Id';
-import GalleryPage from './pages/gallery/Gallery';
-import GalleryId from './pages/gallery-Id/Gallery-Id';
-
-import ErrorPage from './pages/error/ErrorPage';
+import Home from 'pages/Home';
+import Projects from 'pages/Projects';
+import ProjectId from 'pages/Projects-Id';
+import Gallery from 'pages/Gallery';
+import GalleryId from 'pages/Gallery-Id';
+import Error from 'pages/Error';
 import reportWebVitals from './reportWebVitals';
 
 // Import font awesome and some icons
-import Logos from './pages/logos/Logos';
+import Logos from './pages/Logos';
 import AppLayout from './layouts/AppLayout';
 
 import './styles/style.css';
@@ -35,14 +34,13 @@ render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<AppLayout />}>
-        <Route index element={<HomePage />} />
-
+        <Route index element={<Home />} />
         <Route path="projects" element={<Projects />} />
         <Route path="projects/:id" element={<ProjectId />} />
-        <Route path="gallery" element={<GalleryPage />} />
+        <Route path="gallery" element={<Gallery />} />
         <Route path="gallery/:id" element={<GalleryId />} />
         <Route path="logos" element={<Logos />} />
-        <Route path="*" element={<ErrorPage />} />
+        <Route path="*" element={<Error />} />
       </Route>
     </Routes>
   </BrowserRouter>,

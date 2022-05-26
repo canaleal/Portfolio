@@ -4,7 +4,7 @@ import PageHeader from 'components/PageHeader';
 import { getDataUsingFetch } from 'services/fetch-data';
 import { Global } from 'constants';
 
-import LogoCard from './components/LogoCard';
+import LogoCard from 'components/logos/LogoCard';
 
 function Logos() {
   const [error, setError] = useState(false);
