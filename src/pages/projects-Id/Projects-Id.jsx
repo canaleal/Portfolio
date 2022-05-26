@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import PageHeader from 'components/PageHeader';
 import { addRawToImagePath } from 'util/add-raw-link';
-import { getDataUsingFetch } from 'services/FetchingData';
+import { getDataUsingFetch } from 'services/fetch-data';
 import { Global } from 'constants';
 import SmallGridLayout from 'layouts/SmallGridLayout';
 

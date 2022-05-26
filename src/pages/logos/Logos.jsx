@@ -1,7 +1,7 @@
 /* eslint-disable no-nested-ternary */
 import React, { useState, useEffect } from 'react';
 import PageHeader from 'components/PageHeader';
-import { getDataUsingFetch } from 'services/FetchingData';
+import { getDataUsingFetch } from 'services/fetch-data';
 import { Global } from 'constants';
 
 import LogoCard from './components/LogoCard';

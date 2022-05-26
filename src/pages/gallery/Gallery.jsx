@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import AttentionBar from 'components/AttentionBar';
 import PageHeader from 'components/PageHeader';
 import GridLayout from 'layouts/GridLayout';
-import { getDataUsingFetch } from 'services/FetchingData';
+import { getDataUsingFetch } from 'services/fetch-data';
 import { Global } from 'constants';
 import GalleryCard from './components/GalleryCard';
 

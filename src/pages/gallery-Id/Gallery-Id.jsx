@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import PageHeader from 'components/PageHeader';
 import { addRawToImagePath } from 'util/add-raw-link';
 import SmallGridLayout from 'layouts/SmallGridLayout';
-import { getDataUsingFetch } from 'services/FetchingData';
+import { getDataUsingFetch } from 'services/fetch-data';
 import GalleryDescription from './components/GalleryDescription';
 
 function GalleryId() {
