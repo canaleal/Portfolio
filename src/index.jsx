@@ -9,12 +9,12 @@ import {
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faPython, faJs } from '@fortawesome/free-brands-svg-icons';
 
-import Home from 'pages/Home';
-import Projects from 'pages/Projects';
-import ProjectId from 'pages/Projects-Id';
-import Gallery from 'pages/Gallery';
-import GalleryId from 'pages/Gallery-Id';
-import Error from 'pages/Error';
+import Home from './pages/Home';
+import Projects from './pages/Projects';
+import ProjectId from './pages/Projects-Id';
+import Gallery from './pages/Gallery';
+import GalleryId from './pages/Gallery-Id';
+import Error from './pages/Error';
 import reportWebVitals from './reportWebVitals';
 
 // Import font awesome and some icons

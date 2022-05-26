@@ -1,7 +1,7 @@
 import React from 'react';
-import AboutBody from 'components/about/AboutBody';
-import HomeHeader from 'components/about/HomeHeader';
-import Stacks from 'components/about/Stacks';
+import AboutBody from '../components/home/AboutBody';
+import HomeHeader from '../components/home/HomeHeader';
+import Stacks from '../components/home/Stacks';
 
 function Home() {
   return (

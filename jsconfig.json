@@ -1,0 +1,6 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src"
+  },
+  "include": ["src", "components", "constants", "hooks", "layouts", "pages", "services", "util"]
+}
