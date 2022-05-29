@@ -63,8 +63,6 @@ function Projects() {
               ))}
             </GridLayout>
 
-            <Footer />
-
           </div>
         )
         : <p />}
