@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 
 import { filterDataIfPropertyIsFalse } from 'util/filter-tools-list';
 import PageHeader from 'components/PageHeader';
-import Footer from 'components/Footer';
 import { getDataUsingFetch } from 'services/fetch-data';
 import GridLayout from 'layouts/GridLayout';
 import AttentionBar from 'components/AttentionBar';
