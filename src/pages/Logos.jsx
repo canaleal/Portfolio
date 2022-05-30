@@ -4,6 +4,8 @@ import PageHeader from 'components/PageHeader';
 import { Global } from 'constants';
 import { useFetch } from 'hooks/fetch-hook';
 import LogoCard from 'components/logos/LogoCard';
+import GridLayout from 'layouts/GridLayout';
+import Error from './Error';
 
 function Logos() {
   const { data, error, isLoaded } = useFetch(Global.LOGOS_URL);
@@ -12,7 +14,7 @@ function Logos() {
     <section>
 
       {error === true
-        ? <p>Error! Logos do not exist.</p>
+        ? <Error />
         : <p />}
 
       {isLoaded === true && error === false
@@ -22,14 +24,11 @@ function Logos() {
 
             <PageHeader title="Car Brands" color="bg-blue" />
 
-            <div className="px-5 my-4 ">
-              <div className="grid grid-cols-4 md:grid-cols-8 gap-4">
-                {data.map((logoElement) => (
-                  <LogoCard key={logoElement.name} logoElement={logoElement} />
-                ))}
-              </div>
-
-            </div>
+            <GridLayout id="logos" columns="8">
+              {data.map((logoElement) => (
+                <LogoCard key={logoElement.name} logoElement={logoElement} />
+              ))}
+            </GridLayout>
 
           </>
         )

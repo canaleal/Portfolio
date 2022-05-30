@@ -7,6 +7,7 @@ import GridLayout from 'layouts/GridLayout';
 import { Global } from 'constants';
 import GalleryCard from 'components/gallery/GalleryCard';
 import { useFetch } from 'hooks/fetch-hook';
+import Error from './Error';
 
 function Gallery() {
   const { data, error, isLoaded } = useFetch(Global.GALLERY_URL);
@@ -15,7 +16,7 @@ function Gallery() {
     <section>
 
       {error === true
-        ? <p>Error! Unable to load gallery list.</p>
+        ? <Error />
         : <p />}
 
       {isLoaded === true && error === false
@@ -27,7 +28,7 @@ function Gallery() {
 
             <AttentionBar message="This page contains my work, as well as my favorite pieces from other artists." />
 
-            <GridLayout>
+            <GridLayout id="gallery" columns="3">
               {data.map((artElement) => (
                 <GalleryCard key={artElement.id} artElement={artElement} />
               ))}

@@ -38,11 +38,12 @@ export const useFetchWithFilter = (url, id) => {
   async function getData() {
     try {
       const dataJson = await getDataUsingFetch(url);
+      const dataElement = dataJson.find((item) => item.id === parseInt(id, 10));
 
-      if (dataJson && dataJson.length > 0) {
-        setData(dataJson.find((item) => item.id === parseInt(id, 10)));
+      if (dataElement) {
+        setData(dataElement);
       } else {
-        throw new Error('Art list is empty');
+        throw new Error('Element not found!');
       }
     } catch {
       setError(true);

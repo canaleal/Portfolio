@@ -41,7 +41,7 @@ function Stacks() {
 
       <AttentionBar message="These are some of the Tech Stacks/Tools I have used at different companies." />
 
-      <GridLayout>
+      <GridLayout columns="3">
         {stackList.map((stackElement) => (
           <StackCard key={stackElement.id} stackElement={stackElement} />
         ))}

@@ -3,10 +3,11 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import PageHeader from 'components/PageHeader';
 import { addRawToImagePath } from 'util/add-raw-link';
-import SmallGridLayout from 'layouts/SmallGridLayout';
 import GalleryDescription from 'components/gallery/GalleryDescription';
 import { useFetchWithFilter } from 'hooks/fetch-hook';
 import { Global } from 'constants';
+import GridLayout from 'layouts/GridLayout';
+import Error from './Error';
 
 function GalleryId() {
   const { id } = useParams();
@@ -16,7 +17,7 @@ function GalleryId() {
     <section>
 
       {error === true
-        ? <p>Error! Art does not exist.</p>
+        ? <Error />
         : <p />}
 
       {isLoaded === true && error === false
@@ -26,7 +27,7 @@ function GalleryId() {
 
             <PageHeader title={data.title} color="bg-green" />
 
-            <SmallGridLayout>
+            <GridLayout id={id} columns="4">
               <div className="col-span-2">
                 <img height="100" width="auto" src={`${addRawToImagePath(data.imglink)}`} alt="" className="img-card img-card-4xl" loading="lazy" />
               </div>
@@ -34,7 +35,7 @@ function GalleryId() {
               <div className="col-span-2 p-4">
                 <GalleryDescription art={data} />
               </div>
-            </SmallGridLayout>
+            </GridLayout>
           </>
 
         )
