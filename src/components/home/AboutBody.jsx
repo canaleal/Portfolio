@@ -8,7 +8,7 @@ function AboutBody() {
     <GridLayout id="about" columns="2" paddingY="py-16">
 
       <div className="col-span-1">
-        <img className="object-none object-center card card-md" height="100" width="auto" src="\assets\images\art\snowbound.webp" alt="Logo" />
+        <img height="100" width="auto" className="object-none object-center card card-md" src="\assets\images\art\snowbound.webp" alt="Logo" />
       </div>
 
       <div className="col-span-1">
