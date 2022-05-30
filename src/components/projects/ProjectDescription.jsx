@@ -11,7 +11,7 @@ function ProjectDescription({ project }) {
   return (
     <>
       <p className="font-bold">Author:</p>
-      <p className="highlight my-2 mb-4">{author}</p>
+      <p className="my-2 mb-4">{author}</p>
       <p className="font-bold">Project Scale:</p>
       <p className="my-2 mb-4">{scale}</p>
       <p className="font-bold">Description:</p>

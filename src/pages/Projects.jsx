@@ -22,7 +22,7 @@ function Projects() {
       {isLoaded === true && error === false
 
         ? (
-          <div className="h-full w-full flex flex-col">
+          <>
 
             <PageHeader title="Projects" color="bg-blue" />
 
@@ -34,7 +34,7 @@ function Projects() {
               ))}
             </GridLayout>
 
-          </div>
+          </>
         )
         : <p />}
 

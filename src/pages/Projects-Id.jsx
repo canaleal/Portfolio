@@ -29,7 +29,7 @@ function ProjectsId() {
 
             <GridLayout id={id} columns="4">
               <div className="col-span-2">
-                <img height="100" width="auto" src={`${addRawToImagePath(data.imglink)}`} alt={`${data.title}`} className="img-card img-card-4xl" loading="lazy" />
+                <img height="100" width="auto" src={`${addRawToImagePath(data.imglink)}`} alt={`${data.title}`} className="img-card img-card-4xl" />
               </div>
 
               <div className="col-span-2 p-4 ">
