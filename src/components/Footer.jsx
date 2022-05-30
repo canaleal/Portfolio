@@ -86,7 +86,7 @@ function Footer() {
     <footer className="bg-smoke mt-4  ">
       <hr />
 
-      <GridLayout columns="3" paddingY="py-8">
+      <GridLayout columns="md:grid-cols-3" paddingY="py-8">
 
         <div className="col-span-1 py-2">
 
@@ -125,7 +125,7 @@ function Footer() {
 
       </GridLayout>
 
-      <GridLayout columns="3" paddingY="py-8">
+      <GridLayout columns="md:grid-cols-3" paddingY="py-8">
 
         <div className="col-span-1 py-2">
           <p className="font-bold">Disclaimer</p>

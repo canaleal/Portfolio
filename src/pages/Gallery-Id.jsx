@@ -27,7 +27,7 @@ function GalleryId() {
 
             <PageHeader title={data.title} color="bg-green" />
 
-            <GridLayout id={id} columns="4">
+            <GridLayout id={id} columns=" md:grid-cols-4">
               <div className="col-span-2">
                 <img height="100" width="auto" src={`${addRawToImagePath(data.imglink)}`} alt="" className="img-card img-card-4xl" loading="lazy" />
               </div>

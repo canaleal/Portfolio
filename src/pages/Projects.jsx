@@ -28,7 +28,7 @@ function Projects() {
 
             <AttentionBar message="This page contains my Github projects. Both complete, and currently in development." />
 
-            <GridLayout id="projects" columns="3">
+            <GridLayout id="projects" columns=" md:grid-cols-3">
               {data.map((projectElement) => (
                 <ProjectCard key={projectElement.id} projectElement={projectElement} />
               ))}

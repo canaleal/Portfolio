@@ -24,7 +24,7 @@ function Logos() {
 
             <PageHeader title="Car Brands" color="bg-blue" />
 
-            <GridLayout id="logos" columns="8">
+            <GridLayout id="logos" columns="md:grid-cols-8">
               {data.map((logoElement) => (
                 <LogoCard key={logoElement.name} logoElement={logoElement} />
               ))}

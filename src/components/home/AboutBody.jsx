@@ -5,7 +5,7 @@ import GridLayout from 'layouts/GridLayout';
 function AboutBody() {
   const favoriteToolList = ['nextjs', 'svelte', 'nodejs', 'express', 'mongodb', 'postgresql', 'docker', 'googlecloud'];
   return (
-    <GridLayout id="about" columns="2" paddingY="py-16">
+    <GridLayout id="about" columns="md:grid-cols-2" paddingY="py-16">
 
       <div className="col-span-1">
         <img height="100" width="auto" className="object-none object-center card card-md" src="\assets\images\art\snowbound.webp" alt="Logo" />

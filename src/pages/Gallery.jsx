@@ -28,7 +28,7 @@ function Gallery() {
 
             <AttentionBar message="This page contains my work, as well as my favorite pieces from other artists." />
 
-            <GridLayout id="gallery" columns="3">
+            <GridLayout id="gallery" columns=" md:grid-cols-3">
               {data.map((artElement) => (
                 <GalleryCard key={artElement.id} artElement={artElement} />
               ))}
