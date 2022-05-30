@@ -1,8 +1,7 @@
-/* eslint-disable no-plusplus */
 /* eslint-disable prefer-spread */
 export const getToolsList = (objectList, property) => {
   const list = [];
-  for (let i = 0; i < objectList.length; i++) {
+  for (let i = 0; i < objectList.length; i += 1) {
     list.push(objectList[i][property]);
   }
 
@@ -14,7 +13,7 @@ export const getToolsList = (objectList, property) => {
 
 export const filterDataIfPropertyIsFalse = (objectList, property) => {
   const list = [];
-  for (let i = 0; i < objectList.length; i++) {
+  for (let i = 0; i < objectList.length; i += 1) {
     if (objectList[i][property] === false) {
       list.push(objectList[i]);
     }

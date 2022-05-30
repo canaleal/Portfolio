@@ -1,5 +1,3 @@
-/* eslint-disable import/prefer-default-export */
-/* eslint-disable no-plusplus */
 /* eslint-disable prefer-spread */
 
 const splitLinkBySlash = (link) => link.split('/');
@@ -15,3 +13,5 @@ export const addRawToImagePath = (imagePath) => {
   const link = addStringAfterLastSlash(imagePath, '/raw');
   return link;
 };
+
+export default addRawToImagePath;

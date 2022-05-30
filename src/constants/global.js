@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 function getFullWindowPath() {
   if (typeof window !== 'undefined') {
     return `${window.location.protocol}//${window.location.host}`;
@@ -13,3 +12,5 @@ export const Global = {
   EDUCATION_URL: `${getFullWindowPath()}/data/Education.json`,
   LOGOS_URL: `${getFullWindowPath()}/data/Logos.json`,
 };
+
+export default Global;

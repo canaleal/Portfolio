@@ -1,37 +1,12 @@
 /* eslint-disable no-nested-ternary */
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import PageHeader from 'components/PageHeader';
-import { getDataUsingFetch } from 'services/fetch-data';
 import { Global } from 'constants';
-
+import { useFetch } from 'hooks/fetch-hook';
 import LogoCard from 'components/logos/LogoCard';
 
 function Logos() {
-  const [error, setError] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [logoList, setLogoList] = useState([]);
-
-  async function getData() {
-    try {
-      const logoJson = await getDataUsingFetch(Global.LOGOS_URL);
-
-      if (logoJson && logoJson.length > 0) {
-        setLogoList(logoJson);
-      } else {
-        throw new Error('Logo list is empty');
-      }
-    } catch {
-      setError(true);
-    } finally {
-      setIsLoaded(true);
-    }
-  }
-
-  useEffect(() => {
-    getData();
-
-    return () => { setLogoList([]); };
-  }, []);
+  const { data, error, isLoaded } = useFetch(Global.LOGOS_URL);
 
   return (
     <section>
@@ -49,7 +24,7 @@ function Logos() {
 
             <div className="px-5 my-4 ">
               <div className="grid grid-cols-4 md:grid-cols-8 gap-4">
-                {logoList.map((logoElement) => (
+                {data.map((logoElement) => (
                   <LogoCard key={logoElement.name} logoElement={logoElement} />
                 ))}
               </div>

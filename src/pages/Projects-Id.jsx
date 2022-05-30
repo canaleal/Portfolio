@@ -1,42 +1,16 @@
 /* eslint-disable no-nested-ternary */
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import PageHeader from 'components/PageHeader';
 import { addRawToImagePath } from 'util/add-raw-link';
-import { getDataUsingFetch } from 'services/fetch-data';
-import { Global } from 'constants';
 import SmallGridLayout from 'layouts/SmallGridLayout';
-
 import ProjectDescription from 'components/projects/ProjectDescription';
+import { useFetchWithFilter } from 'hooks/fetch-hook';
+import { Global } from 'constants';
 
 function ProjectsId() {
   const { id } = useParams();
-  const [error, setError] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [project, setProject] = useState({});
-
-  async function getData() {
-    try {
-      const projectsJson = await getDataUsingFetch(Global.PROJECTS_URL);
-      const projectElement = projectsJson.find((item) => item.id === parseInt(id, 10));
-
-      if (projectElement) {
-        setProject(projectElement);
-      } else {
-        throw new Error('Project is empty');
-      }
-    } catch {
-      setError(true);
-    } finally {
-      setIsLoaded(true);
-    }
-  }
-
-  useEffect(() => {
-    getData();
-
-    return () => { setProject({}); };
-  }, []);
+  const { data, error, isLoaded } = useFetchWithFilter(Global.GALLERY_URL, id);
 
   return (
     <section>
@@ -50,15 +24,15 @@ function ProjectsId() {
         ? (
           <>
 
-            <PageHeader title={project.title} color="bg-blue" />
+            <PageHeader title={data.title} color="bg-blue" />
 
             <SmallGridLayout>
               <div className="col-span-2">
-                <img height="100" width="auto" src={`${addRawToImagePath(project.imglink)}`} alt={`${project.title}`} className="img-card img-card-4xl" loading="lazy" />
+                <img height="100" width="auto" src={`${addRawToImagePath(data.imglink)}`} alt={`${data.title}`} className="img-card img-card-4xl" loading="lazy" />
               </div>
 
               <div className="col-span-2 p-4 ">
-                <ProjectDescription project={project} />
+                <ProjectDescription project={data} />
               </div>
             </SmallGridLayout>
 

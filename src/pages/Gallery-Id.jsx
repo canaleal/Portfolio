@@ -1,41 +1,16 @@
 /* eslint-disable no-nested-ternary */
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import PageHeader from 'components/PageHeader';
 import { addRawToImagePath } from 'util/add-raw-link';
 import SmallGridLayout from 'layouts/SmallGridLayout';
-import { getDataUsingFetch } from 'services/fetch-data';
 import GalleryDescription from 'components/gallery/GalleryDescription';
+import { useFetchWithFilter } from 'hooks/fetch-hook';
+import { Global } from 'constants';
 
 function GalleryId() {
   const { id } = useParams();
-  const [error, setError] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [art, setArt] = useState({});
-
-  async function getData() {
-    try {
-      const artJson = await getDataUsingFetch('../data/Art.json');
-
-      const artElement = artJson.find((item) => item.id === parseInt(id, 10));
-
-      if (artElement) {
-        setArt(artElement);
-      } else {
-        throw new Error('Art is empty');
-      }
-    } catch {
-      setError(true);
-    } finally {
-      setIsLoaded(true);
-    }
-  }
-
-  useEffect(() => {
-    getData();
-
-    return () => { setArt({}); };
-  }, []);
+  const { data, error, isLoaded } = useFetchWithFilter(Global.GALLERY_URL, id);
 
   return (
     <section>
@@ -49,15 +24,15 @@ function GalleryId() {
         ? (
           <>
 
-            <PageHeader title={art.title} color="bg-green" />
+            <PageHeader title={data.title} color="bg-green" />
 
             <SmallGridLayout>
               <div className="col-span-2">
-                <img height="100" width="auto" src={`${addRawToImagePath(art.imglink)}`} alt="" className="img-card img-card-4xl" loading="lazy" />
+                <img height="100" width="auto" src={`${addRawToImagePath(data.imglink)}`} alt="" className="img-card img-card-4xl" loading="lazy" />
               </div>
 
               <div className="col-span-2 p-4">
-                <GalleryDescription art={art} />
+                <GalleryDescription art={data} />
               </div>
             </SmallGridLayout>
           </>
