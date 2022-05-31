@@ -22,7 +22,7 @@ function Stacks() {
       frontEndTools: ['react', 'tailwindcss-plain', 'redux', 'jest-plain', 'webpack', 'nextjs', 'figma'],
       backEndTools: ['nodejs', 'express'],
       databaseTools: ['mongodb', 'postgresql'],
-      deploymentTools: ['docker', 'googlecloud', 'gitlab'],
+      deploymentTools: ['nginx', 'docker', 'googlecloud', 'gitlab'],
     },
     {
       id: 2,
@@ -37,7 +37,7 @@ function Stacks() {
 
     <section id="stack">
 
-      <PageHeader title="Tech Stacks" color="bg-blue" />
+      <PageHeader title="Tech Stacks" color="bg-blue" zHeight="z-10" />
 
       <AttentionBar message="These are some of the Tech Stacks/Tools I have used at different companies." />
 

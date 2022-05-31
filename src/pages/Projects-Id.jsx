@@ -25,7 +25,7 @@ function ProjectsId() {
         ? (
           <>
 
-            <PageHeader title={data.title} color="bg-blue" />
+            <PageHeader title={data.title} color="bg-blue" zHeight="z-10" />
 
             <GridLayout id={id} columns="md:grid-cols-4">
               <div className="col-span-2">

@@ -24,7 +24,7 @@ function Projects() {
         ? (
           <>
 
-            <PageHeader title="Projects" color="bg-blue" />
+            <PageHeader title="Projects" color="bg-blue" zHeight="z-10" />
 
             <AttentionBar message="This page contains my Github projects. Both complete, and currently in development." />
 

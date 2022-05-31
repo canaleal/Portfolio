@@ -25,7 +25,7 @@ function GalleryId() {
         ? (
           <>
 
-            <PageHeader title={data.title} color="bg-green" />
+            <PageHeader title={data.title} color="bg-green" zHeight="z-10" />
 
             <GridLayout id={id} columns=" md:grid-cols-4">
               <div className="col-span-2">

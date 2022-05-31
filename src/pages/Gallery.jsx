@@ -24,7 +24,7 @@ function Gallery() {
         ? (
           <>
 
-            <PageHeader title="Gallery" color="bg-green" />
+            <PageHeader title="Gallery" color="bg-green" zHeight="z-10" />
 
             <AttentionBar message="This page contains my work, as well as my favorite pieces from other artists." />
 

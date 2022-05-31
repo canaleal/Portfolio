@@ -22,7 +22,7 @@ function Logos() {
         ? (
           <>
 
-            <PageHeader title="Car Brands" color="bg-blue" />
+            <PageHeader title="Car Brands" color="bg-blue" zHeight="z-10" />
 
             <GridLayout id="logos" columns="md:grid-cols-8">
               {data.map((logoElement) => (
