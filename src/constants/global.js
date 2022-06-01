@@ -8,9 +8,8 @@ function getFullWindowPath() {
 export const Global = {
   PROJECTS_URL: `${getFullWindowPath()}/data/Projects.json`,
   GALLERY_URL: `${getFullWindowPath()}/data/Art.json`,
-  WORK_URL: `${getFullWindowPath()}/data/Work.json`,
-  EDUCATION_URL: `${getFullWindowPath()}/data/Education.json`,
   LOGOS_URL: `${getFullWindowPath()}/data/Logos.json`,
+  IMAGES_URL: `${getFullWindowPath()}/data/Images.json`,
 };
 
 export default Global;

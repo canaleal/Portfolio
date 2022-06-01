@@ -15,7 +15,7 @@ import ProjectId from './pages/Projects-Id';
 import Gallery from './pages/Gallery';
 import GalleryId from './pages/Gallery-Id';
 import Error from './pages/Error';
-
+import Images from './pages/Images';
 // Import font awesome and some icons
 import Logos from './pages/Logos';
 import AppLayout from './layouts/AppLayout';
@@ -39,6 +39,7 @@ render(
         <Route path="gallery" element={<Gallery />} />
         <Route path="gallery/:id" element={<GalleryId />} />
         <Route path="logos" element={<Logos />} />
+        <Route path="images" element={<Images />} />
         <Route path="*" element={<Error />} />
       </Route>
     </Routes>

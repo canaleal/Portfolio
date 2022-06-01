@@ -138,7 +138,7 @@
       "description" : "Program Downloads Images from the Internet and saves them to a local repository. Application makes use of Streamlit and Pytest. The image links are saved to a Postgres Database for further development. ",
       "tools" : ["python", "pandas", "pytest", "postgresql"],
       "githublink" : "https://github.com/canaleal/RedditWebRetriever",
-      "projectlink": null,
+      "projectlink": "/images",
       "imglink" : "/assets/images/projects/japan.webp",
       "type": "application",
       "scale":"Small",

@@ -1,7 +1,14 @@
 import axios from 'axios';
 
 // Fetching data from the API
-export const getDataUsingFetch = async (url) => axios.get(url)
+export const getDataUsingFetch = async (url) => axios.get(url, {
+  headers: {
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+  },
+  Pragma: 'no-cache',
+  responseType: 'json',
+})
   .then((res) => res.data.Data);
 
 export const getDataWithAxios = async (sourceLink) => {
