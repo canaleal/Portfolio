@@ -25,14 +25,16 @@ function Gallery() {
           <>
 
             <PageHeader title="Web Getter Images" color="bg-green" zHeight="z-10" />
-            <AttentionBar message="This page contains images collected from the Web Getter. Only a hand full of images are shown out of 2600." />
-            <GridLayout id="images" columns=" md:grid-cols-3">
+            <AttentionBar message="This page contains images collected from the Web Getter. Only a hand full of images are shown out of 26000." />
+            <GridLayout id="images" columns=" md:grid-cols-8">
               {data.map((imageElement) => (
                 <ImageCard
                   key={imageElement.id}
                   id={imageElement.id}
+                  containerlink={imageElement.container_link}
                   imglink={imageElement.image_link}
                   title={imageElement.name}
+                  isNsfw
                 />
               ))}
             </GridLayout>
