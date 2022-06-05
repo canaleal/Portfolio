@@ -1,32 +1,26 @@
-.card{
-
+.card {
 	border-radius: 1rem;
 	transition: all 0.5s;
 	overflow: hidden;
 
-
-	&-noHover{
+	&-noHover {
 		pointer-events: none;
 	}
 
 	&:hover {
-	
 		transform: scale(1.01);
-	
-    }  
-
+	}
 }
-
 
 .img-card {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	
+
 	font-size: 3rem;
 	color: #fff;
-	
+
 	height: 15rem;
 	width: 100%;
 	border-radius: 1rem;
@@ -37,96 +31,84 @@
 	background-position: center;
 	background-repeat: no-repeat;
 
-	&-noHover{
+	&-noHover {
 		pointer-events: none;
 	}
 
 	&:hover {
-	
 		box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
 		transform: scale(1.03);
 		cursor: pointer;
 		filter: opacity(1) saturate(150%);
-    }  
-	
-	&-xsm{
+	}
+
+	&-xsm {
 		height: 10rem;
 	}
 
-	&-sm{
+	&-sm {
 		height: 15rem;
 	}
 
-
-	&-md{
+	&-md {
 		height: 20rem;
 	}
 
-	&-lg{
+	&-lg {
 		height: 25rem;
 	}
 
-	&-xl{
+	&-xl {
 		height: 30rem;
 	}
 
-	&-2xl{
+	&-2xl {
 		height: 35rem;
 	}
 
-	&-3xl{
+	&-3xl {
 		height: 40rem;
 	}
 
-	&-4xl{
+	&-4xl {
 		height: 45rem;
 	}
 }
 
-
-
-.blur{
+.blur {
 	filter: blur(8px);
 	transition: all 1s;
 
-	&:hover{
-		filter:  none;
+	&:hover {
+		filter: none;
 	}
 
-	&-none{
+	&-none {
 		filter: none;
 	}
 }
 
-.card-btn{
-    display:inline-block;
-    padding:0.35em 1.2em;
-    border:0.1em solid $black;
-   
-    font-weight:300;
-   
-    text-align:center;
-    transition: all $xslow-spd ease;
+.card-btn {
+	display: inline-block;
+	padding: 0.35em 1.2em;
+	border: 0.1em solid $black;
 
-    
+	font-weight: 300;
 
-    &:hover{
-       
-        padding:0.35em 2em;
-        
-        
-    }
+	text-align: center;
+	transition: all $xslow-spd ease;
 
-    &-blue{
-        color: white;
-        background-color: #4648a4;
-    }
+	&:hover {
+		padding: 0.35em 2em;
+	}
 
-	&-green{
-        color: white;
-        background-color: #007a3e;
-    }
+	&-blue {
+		color: white;
+		background-color: #4648a4;
+	}
 
+	&-green {
+		color: white;
+		background-color: #007a3e;
+	}
 }
-
-
