@@ -9,7 +9,7 @@ export const Global = {
   PROJECTS_URL: `${getFullWindowPath()}/data/Projects.json`,
   GALLERY_URL: `${getFullWindowPath()}/data/Art.json`,
   LOGOS_URL: `${getFullWindowPath()}/data/Logos.json`,
-  IMAGES_URL: `${getFullWindowPath()}/data/Images-Dev.json`,
+  IMAGES_URL: `${getFullWindowPath()}/data/Images.json`,
 };
 
 export default Global;

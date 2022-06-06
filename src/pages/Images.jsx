@@ -26,7 +26,7 @@ function Gallery() {
 
             <PageHeader title="Web Getter Images" color="bg-green" zHeight="z-10" />
             <AttentionBar message="This page contains images collected from the Web Getter. Only a hand full of images are shown out of 26000." />
-            <GridLayout id="images" columns=" md:grid-cols-3">
+            <GridLayout id="images" columns=" md:grid-cols-6">
               {data.map((imageElement) => (
                 <ImageCard
                   key={imageElement.id}
@@ -34,7 +34,9 @@ function Gallery() {
                   containerlink={imageElement.post_link}
                   imglink={imageElement.post_link}
                   title={imageElement.post_title}
-                  isNsfw
+                  // containerlink={imageElement.container_link}
+                  // imglink={imageElement.image_link}
+                  // title={imageElement.name}
                 />
               ))}
             </GridLayout>

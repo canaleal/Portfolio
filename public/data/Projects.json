@@ -16,23 +16,6 @@
       "isDisable": false,
       "inDevelopment": true
       },
-    
-      {
-        "id":1,
-      "title" : "4K Image Upscaler",
-      "author" : "Alex",
-      "date" : "2020UTC",
-      "metadata" : "Enhanced Deep Residual Networks for Single Image Super-Resolution (EDSR)",
-      "description" : "Built using Python and Streamlit, this application takes an input image and returns and upscaled 2K, or 4K version of the same image. Although the application can accept any image, drawings are prefered as they're easier for the algorithms to work with and require less time to upscale.",
-      "tools" : ["fastapi","python","tensorflow","opencv", "pytest"],
-      "githublink" : null,
-      "projectlink": null,
-      "imglink" : "/assets/images/projects/upscaler.webp",
-      "type": "application",
-      "scale":"Small",
-      "isDisable": false,
-      "inDevelopment": true
-      },
       {
         "id":2,
       "title" : "3D Geotab Mapping",
@@ -94,22 +77,6 @@
       "imglink" : "/assets/images/projects/bones.webp",
       "type": "machine",
       "scale":"Large",
-      "isDisable": false,
-      "inDevelopment": false
-      },
-      {
-        "id":6,
-      "title" : "Vehicle Identification Number : OCR device",
-      "author" : "Alex",
-      "date" : "2020UTC",
-      "metadata" : null,
-      "description" : "VIN Vault is a fully usable data visualization and service report able to locate and find the details of any vehicle in the NHTSA database. With it’s easy to use/ seamless setup, users are be able to view VINs by either scanning or typing in the VIN. (Note: The Web version cannot Scan Inputs)",
-      "tools" : ["react","tailwindcss-plain","intellij","firebase-plain", "androidstudio"],
-      "githublink" : null,
-      "projectlink": null,
-      "imglink" : "/assets/images//projects/vin.webp",
-      "type": "application",
-      "scale":"Medium",
       "isDisable": false,
       "inDevelopment": false
       },
