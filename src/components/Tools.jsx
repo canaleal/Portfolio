@@ -10,7 +10,6 @@ function Tools({ tools, iconSize = 'w-8' }) {
           <img height="100" width="auto" title={tool} key={tool} className={`img-icon ${iconSize} mx-2 py-2`} alt="" src={returnLinkGivenIfStringContains(tool)} loading="lazy" />
         ))
       }
-
     </div>
   );
 }
