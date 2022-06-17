@@ -34,9 +34,6 @@ function Gallery() {
                   containerlink={imageElement.post_link}
                   imglink={imageElement.post_link}
                   title={imageElement.post_title}
-                  // containerlink={imageElement.container_link}
-                  // imglink={imageElement.image_link}
-                  // title={imageElement.name}
                 />
               ))}
             </GridLayout>

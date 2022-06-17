@@ -4,7 +4,6 @@ export const getToolsList = (objectList, property) => {
   for (let i = 0; i < objectList.length; i += 1) {
     list.push(objectList[i][property]);
   }
-
   const flat = [].concat.apply([], list);
   const unique = flat.filter((elem, pos) => flat.indexOf(elem) === pos);
 
