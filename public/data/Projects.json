@@ -17,6 +17,22 @@
       "inDevelopment": true
       },
       {
+        "id":1,
+        "title" : "Alpine - Yahoo & Alpha Vantage Stock Market Data",
+        "author" : "Alex",
+        "date" : "2020UTC",
+        "metadata" : "null",
+        "description" : "This program uses Yahoo and Alpha Vantage to collect and display stock details for the user. The program is currently under development.",
+        "tools" : ["python","pandas","numpy", "tensorflow", "googlecloud", "pytest", "inkscape"],
+        "githublink" : "https://github.com/canaleal/PotholeObjectDetection",
+        "projectlink": "https://usars-geohash-demo.netlify.app/",
+        "imglink" : "/assets/images/projects/stock.webp",
+        "type": "application",
+        "scale":"Small",
+        "isDisable": false,
+        "inDevelopment": true
+        },
+      {
         "id":2,
       "title" : "3D Geotab Mapping",
       "author" : "Alex",
