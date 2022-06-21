@@ -17,7 +17,7 @@ function ProjectCard({ projectElement }) {
       <div className="flex flex-col">
         <Link to={{ pathname: `/projects/${id}` }} aria-label={title}>
 
-          <img height="100" width="auto" src={`${imglink}`} alt={`${title}`} className="img-card img-card-md" loading="lazy" />
+          <img height="100" width="auto" src={`${imglink}`} alt={`${title}`} className="img-card img-card-sm" loading="lazy" />
         </Link>
 
         <div className="p-4">

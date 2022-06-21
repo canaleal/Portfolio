@@ -1,5 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300&display=swap");
+.bg-green {
+  background-color: #007a3e;
+}
+
+.bg-blue {
+  background-color: #343579;
+}
+
+.bg-red {
+  background-color: #793434;
+}
+
+.bg-smoke {
+  background-color: #f8f9f2;
+}
+
+.bg-dark {
+  background-color: #212426;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -69,32 +89,10 @@ h6 {
   font-family: 'Source Serif Pro', serif;
 }
 
-.bg-green {
-  background-color: #007a3e;
-}
-
-.bg-blue {
-  background-color: #343579;
-}
-
-.bg-red {
-  background-color: #793434;
-}
-
-.bg-smoke {
-  background-color: #f8f9f2;
-}
-
-.bg-dark {
-  background-color: #212426;
-}
-
 hr {
   border: none;
   height: 1px;
-  /* Set the hr color */
   background-color: #e6e8de;
-  /* Modern Browsers */
 }
 
 .ellipsis {
