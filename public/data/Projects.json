@@ -118,7 +118,7 @@
       "author" : "Alex",
       "date" : "2020UTC",
       "metadata" : null,
-      "description" : "Program Downloads Images from the Internet and saves them to a local repository. Application makes use of Streamlit and Pytest. The image links are saved to a Postgres Database for further development. ",
+      "description" : "26,000 records saved in postgres database. Program Downloads Images from the Internet and saves them to a local repository. Application makes use of Streamlit and Pytest. The image links are saved to a Postgres Database for further development. ",
       "tools" : ["python", "pandas", "pytest", "postgresql" ,"inkscape", "streamlit"],
       "githublink" : "https://github.com/canaleal/RedditWebRetriever",
       "projectlink": "/images",
